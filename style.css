@@ -73,3 +73,28 @@ ul {
     margin-top: 8px;
 }
 
+.hero {
+    background: url('images/cover.jpg') no-repeat center center/cover;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.overlay {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 30px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.overlay h1 {
+    font-size: 36px;
+    margin: 0;
+}
+
+.overlay p {
+    margin-top: 10px;
+    font-size: 18px;
+}
