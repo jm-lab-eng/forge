@@ -9,7 +9,7 @@ body {
 /* HERO COVER */
 .hero {
     height: 280px;
-    background: url('images/cover.jpg') center/cover no-repeat;
+    background: url('images/cover.png.jpg') center/cover no-repeat;
     position: relative;
     display: flex;
     align-items: center;
