@@ -1,4 +1,7 @@
-/* RESET */
+/* IMPORT FONT */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&display=swap');
+
+/* BODY */
 body {
     margin: 0;
     font-family: Arial, sans-serif;
@@ -15,7 +18,7 @@ body {
     align-items: center;
 }
 
-/* DARK OVERLAY */
+/* OVERLAY */
 .hero::before {
     content: "";
     position: absolute;
@@ -36,10 +39,8 @@ body {
 /* HERO TEXT */
 .hero-text {
     max-width: 600px;
-    text-align: left;
 }
 
-/* NAME */
 .hero-text h1 {
     color: white;
     font-size: 38px;
@@ -48,14 +49,12 @@ body {
     text-shadow: 0 2px 10px rgba(0,0,0,0.6);
 }
 
-/* ROLE */
 .role {
     color: #e2e8f0;
     margin-top: 8px;
     font-size: 18px;
 }
 
-/* SMALL DIVIDER */
 .role::after {
     content: "";
     display: block;
@@ -65,22 +64,20 @@ body {
     margin-top: 8px;
 }
 
-/* SUBTEXT */
 .subtext {
     color: #cbd5f5;
     margin-top: 6px;
     font-size: 14px;
-    letter-spacing: 0.5px;
 }
 
-/* INTRO SECTION */
+/* INTRO */
 .intro {
     background: #f1f5f9;
     padding: 90px 40px 20px 40px;
     position: relative;
 }
 
-/* PROFILE IMAGE */
+/* PROFILE */
 .profile-img {
     width: 130px;
     height: 160px;
@@ -93,7 +90,7 @@ body {
     box-shadow: 0 6px 14px rgba(0,0,0,0.2);
 }
 
-/* NAME BELOW */
+/* NAME */
 .intro h1 {
     margin-top: 10px;
     font-size: 30px;
@@ -102,13 +99,33 @@ body {
 
 /* QUOTE */
 .quote {
-    margin-top: 10px;
-    font-size: 15px;
-    color: #475569;
+    margin-top: 15px;
     max-width: 700px;
 }
 
-/* MAIN CONTAINER */
+.quote span {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 18px;
+    color: #475569;
+    line-height: 1.6;
+}
+
+.quote span::before {
+    content: "“";
+    font-size: 30px;
+    color: #38bdf8;
+    margin-right: 6px;
+}
+
+.quote span::after {
+    content: "”";
+    font-size: 30px;
+    color: #38bdf8;
+    margin-left: 6px;
+}
+
+/* MAIN LAYOUT */
 .container {
     display: grid;
     grid-template-columns: 1.6fr 1fr;
@@ -128,15 +145,12 @@ body {
     transition: transform 0.2s ease;
 }
 
-/* HOVER EFFECT */
 .card:hover {
     transform: translateY(-4px);
 }
 
-/* CARD TITLE */
 .card h2 {
     margin-top: 0;
-    font-size: 20px;
 }
 
 /* EDUCATION GRID */
@@ -146,7 +160,6 @@ body {
     margin-top: 12px;
 }
 
-/* EDUCATION CARD */
 .edu-card {
     background: #f8fafc;
     padding: 16px;
