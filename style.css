@@ -233,3 +233,15 @@ body {
     border: none;
 }
 
+/* INSTITUTE LINK */
+.edu-inst a {
+    text-decoration: none;
+    color: #0f172a;
+    font-weight: 500;
+}
+
+.edu-inst a:hover {
+    color: #2563eb;
+    text-decoration: underline;
+}
+
