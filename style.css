@@ -176,3 +176,51 @@ body {
 .edu-card:hover {
     background: #f1f5f9;
 }
+
+/* BUTTON */
+.btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 14px;
+    background: #38bdf8;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+.btn:hover {
+    background: #0ea5e9;
+}
+
+/* PAGE HEADER */
+.page-header {
+    padding: 20px 40px;
+    background: #020617;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.page-header a {
+    color: #38bdf8;
+    text-decoration: none;
+}
+
+/* PAGE CONTENT */
+.page-container {
+    max-width: 900px;
+    margin: auto;
+    padding: 30px 40px;
+}
+
+/* EDUCATION BLOCK */
+.edu-block {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    border-left: 4px solid #38bdf8;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
