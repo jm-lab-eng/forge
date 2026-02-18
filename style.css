@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&display=swap');
 
-/* BODY */
 body {
     margin: 0;
     font-family: Arial, sans-serif;
@@ -21,7 +20,7 @@ body {
     content: "";
     position: absolute;
     inset: 0;
-    background: rgba(0, 0, 0, 0.55);
+    background: rgba(0,0,0,0.55);
 }
 
 .hero-container {
@@ -29,12 +28,7 @@ body {
     z-index: 1;
     max-width: 1100px;
     margin: auto;
-    width: 100%;
     padding: 0 40px;
-}
-
-.hero-text {
-    max-width: 600px;
 }
 
 .hero-text h1 {
@@ -45,13 +39,12 @@ body {
 
 .role {
     color: #e2e8f0;
-    margin-top: 8px;
     font-size: 18px;
+    margin-top: 8px;
 }
 
 .subtext {
     color: #cbd5f5;
-    margin-top: 6px;
     font-size: 14px;
 }
 
@@ -63,7 +56,6 @@ body {
 .intro-header {
     display: flex;
     gap: 20px;
-    align-items: flex-start;
 }
 
 .profile-img {
@@ -72,12 +64,10 @@ body {
     border-radius: 10px;
     border: 4px solid white;
     object-fit: cover;
-    box-shadow: 0 6px 14px rgba(0,0,0,0.2);
 }
 
 .intro-text h1 {
     margin: 0;
-    font-size: 28px;
 }
 
 /* QUOTE */
@@ -85,7 +75,6 @@ body {
     font-family: 'Playfair Display', serif;
     font-style: italic;
     font-size: 18px;
-    color: #475569;
 }
 
 /* GRID */
@@ -110,7 +99,6 @@ body {
 /* SUB HEADING */
 .sub-heading {
     margin-top: 20px;
-    font-size: 18px;
     border-left: 3px solid #38bdf8;
     padding-left: 10px;
 }
@@ -118,32 +106,36 @@ body {
 /* EDUCATION BLOCK */
 .edu-block {
     display: flex;
-    gap: 15px;
+    gap: 12px;
     margin-top: 15px;
-    padding: 12px;
+    padding: 12px 14px;
     border-radius: 10px;
     background: #f8fafc;
     border: 1px solid #e2e8f0;
-    transition: all 0.2s ease;
+    align-items: flex-start;
 }
 
-.edu-block:hover {
-    background: #eef2ff;
-}
-
-/* LOGO */
 .edu-logo {
-    width: 60px;
-    height: 60px;
+    width: 42px;
+    height: 42px;
     object-fit: contain;
+    margin-top: 4px;
 }
 
-/* LINKS */
+.edu-block div {
+    flex: 1;
+}
+
+.edu-block h4 {
+    margin: 0;
+    font-size: 16px;
+}
+
 .edu-links a {
     margin-right: 10px;
     font-size: 14px;
-    text-decoration: none;
     color: #2563eb;
+    text-decoration: none;
 }
 
 .edu-links a:hover {
