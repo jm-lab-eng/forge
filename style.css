@@ -2,39 +2,40 @@
 
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
+    font-family: Arial;
     background: #f1f5f9;
+}
+
+/* NAVBAR */
+.navbar {
+    background: white;
+    padding: 12px 40px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    position: sticky;
+    top: 0;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.navbar a {
+    margin-left: 15px;
+    text-decoration: none;
     color: #1e293b;
 }
 
 /* HERO */
 .hero {
-    height: 280px;
+    height: 260px;
     background: url('images/cover.jpg') center/cover no-repeat;
-    position: relative;
     display: flex;
     align-items: center;
 }
 
-.hero::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: rgba(0,0,0,0.55);
-}
-
-.hero-container {
-    position: relative;
-    z-index: 1;
-    max-width: 1100px;
-    margin: auto;
-    padding: 0 40px;
-}
-
 .hero-text h1 {
     color: white;
-    font-size: 40px;
-    margin: 0;
 }
 
 /* INTRO */
@@ -42,58 +43,50 @@ body {
     padding: 40px;
 }
 
-.profile-img {
-    width: 110px;
-    border-radius: 10px;
+.intro-header {
+    display: flex;
+    gap: 20px;
 }
 
-/* QUOTE */
-.quote span {
-    font-family: 'Playfair Display', serif;
-    font-style: italic;
+.profile-img {
+    width: 100px;
 }
 
 /* GRID */
 .container {
     display: grid;
-    grid-template-columns: 1.6fr 1fr;
+    grid-template-columns: 1.5fr 1fr;
     gap: 20px;
     padding: 20px 40px;
-    max-width: 1100px;
-    margin: auto;
 }
 
 /* CARD */
 .card {
     background: white;
     padding: 20px;
-    border-radius: 12px;
-    box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+    border-radius: 10px;
 }
 
 /* EDUCATION */
 .edu-block {
     display: flex;
     gap: 10px;
-    margin-top: 15px;
+    margin-top: 10px;
 }
 
 .edu-logo {
-    width: 36px;
+    width: 40px;
 }
 
-/* PROJECTS */
+/* PROJECT */
+.projects-section {
+    padding: 20px 40px;
+}
+
 .project-card {
     background: white;
     padding: 20px;
-    border-radius: 12px;
-    margin: 20px;
-    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
-    transition: 0.2s;
-}
-
-.project-card:hover {
-    transform: translateY(-5px);
+    margin-top: 20px;
 }
 
 /* MEDIA */
@@ -113,12 +106,4 @@ body {
     position: absolute;
     width: 100%;
     height: 100%;
-}
-
-/* RESPONSIVE */
-@media(max-width: 768px){
-    .container,
-    .project-media {
-        grid-template-columns: 1fr;
-    }
 }
