@@ -1,11 +1,19 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Jithin Machath | Mechanical Engineer</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="images/profile.png">
 </head>
 
 <body>
+
+<!-- DARK MODE TOGGLE -->
+<button id="theme-toggle">🌙</button>
 
 <!-- HERO -->
 <header class="hero">
@@ -22,10 +30,10 @@
 <section class="intro">
     <div class="intro-header">
 
-        <img src="images/profile.png" class="profile-img">
+        <img src="images/profile.png" class="profile-img" alt="Jithin Machath">
 
         <div class="intro-text">
-            <h1>JITHIN MACHATH</h1>
+            <h2>JITHIN MACHATH</h2>
 
             <p class="quote">
                 <span>
@@ -42,132 +50,135 @@
 <section class="container">
 
     <!-- ABOUT -->
-    <div class="card">
+    <article class="card">
         <h2>👤 About Me</h2>
-        <p>Mechanical Design Engineer with 4+ years of experience in robotics and industrial systems.</p>
-        <p>Focused on system-level design, manufacturable solutions, and real-world deployment.</p>
-    </div>
+        <p>
+        Mechanical Design Engineer with 4+ years of experience in robotics, hazardous environment systems, and industrial automation.
+        Specialized in system architecture, manufacturable design, and field-deployed engineering solutions.
+        </p>
+    </article>
 
-  <!-- EDUCATION & CERTIFICATIONS -->
-    <div class="card">
+    <!-- SKILLS -->
+    <article class="card">
+        <h2>🛠 Skills</h2>
+        <p>
+        Mechanical Design | System Architecture | Product Development | Prototyping | Validation |
+        Hydraulics | Manufacturing Design | GD&T | DFMEA | Root Cause Analysis
+        </p>
+    </article>
+
+    <!-- EDUCATION -->
+    <article class="card">
         <h2>🎓 Education & Certifications</h2>
 
-        <!-- EDUCATION -->
         <h3 class="sub-heading">Education</h3>
 
-        <!-- UG -->
         <div class="edu-block">
-            <img src="images/gec.jpg" class="edu-logo">
-
+            <img src="images/gec.jpg" class="edu-logo" alt="GEC Thrissur">
             <div>
-                <h4>Bachelor of Technology (B.Tech) – Mechanical Engineering</h4>
+                <h4>B.Tech – Mechanical Engineering</h4>
                 <p><strong>2012 – 2016</strong></p>
-                <p>
-                    <a href="https://gectcr.ac.in/" target="_blank" class="edu-link-main">
-                        Government Engineering College, Thrissur
-                    </a>
-                </p>
-
-                <p class="edu-desc">
-                Built a strong foundation in core mechanical engineering disciplines including thermodynamics, mechanics, fluid systems, machine design, and manufacturing. Gained practical exposure through labs, workshops, and projects, developing an understanding of how engineering designs translate into real-world systems. Also developed awareness of operations, supply chain, and management aspects influencing engineering decisions.
-                </p>
+                <p><a href="https://gectcr.ac.in/" target="_blank" class="edu-link-main">GEC Thrissur</a></p>
             </div>
         </div>
 
-        <!-- PG -->
         <div class="edu-block">
-            <img src="images/iiitdm.png" class="edu-logo">
-
+            <img src="images/iiitdm.png" class="edu-logo" alt="IIITDM">
             <div>
-                <h4>Master of Design (M.Des) – Mechanical Systems</h4>
+                <h4>M.Des – Mechanical Systems</h4>
                 <p><strong>2017 – 2019</strong></p>
-                <p>
-    <a href="https://www.iiitdm.ac.in/" target="_blank" class="edu-link-main">
-        IIITDM Kancheepuram
-    </a>
-</p>
-
-                <p class="edu-desc">
-                Completed Master of Design (M.Des) in Mechanical Systems from IIITDM Kancheepuram, with a focus on product engineering, system-level design, and integrated mechanical solutions. Gained strong exposure to mechatronics, FEA, advanced manufacturing, and simulation-driven design. The programme was highly project-oriented, enabling development from concept to fully functional systems.
-                </p>
+                <p><a href="https://www.iiitdm.ac.in/" target="_blank" class="edu-link-main">IIITDM Kancheepuram</a></p>
             </div>
         </div>
 
-        <!-- CERTIFICATIONS -->
         <h3 class="sub-heading">Certifications</h3>
 
         <div class="edu-block">
-            <img src="images/imc.png" class="edu-logo">
-
+            <img src="images/imc.png" class="edu-logo" alt="IMC Certification">
             <div>
                 <h4>Lean Six Sigma Black Belt</h4>
                 <p><strong>2025</strong></p>
-                <p>
-                <a href="https://imccertifications.com/" target="_blank" class="edu-link-main">
-                    International Management Consultancy (IMC)
-                </a>
-                </p>
-
-                <p class="edu-links">
-                    <a href="https://imccertifications.com/certificates/C-2025-51795.pdf" target="_blank">IMC Certificate</a>
-                    <a href="https://imccertifications.com/certificates/CPD-C-2025-51795.pdf" target="_blank">CPD Certtificate</a>
-                </p>
-
-                <p class="edu-desc">
-                Completed Lean Six Sigma Black Belt certification with a focus on structured, data-driven problem solving. Applied DMAIC methodology to identify root causes, improve process efficiency, and enhance quality using statistical and analytical tools.
-                </p>
+                <p><a href="https://imccertifications.com/" target="_blank" class="edu-link-main">IMC</a></p>
             </div>
-        </div>>
-    </div>
+        </div>
+
+    </article>
 
 </section>
 
-<!-- PROJECTS SECTION -->
+<!-- PROJECTS -->
 <section class="projects-section">
 
     <h2>🚀 Projects</h2>
 
-    <!-- PROJECT 1 -->
-    <div class="project-card">
+    <article class="project-card">
 
         <div class="project-header">
-            <h3>DRACO – In-Service Tank Cleaning Robot</h3>
-            <span class="project-tag">R&D | Robotics | Hazardous Systems</span>
+            <h3>DRACO – Tank Cleaning Robot</h3>
+            <span class="project-tag">R&D | Robotics</span>
         </div>
 
         <p class="project-desc">
-        Designed and developed an in-service crude oil tank cleaning robot capable of operating in hazardous Zone-0 environments through a 24-inch manhole, eliminating the need for shutdown.
+        Designed and developed an in-service crude oil tank cleaning robot enabling zero-shutdown operations, improving safety and efficiency in hazardous environments.
         </p>
 
         <div class="project-grid">
-
             <div>
                 <h4>Key Contributions</h4>
                 <ul>
-                    <li>Mechanical system design and architecture</li>
-                    <li>Hydraulic system integration</li>
-                    <li>Structural design and optimization</li>
-                    <li>Design validation in real field conditions</li>
+                    <li>System architecture</li>
+                    <li>Hydraulic integration</li>
+                    <li>Structural optimization</li>
                 </ul>
             </div>
 
             <div>
                 <h4>Engineering Focus</h4>
                 <ul>
-                    <li>ATEX / hazardous environment constraints</li>
-                    <li>Compact deployment mechanism</li>
-                    <li>Material selection for oil exposure</li>
-                    <li>Reliability and maintainability</li>
+                    <li>ATEX constraints</li>
+                    <li>Compact deployment</li>
+                    <li>Material selection</li>
                 </ul>
             </div>
-
         </div>
 
-    </div>
-
-    <!-- ADD MORE PROJECTS BELOW LIKE THIS -->
+    </article>
 
 </section>
+
+<!-- CONTACT -->
+<section class="projects-section">
+    <h2>📬 Contact</h2>
+
+    <div class="card">
+        <p>Email: yourmail@gmail.com</p>
+        <p>LinkedIn: <a href="#">your-link</a></p>
+        <p>GitHub: <a href="#">jm-lab-eng</a></p>
+    </div>
+</section>
+
+<!-- DARK MODE SCRIPT -->
+<script>
+const toggle = document.getElementById("theme-toggle");
+
+toggle.onclick = () => {
+    document.body.classList.toggle("dark");
+
+    if(document.body.classList.contains("dark")){
+        localStorage.setItem("theme","dark");
+        toggle.innerText = "☀️";
+    } else {
+        localStorage.setItem("theme","light");
+        toggle.innerText = "🌙";
+    }
+};
+
+// Load saved theme
+if(localStorage.getItem("theme") === "dark"){
+    document.body.classList.add("dark");
+    toggle.innerText = "☀️";
+}
+</script>
 
 </body>
 </html>
