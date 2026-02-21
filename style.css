@@ -475,5 +475,37 @@ body.dark .projects-section {
     font-weight: 500;
 }
 
+/* CASE STUDY HERO */
+.case-hero {
+    padding: 80px 40px 40px;
+    text-align: center;
+    background: linear-gradient(to right, #1e293b, #0f172a);
+    color: white;
+}
+
+.case-hero h1 {
+    margin: 0;
+    font-size: 36px;
+}
+
+.case-container {
+    max-width: 900px;
+    margin: auto;
+    padding: 40px;
+}
+
+/* CASE BLOCK */
+.case-block {
+    margin-bottom: 30px;
+    padding: 20px;
+    border-left: 4px solid #38bdf8;
+    background: white;
+    border-radius: 10px;
+}
+
+body.dark .case-block {
+    background: #1e293b;
+}
+
 
 
