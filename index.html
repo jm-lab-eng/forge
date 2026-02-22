@@ -42,7 +42,7 @@
 
 <article class="card" id="about">
 <h2>👤 About Me</h2>
-<p>Mechanical Design Engineer with 4+ years experience in robotics and industrial systems.</p>
+<p>Mechanical Design Engineer with 4+ years of experience in robotics and industrial systems.</p>
 </article>
 
 <article class="card" id="skills">
@@ -60,13 +60,10 @@
 <section class="projects-section" id="projects">
 <h2>🚀 Projects</h2>
 
-<a href="draco.html" class="project-link">
 <article class="project-card">
-
-<div class="project-header">
-<h3>DRACO – Tank Cleaning Robot</h3>
-<span class="project-tag">R&D | Robotics</span>
-</div>
+<h3>
+<a href="draco.html">DRACO – Tank Cleaning Robot</a>
+</h3>
 
 <p class="project-desc">
 In-service robotic system for hazardous tank cleaning.
@@ -79,7 +76,6 @@ In-service robotic system for hazardous tank cleaning.
 </div>
 
 </article>
-</a>
 
 </section>
 
@@ -96,10 +92,12 @@ const toggle = document.getElementById("theme-toggle");
 toggle.onclick = () => {
 document.body.classList.toggle("dark");
 localStorage.setItem("theme", document.body.classList.contains("dark") ? "dark" : "light");
+toggle.innerText = document.body.classList.contains("dark") ? "☀️" : "🌙";
 };
 
 if(localStorage.getItem("theme")==="dark"){
 document.body.classList.add("dark");
+toggle.innerText = "☀️";
 }
 </script>
 
