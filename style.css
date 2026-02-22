@@ -340,3 +340,38 @@ body.dark .case-block {
         height: 220px;
     }
 }
+
+.edu-link-main {
+    text-decoration: none;
+    color: #1e293b;
+    font-weight: 600;
+}
+
+.edu-link-main:hover {
+    color: #2563eb;
+}
+
+body.dark .edu-link-main {
+    color: #e2e8f0;
+}
+
+#theme-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 2000;
+    padding: 8px 12px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    background: white;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+body.dark #theme-toggle {
+    background: #334155;
+    color: white;
+}
+
+
+
