@@ -1,194 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DRACO Case Study | Jithin Machath</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DRACO Case Study</title>
+<link rel="stylesheet" href="style.css">
+<link rel="icon" href="images/profile.png">
 </head>
 
 <body>
 
-<!-- NAVBAR -->
 <nav class="navbar">
-    <div class="nav-container">
-        <div class="nav-logo">JM</div>
-
-        <ul class="nav-links">
-            <li><a href="index.html">Home</a></li>
-        </ul>
-
-        <a href="resume.pdf" class="resume-btn" download>Download CV</a>
-    </div>
+<div class="nav-container">
+<div class="nav-logo">JM</div>
+<a href="index.html">Home</a>
+<a href="resume.pdf" class="resume-btn">Download CV</a>
+</div>
 </nav>
 
-<!-- HERO -->
 <section class="case-hero">
-    <h1>DRACO – In-Service Tank Cleaning Robot</h1>
-    <p>Robotics | Hazardous Systems | Mechanical System Design</p>
+<h1>DRACO – Tank Cleaning Robot</h1>
 </section>
 
-<!-- CONTENT -->
 <section class="case-container">
 
-    <!-- OVERVIEW -->
-    <div class="case-block">
-        <h2>📌 Project Overview</h2>
-        <p>
-        DRACO is an in-service robotic system developed for cleaning crude oil storage tanks without requiring shutdown. 
-        The system was designed to operate in ATEX Zone-0 hazardous environments, handling high-viscosity sludge while ensuring 
-        safety, reliability, and operational efficiency.
-        </p>
-        <p>
-        As Project Lead and Senior Mechanical Design Engineer, I led the complete lifecycle from concept development to 
-        prototype validation and field deployment.
-        </p>
-    </div>
+<div class="case-block">
+<h2>Overview</h2>
+<p>Robotic system for cleaning oil tanks without shutdown.</p>
+</div>
 
-    <!-- PROBLEM -->
-    <div class="case-block">
-        <h2>⚠️ Problem Statement</h2>
-        <p>
-        Conventional tank cleaning requires shutdown and manual entry, leading to high operational losses and safety risks. 
-        The challenge was to develop a system capable of operating inside live tanks with viscous sludge and explosive atmosphere.
-        </p>
-    </div>
-
-    <!-- CONSTRAINTS -->
-    <div class="case-block">
-        <h2>📐 Key Engineering Constraints</h2>
-        <ul>
-            <li>ATEX Zone-0 hazardous environment</li>
-            <li>Deployment through limited manhole access</li>
-            <li>High-viscosity sludge (>10,000 cSt)</li>
-            <li>Confined space navigation</li>
-            <li>Non-sparking and intrinsically safe design</li>
-        </ul>
-    </div>
-
-    <!-- CONCEPT -->
-    <div class="case-block">
-        <h2>🧠 Concept Development</h2>
-        <p>
-        Multiple concepts were evaluated including mechanical track-based systems and propeller-driven floating systems. 
-        Based on feasibility, adaptability, and operational efficiency in sludge environments, a propeller-based system 
-        was selected for development.
-        </p>
-    </div>
-
-    <!-- SYSTEM DESIGN -->
-    <div class="case-block">
-        <h2>⚙️ System Architecture</h2>
-        <ul>
-            <li>Propeller-based manoeuvring system</li>
-            <li>Hydraulic sludge suction system</li>
-            <li>Stirrer mechanism for sludge breakdown</li>
-            <li>Camera and monitoring system</li>
-            <li>Hydraulic power transmission</li>
-        </ul>
-    </div>
 <div class="case-gallery">
-    <img src="images/draco/system1.jpg" alt="System Overview">
-    <img src="images/draco/system2.jpg" alt="System CAD">
-    <img src="images/draco/system3.jpg" alt="Assembly">
+<img src="images/draco/system1.jpg">
+<img src="images/draco/system2.jpg">
+<img src="images/draco/system3.jpg">
 </div>
-    <!-- PUMP -->
-    <div class="case-block">
-        <h2>🛢️ Sludge Removal System</h2>
-        <p>
-        A custom hydraulic piston pump was developed to handle high-viscosity sludge under submerged conditions. 
-        The system ensured reliable suction and discharge using synchronized hydraulic actuation.
-        </p>
-    </div>
-    
+
+<div class="case-block">
+<h2>Pump System</h2>
+<p>Custom piston pump for sludge handling.</p>
+</div>
+
 <div class="case-gallery">
-    <img src="images/draco/pump1.jpg" alt="Pump CAD">
-    <img src="images/draco/pump2.jpg" alt="Pump Prototype">
-    <img src="images/draco/pump3.jpg" alt="Pump Testing">
+<img src="images/draco/pump1.jpg">
+<img src="images/draco/pump2.jpg">
+<img src="images/draco/pump3.jpg">
 </div>
-    <!-- PROPULSION -->
-    <div class="case-block">
-        <h2>🌀 Propulsion System</h2>
-        <p>
-        A multi-propeller configuration was developed for manoeuvrability within the tank. The design was optimized 
-        for thrust generation in viscous fluid environments and validated through both simulation and physical testing.
-        </p>
-    </div>
 
-    <div class="case-gallery">
-    <img src="images/draco/prop1.jpg" alt="Propeller CAD">
-    <img src="images/draco/prop2.jpg" alt="Testing Setup">
-    <img src="images/draco/prop3.jpg" alt="Prototype">
-</div>
-    
-    <!-- VALIDATION -->
-    <div class="case-block">
-        <h2>🔬 Engineering Validation</h2>
-        <p>
-        Structural integrity of the system was verified using Finite Element Analysis under worst-case operating pressures, 
-        ensuring safety factors above acceptable limits for continuous operation. Hydraulic modelling ensured synchronized 
-        actuation and efficient energy utilization.
-        </p>
-    </div>
-
-    <div class="case-gallery">
-    <img src="images/draco/test1.jpg" alt="Sludge Testing">
-    <img src="images/draco/test2.jpg" alt="Field Deployment">
-    <img src="images/draco/test3.jpg" alt="Tank Setup">
-</div>
-    
-    <!-- PROTOTYPE -->
-    <div class="case-block">
-        <h2>🏗️ Prototype Development</h2>
-        <p>
-        Multiple iterations of subsystems including pump, propulsion, and structural assemblies were developed and tested. 
-        In-house testing rigs were built for evaluating thrust, pumping efficiency, and system integration.
-        </p>
-    </div>
-
-    <!-- TESTING -->
-    <div class="case-block">
-        <h2>🧪 Field Testing & Validation</h2>
-        <p>
-        The system was tested in simulated and real sludge environments. Initial testing revealed limitations in propulsion 
-        under extreme viscosity, leading to improvements in power systems, cooling, and buoyancy design.
-        </p>
-    </div>
-    
 <div class="case-video">
-    <h3>🎥 Field Testing Video</h3>
-
-    <iframe 
-        src="https://www.youtube.com/embed/YOUR_VIDEO_ID"
-        frameborder="0"
-        allowfullscreen>
-    </iframe>
+<iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID" allowfullscreen></iframe>
 </div>
-    <!-- RESULTS -->
-    <div class="case-block">
-        <h2>📊 Key Outcomes</h2>
-        <ul>
-            <li>Enabled in-service tank cleaning</li>
-            <li>Reduced operational downtime significantly</li>
-            <li>Improved safety by eliminating manual entry</li>
-            <li>Validated system performance in real sludge conditions</li>
-        </ul>
-    </div>
-
-    <!-- ROLE -->
-    <div class="case-block">
-        <h2>👨‍🔧 My Role</h2>
-        <ul>
-            <li>Led system-level mechanical design and architecture</li>
-            <li>Designed pump, propulsion, and structural systems</li>
-            <li>Conducted simulation, analysis, and validation</li>
-            <li>Managed prototype development and field testing</li>
-            <li>Led cross-functional integration and delivery</li>
-        </ul>
-    </div>
 
 </section>
+
+<!-- MODAL -->
+<div id="imgModal" class="modal">
+<span class="close">&times;</span>
+<img class="modal-content" id="modalImg">
+</div>
+
+<script>
+const modal = document.getElementById("imgModal");
+const modalImg = document.getElementById("modalImg");
+
+document.querySelectorAll(".case-gallery img").forEach(img => {
+img.onclick = () => {
+modal.style.display="block";
+modalImg.src=img.src;
+};
+});
+
+document.querySelector(".close").onclick = () => {
+modal.style.display="none";
+};
+</script>
 
 </body>
 </html>
