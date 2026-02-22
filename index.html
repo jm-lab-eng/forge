@@ -10,6 +10,7 @@
 
 <body>
 
+<!-- FLOATING DARK MODE BUTTON -->
 <button id="theme-toggle">🌙</button>
 
 <nav class="navbar">
@@ -49,6 +50,7 @@
 
 <section class="container">
 
+    <!-- ABOUT -->
     <article class="card" id="about">
         <h2>👤 About Me</h2>
         <p>
@@ -59,6 +61,7 @@
         </p>
     </article>
 
+    <!-- SKILLS -->
     <article class="card" id="skills">
         <h2>🛠 Skills</h2>
         <p>
@@ -67,6 +70,7 @@
         </p>
     </article>
 
+    <!-- EDUCATION -->
     <article class="card" id="education">
         <h2>🎓 Education & Certifications</h2>
 
@@ -77,11 +81,13 @@
             <div>
                 <h4>B.Tech – Mechanical Engineering</h4>
                 <p><strong>2012 – 2016</strong></p>
+
                 <p>
                     <a href="https://gectcr.ac.in/" target="_blank" class="edu-link-main">
                         Government Engineering College, Thrissur
                     </a>
                 </p>
+
                 <p class="edu-desc">
                 Built a strong foundation in thermodynamics, mechanics, fluid systems, machine design, and manufacturing.
                 Developed practical exposure through labs and workshops, understanding how engineering concepts translate
@@ -95,11 +101,13 @@
             <div>
                 <h4>M.Des – Mechanical Systems</h4>
                 <p><strong>2017 – 2019</strong></p>
+
                 <p>
                     <a href="https://www.iiitdm.ac.in/" target="_blank" class="edu-link-main">
                         IIITDM Kancheepuram
                     </a>
                 </p>
+
                 <p class="edu-desc">
                 Specialized in product engineering, system-level design, mechatronics, FEA, and simulation-driven development.
                 The program was highly project-oriented, enabling development from concept to functional prototypes.
@@ -114,7 +122,12 @@
             <div>
                 <h4>Lean Six Sigma Black Belt</h4>
                 <p><strong>2025</strong></p>
-                <p><a href="https://imccertifications.com/" target="_blank">IMC</a></p>
+
+                <p>
+                    <a href="https://imccertifications.com/" target="_blank" class="edu-link-main">
+                        International Management Consultancy (IMC)
+                    </a>
+                </p>
 
                 <p class="edu-links">
                     <a href="https://imccertifications.com/certificates/C-2025-51795.pdf" target="_blank">IMC Certificate</a>
@@ -132,6 +145,7 @@
 
 </section>
 
+<!-- PROJECT -->
 <section class="projects-section" id="projects">
     <h2>🚀 Projects</h2>
 
@@ -148,16 +162,20 @@
 
 </section>
 
+<!-- THEME SCRIPT -->
 <script>
 const toggle = document.getElementById("theme-toggle");
 
 toggle.onclick = () => {
     document.body.classList.toggle("dark");
     localStorage.setItem("theme", document.body.classList.contains("dark") ? "dark" : "light");
+
+    toggle.innerText = document.body.classList.contains("dark") ? "☀️" : "🌙";
 };
 
 if(localStorage.getItem("theme") === "dark"){
     document.body.classList.add("dark");
+    toggle.innerText = "☀️";
 }
 </script>
 
