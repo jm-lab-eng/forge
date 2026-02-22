@@ -7,7 +7,26 @@
     <title>DRACO Case Study | Jithin Machath</title>
     <link rel="stylesheet" href="style.css">
 </head>
+<div id="imgModal" class="modal">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="modalImg">
+</div>
 
+<script>
+const modal = document.getElementById("imgModal");
+const modalImg = document.getElementById("modalImg");
+
+document.querySelectorAll(".case-gallery img").forEach(img => {
+    img.onclick = function(){
+        modal.style.display = "block";
+        modalImg.src = this.src;
+    }
+});
+
+document.querySelector(".close").onclick = function() {
+    modal.style.display = "none";
+};
+</script>
 <body>
 
 <!-- NAVBAR -->
