@@ -409,23 +409,29 @@ background:#1d4ed8;
 .project-timeline{
 
 display:flex;
-flex-wrap:wrap;
+justify-content:center;
 align-items:center;
-gap:6px;
+flex-wrap:wrap;
 
-margin-top:14px;
+gap:10px;
 
-font-size:13px;
-font-weight:500;
+margin-top:16px;
+margin-bottom:8px;
 
-color:#4338ca;
+font-size:14px;
+font-weight:600;
+
+color:#3730a3;
+text-align:center;
 
 }
 
+/* ARROWS */
+
 .project-timeline span{
 
-color:#64748b;
-padding:0 2px;
+color:#94a3b8;
+font-weight:500;
 
 }
 
@@ -436,7 +442,7 @@ color:#93c5fd;
 }
 
 body.dark .project-timeline span{
-color:#94a3b8;
+color:#64748b;
 }
 
 
