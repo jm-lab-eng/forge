@@ -300,27 +300,108 @@ body.dark .edu-link-main {
     color: #e2e8f0;
 }
 
-/* ================= PROJECT ================= */
-.project-link {
-    text-decoration: none;
-    color: inherit;
-}
 
-.case-btn {
-    display: inline-block;
-    margin-top: 10px;
-    background: #2563eb;
-    color: white;
-    padding: 6px 10px;
-    border-radius: 6px;
-    font-size: 13px;
-}
 
 /* ================= PROJECT SECTION ================= */
 .projects-section {
     max-width: 1100px;
     margin: 40px auto;
     padding: 0 40px;
+}
+
+/* ================= PROJECT CARD ================= */
+
+.project-link{
+text-decoration:none;
+color:inherit;
+}
+
+/* STORY TEXT */
+
+.project-story{
+margin-top:12px;
+font-size:14px;
+line-height:1.6;
+color:#475569;
+}
+
+body.dark .project-story{
+color:#cbd5f5;
+}
+
+/* DEVELOPMENT FLOW */
+
+.project-flow{
+display:flex;
+flex-wrap:wrap;
+gap:10px;
+margin-top:14px;
+}
+
+.project-flow span{
+
+font-size:12px;
+font-weight:500;
+
+background:#eef2ff;
+color:#4338ca;
+
+padding:6px 10px;
+border-radius:6px;
+
+transition:all .2s ease;
+}
+
+.project-flow span:hover{
+transform:translateY(-2px);
+background:#e0e7ff;
+}
+
+/* DARK MODE */
+
+body.dark .project-flow span{
+
+background:#1e293b;
+color:#93c5fd;
+
+}
+
+/* ROLE DESCRIPTION */
+
+.project-role{
+
+margin-top:14px;
+font-size:14px;
+line-height:1.6;
+color:#475569;
+
+}
+
+body.dark .project-role{
+color:#cbd5f5;
+}
+
+/* BUTTON */
+
+.case-btn{
+
+display:inline-block;
+margin-top:14px;
+
+background:#2563eb;
+color:white;
+
+padding:7px 12px;
+border-radius:6px;
+
+font-size:13px;
+
+transition:0.2s;
+
+}
+
+.case-btn:hover{
+background:#1d4ed8;
 }
 
 /* ================= CASE STUDY ================= */
@@ -471,46 +552,6 @@ body.dark .exp-meta {
 }
 
 
-.project-story {
-    margin-top: 10px;
-    color: #475569;
-}
-
-body.dark .project-story {
-    color: #cbd5f5;
-}
-
-/* FLOW TAGS */
-.project-flow {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-    margin-top: 12px;
-}
-
-.project-flow span {
-    font-size: 12px;
-    background: #eef2ff;
-    color: #4338ca;
-    padding: 4px 8px;
-    border-radius: 6px;
-}
-
-body.dark .project-flow span {
-    background: #1e293b;
-    color: #93c5fd;
-}
-
-/* ROLE */
-.project-role {
-    margin-top: 12px;
-    font-size: 14px;
-    color: #475569;
-}
-
-body.dark .project-role {
-    color: #cbd5f5;
-}
 
 /* ================= ENGINEERING TOOLS ================= */
 
