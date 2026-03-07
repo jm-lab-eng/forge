@@ -693,3 +693,14 @@ color:#93c5fd;
 body.dark .tech-stack span{
 color:#64748b;
 }
+
+.hazard-highlight{
+
+font-weight:600;
+color:#b91c1c;
+
+}
+
+body.dark .hazard-highlight{
+color:#f87171;
+}
