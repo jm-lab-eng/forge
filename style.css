@@ -585,6 +585,24 @@ article {
     }
 }
 
+/* CASE STUDY LIST SPACING */
+
+.case-block ul{
+padding-left:18px;
+}
+
+.case-block ul li{
+
+margin-bottom:12px;
+line-height:1.35;
+
+}
+
+.case-block p{
+margin-bottom:14px;
+}
+
+
 /* ACHIEVEMENTS */
 .achievements-list {
     padding-left: 18px;
