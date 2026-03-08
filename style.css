@@ -707,3 +707,36 @@ color:#b91c1c;
 body.dark .hazard-highlight{
 color:#f87171;
 }
+
+
+/* PROJECT SNAPSHOT */
+
+.project-snapshot h2{
+margin-bottom:16px;
+}
+
+.snapshot-grid{
+
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:16px;
+
+}
+
+.snapshot-item strong{
+
+display:block;
+font-size:13px;
+color:#64748b;
+margin-bottom:4px;
+
+}
+
+.snapshot-item p{
+margin:0;
+font-weight:500;
+}
+
+body.dark .snapshot-item strong{
+color:#94a3b8;
+}
