@@ -850,3 +850,46 @@ body.dark .project-note{
 opacity:0.85;
 }
 
+
+/* CASE HEADER */
+
+.case-header{
+
+margin-bottom:30px;
+
+}
+
+.case-header h1{
+
+font-size:36px;
+margin-bottom:6px;
+
+}
+
+.case-subtitle{
+
+font-size:18px;
+font-weight:500;
+color:#475569;
+
+margin-bottom:10px;
+
+}
+
+.case-summary{
+
+max-width:700px;
+margin-bottom:8px;
+
+}
+
+.project-note{
+
+font-size:13px;
+opacity:0.75;
+max-width:700px;
+
+}
+
+
+
