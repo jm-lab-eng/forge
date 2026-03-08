@@ -833,3 +833,20 @@ border-left-color:#60a5fa;
 body.dark .journey-step p{
 color:#cbd5f5;
 }
+
+
+.project-note{
+
+max-width:720px;
+margin:14px auto 0;
+
+font-size:13px;
+opacity:0.8;
+line-height:1.5;
+
+}
+
+body.dark .project-note{
+opacity:0.85;
+}
+
