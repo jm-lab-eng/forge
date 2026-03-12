@@ -945,3 +945,14 @@ body.dark .project-tag{
 background:#1e293b;
 color:#93c5fd;
 }
+
+
+.snapshot-item a{
+color:#2563eb;
+text-decoration:none;
+font-size:14px;
+}
+
+.snapshot-item a:hover{
+text-decoration:underline;
+}
