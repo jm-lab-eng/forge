@@ -1,159 +1,102 @@
-/* main.js — Jithin Machath Portfolio
-   Place this file in your repository root folder
-   alongside index.html, projects.html, style.css
-*/
+/* main.js — Jithin Machath Portfolio */
 
-// ─────────────────────────────────────────────
-// DARK MODE
-// The <head> inline script already sets data-theme
-// from localStorage before paint. Here we just
-// wire the button and keep the icon in sync.
-// ─────────────────────────────────────────────
-function applyTheme(theme) {
-  document.documentElement.setAttribute('data-theme', theme);
-  localStorage.setItem('jm-theme', theme);
-  var btn = document.getElementById('theme-toggle');
-  if (btn) {
-    btn.querySelector('.toggle-icon').textContent = (theme === 'dark') ? '○' : '◑';
-  }
-}
+// ── CURSOR ────────────────────────────────────────────────
+const cursor = document.getElementById('cursor');
+const follower = document.getElementById('cursor-follower');
 
-// ─────────────────────────────────────────────
-// ACCORDION
-// The expand-btn sits INSIDE the header div.
-// Without stopPropagation the click fires twice
-// (button → header), toggling open then closed.
-// ─────────────────────────────────────────────
-function initAccordion() {
-  document.querySelectorAll('.project-entry-header').forEach(function (header) {
-    header.addEventListener('click', function (e) {
-      // If the click came from the expand-btn itself, let it bubble
-      // to here (the header), but don't double-fire.
-      var entry = header.closest('.project-entry');
-      if (!entry) return;
+if (cursor && follower && window.matchMedia('(hover: hover)').matches) {
+  let mx = 0, my = 0, fx = 0, fy = 0;
 
-      var isOpen = entry.classList.contains('is-open');
-
-      // Close all entries
-      document.querySelectorAll('.project-entry.is-open').forEach(function (e) {
-        e.classList.remove('is-open');
-      });
-
-      // If this one was closed, open it now
-      if (!isOpen) {
-        entry.classList.add('is-open');
-      }
-    });
-  });
-
-  // Stop the expand-btn from firing a SECOND click on the header
-  document.querySelectorAll('.expand-btn').forEach(function (btn) {
-    btn.addEventListener('click', function (e) {
-      e.stopPropagation(); // don't let button bubble to header
-      var entry = btn.closest('.project-entry');
-      if (!entry) return;
-
-      var isOpen = entry.classList.contains('is-open');
-      document.querySelectorAll('.project-entry.is-open').forEach(function (e) {
-        e.classList.remove('is-open');
-      });
-      if (!isOpen) {
-        entry.classList.add('is-open');
-      }
-    });
-  });
-}
-
-// ─────────────────────────────────────────────
-// SCROLL REVEAL
-// ─────────────────────────────────────────────
-function initReveal() {
-  var els = document.querySelectorAll(
-    '.about-card, .skill-block, .edu-item, .timeline-item, .impact-item, .tool-chip'
-  );
-  els.forEach(function (el) { el.classList.add('reveal'); });
-
-  var obs = new IntersectionObserver(function (entries) {
-    entries.forEach(function (entry, i) {
-      if (entry.isIntersecting) {
-        setTimeout(function () { entry.target.classList.add('visible'); }, i * 60);
-        obs.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.1 });
-
-  els.forEach(function (el) { obs.observe(el); });
-}
-
-// ─────────────────────────────────────────────
-// NAVBAR SHADOW ON SCROLL
-// ─────────────────────────────────────────────
-function initNavbar() {
-  var navbar = document.getElementById('navbar');
-  if (!navbar) return;
-  window.addEventListener('scroll', function () {
-    navbar.style.boxShadow = window.scrollY > 10
-      ? '0 2px 20px rgba(0,0,0,.10)'
-      : 'none';
-  }, { passive: true });
-}
-
-// ─────────────────────────────────────────────
-// CUSTOM CURSOR (desktop / pointer device only)
-// ─────────────────────────────────────────────
-function initCursor() {
-  var cursor   = document.getElementById('cursor');
-  var follower = document.getElementById('cursor-follower');
-  if (!cursor || !follower) return;
-  if (!window.matchMedia('(hover: hover)').matches) return;
-
-  var mx = 0, my = 0, fx = 0, fy = 0;
-
-  document.addEventListener('mousemove', function (e) {
-    mx = e.clientX;
-    my = e.clientY;
+  document.addEventListener('mousemove', e => {
+    mx = e.clientX; my = e.clientY;
     cursor.style.left = mx + 'px';
     cursor.style.top  = my + 'px';
   });
 
-  (function tick() {
+  (function animFollower() {
     fx += (mx - fx) * 0.14;
     fy += (my - fy) * 0.14;
     follower.style.left = fx + 'px';
     follower.style.top  = fy + 'px';
-    requestAnimationFrame(tick);
+    requestAnimationFrame(animFollower);
   })();
 
-  document.querySelectorAll('a, button, .project-entry-header, .gallery-item').forEach(function (el) {
-    el.addEventListener('mouseenter', function () {
-      cursor.style.transform   = 'translate(-50%,-50%) scale(2)';
-      follower.style.opacity   = '0.8';
+  document.querySelectorAll('a, button, .project-entry-header, .gallery-item').forEach(el => {
+    el.addEventListener('mouseenter', () => {
+      cursor.style.transform = 'translate(-50%,-50%) scale(2)';
+      follower.style.opacity = '0.8';
     });
-    el.addEventListener('mouseleave', function () {
-      cursor.style.transform   = 'translate(-50%,-50%) scale(1)';
-      follower.style.opacity   = '0.5';
+    el.addEventListener('mouseleave', () => {
+      cursor.style.transform = 'translate(-50%,-50%) scale(1)';
+      follower.style.opacity = '0.5';
     });
   });
 }
 
-// ─────────────────────────────────────────────
-// BOOT — run everything once DOM is ready
-// ─────────────────────────────────────────────
-document.addEventListener('DOMContentLoaded', function () {
+// ── THEME ─────────────────────────────────────────────────
+const toggle = document.getElementById('theme-toggle');
 
-  // Sync theme button icon with whatever the <head> script already set
-  var currentTheme = document.documentElement.getAttribute('data-theme') || 'light';
-  var btn = document.getElementById('theme-toggle');
-  if (btn) {
-    btn.querySelector('.toggle-icon').textContent = (currentTheme === 'dark') ? '○' : '◑';
-    btn.addEventListener('click', function () {
-      var isDark = document.documentElement.getAttribute('data-theme') === 'dark';
-      applyTheme(isDark ? 'light' : 'dark');
-    });
+function applyTheme(theme) {
+  document.documentElement.setAttribute('data-theme', theme);
+  localStorage.setItem('jm-theme', theme);
+  if (toggle) {
+    toggle.querySelector('.toggle-icon').textContent = theme === 'dark' ? '○' : '◑';
+    toggle.setAttribute('aria-label', theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode');
   }
+}
 
-  initAccordion();
-  initReveal();
-  initNavbar();
-  initCursor();
-});
+// Apply saved theme (inline script in <head> handles first paint; this syncs the icon)
+const saved = localStorage.getItem('jm-theme');
+applyTheme(saved === 'dark' ? 'dark' : 'light');
+
+if (toggle) {
+  toggle.addEventListener('click', () => {
+    const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+    applyTheme(isDark ? 'light' : 'dark');
+  });
+}
+
+// ── NAVBAR SCROLL ─────────────────────────────────────────
+const navbar = document.getElementById('navbar');
+if (navbar) {
+  window.addEventListener('scroll', () => {
+    navbar.style.boxShadow = window.scrollY > 10
+      ? '0 2px 20px rgba(0,0,0,.08)'
+      : 'none';
+  }, { passive: true });
+}
+
+// ── SCROLL REVEAL ─────────────────────────────────────────
+const revealEls = document.querySelectorAll(
+  '.about-card, .skill-block, .edu-item, .timeline-item, .impact-item, .tool-chip, .project-entry'
+);
+revealEls.forEach(el => el.classList.add('reveal'));
+
+const revealObserver = new IntersectionObserver((entries) => {
+  entries.forEach((entry, i) => {
+    if (entry.isIntersecting) {
+      setTimeout(() => entry.target.classList.add('visible'), i * 60);
+      revealObserver.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.1 });
+
+revealEls.forEach(el => revealObserver.observe(el));
+
+// ── ACCORDION ─────────────────────────────────────────────
+function toggleProject(id) {
+  const el = document.getElementById(id);
+  if (!el) return;
+  const wasOpen = el.classList.contains('is-open');
+
+  // Close all open entries
+  document.querySelectorAll('.project-entry.is-open').forEach(e => e.classList.remove('is-open'));
+
+  // If it wasn't open, open it and scroll to it
+  if (!wasOpen) {
+    el.classList.add('is-open');
+    setTimeout(() => {
+      el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }, 80);
+  }
+}
