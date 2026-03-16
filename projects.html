@@ -17,36 +17,33 @@
 </head>
 <body>
 
-<!-- CURSOR -->
 <div class="cursor" id="cursor"></div>
 <div class="cursor-follower" id="cursor-follower"></div>
 
-<!-- THEME TOGGLE -->
 <button id="theme-toggle" aria-label="Switch to dark mode">
   <span class="toggle-icon">◑</span>
 </button>
 
-<!-- NAVBAR -->
 <nav class="navbar" id="navbar">
   <div class="nav-inner">
-    <a href="index.html" class="nav-brand">
-      <span class="brand-jm">JM</span>
-    </a>
-    <ul class="nav-links">
-      <li><a href="index.html#about"      class="nav-link">About</a></li>
-      <li><a href="index.html#experience" class="nav-link">Experience</a></li>
-      <li><a href="index.html#skills"     class="nav-link">Skills</a></li>
-      <li><a href="index.html#education"  class="nav-link">Education</a></li>
+    <a href="index.html" class="nav-brand"><span class="brand-jm">JM</span></a>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="index.html#about"      class="nav-link" onclick="closeMenu()">About</a></li>
+      <li><a href="index.html#experience" class="nav-link" onclick="closeMenu()">Experience</a></li>
+      <li><a href="index.html#skills"     class="nav-link" onclick="closeMenu()">Skills</a></li>
+      <li><a href="index.html#education"  class="nav-link" onclick="closeMenu()">Education</a></li>
       <li><a href="projects.html"         class="nav-link nav-link--active">Projects</a></li>
     </ul>
     <a href="resume.pdf" class="nav-cv" download>
       <span>CV</span>
       <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M6 1v7M3 5l3 3 3-3M1 10h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
     </a>
+    <button class="hamburger" id="hamburger" aria-label="Open menu" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </button>
   </div>
 </nav>
 
-<!-- PAGE HEADER -->
 <section class="page-header">
   <div class="page-header-inner">
     <a href="index.html" class="back-link">← Back to Portfolio</a>
@@ -61,11 +58,9 @@
   </div>
 </section>
 
-<!-- PROJECTS LIST -->
 <section class="projects-page">
   <div class="projects-page-inner">
 
-    <!-- DISCLAIMER -->
     <div class="global-disclaimer">
       <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="7" stroke="currentColor" stroke-width="1.2"/><path d="M8 7v4M8 5v.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
       <p>This page documents my engineering contributions from prior employment. Project details are based on publicly available information and personal professional experience. No confidential, proprietary, or internal information is disclosed.</p>
@@ -77,7 +72,6 @@
     <!-- ═══════════════════════════════════════════════════ -->
     <article class="project-entry is-open" id="proj-draco">
 
-      <!-- HEADER — always visible, click to toggle -->
       <div class="project-entry-header" onclick="toggleProject('proj-draco')">
         <div class="peh-left">
           <span class="proj-num">01</span>
@@ -95,10 +89,9 @@
         </div>
       </div>
 
-      <!-- BODY — collapses/expands -->
       <div class="project-entry-body">
 
-        <!-- ── 1. PROJECT NAME + REFERENCE ─────────────── -->
+        <!-- 1 · PROJECT NAME + REFERENCE -->
         <div class="proj-section proj-section--name-ref">
           <div class="proj-name-block">
             <h3 class="proj-full-name">DRACO — Robotic Tank Cleaning System</h3>
@@ -130,14 +123,10 @@
 
         <div class="proj-body-grid">
 
-          <!-- ── 2. APPLICATION AREA ─────────────────────── -->
+          <!-- 2 · APPLICATION AREA -->
           <div class="proj-section">
-            <div class="proj-section-label">
-              <span class="psec-dot"></span>Application Area
-            </div>
-            <p class="proj-section-desc">
-              Crude oil storage tank maintenance in active oil &amp; gas facilities — enabling in-service sludge removal without shutting down the tank or requiring personnel to enter hazardous confined spaces.
-            </p>
+            <div class="proj-section-label"><span class="psec-dot"></span>Application Area</div>
+            <p class="proj-section-desc">Crude oil storage tank maintenance in active oil &amp; gas facilities — enabling in-service sludge removal without shutting down the tank or requiring personnel to enter hazardous confined spaces.</p>
             <div class="app-tags">
               <span>Crude Oil Storage Tanks</span>
               <span>In-Service Maintenance</span>
@@ -147,11 +136,9 @@
             </div>
           </div>
 
-          <!-- ── 3. KEYWORDS ─────────────────────────────── -->
+          <!-- 3 · KEYWORDS -->
           <div class="proj-section">
-            <div class="proj-section-label">
-              <span class="psec-dot"></span>Keywords
-            </div>
+            <div class="proj-section-label"><span class="psec-dot"></span>Keywords</div>
             <div class="keyword-cloud">
               <span>Robotics</span>
               <span>Hydraulic Systems</span>
@@ -170,16 +157,12 @@
             </div>
           </div>
 
-          <!-- ── 4. MY ROLE & CONTRIBUTION ──────────────── -->
+          <!-- 4 · MY ROLE & CONTRIBUTION -->
           <div class="proj-section proj-section--full">
-            <div class="proj-section-label">
-              <span class="psec-dot"></span>My Role &amp; Contribution
-            </div>
+            <div class="proj-section-label"><span class="psec-dot"></span>My Role &amp; Contribution</div>
             <div class="role-grid">
               <div class="role-phase">
-                <div class="role-phase-title">
-                  <span class="phase-badge">Design Phase</span>
-                </div>
+                <div class="role-phase-title"><span class="phase-badge">Design Phase</span></div>
                 <ul class="contribution-list">
                   <li>Designed the piston pump subsystem for sludge mobilisation and pumping</li>
                   <li>Developed hydraulic circuit architecture; selected components suitable for hazardous environments</li>
@@ -190,9 +173,7 @@
                 </ul>
               </div>
               <div class="role-phase">
-                <div class="role-phase-title">
-                  <span class="phase-badge phase-badge--b">Development &amp; Validation Phase</span>
-                </div>
+                <div class="role-phase-title"><span class="phase-badge phase-badge--b">Development &amp; Validation Phase</span></div>
                 <ul class="contribution-list">
                   <li>Performed engineering risk assessments — ignition hazard analysis, DFMEA, Job Safety Analysis</li>
                   <li>Coordinated engineering activities across design, fabrication, and testing phases</li>
@@ -204,11 +185,9 @@
             </div>
           </div>
 
-          <!-- ── 5. KEY SKILLS ACHIEVED ─────────────────── -->
+          <!-- 5 · KEY SKILLS ACHIEVED -->
           <div class="proj-section proj-section--full">
-            <div class="proj-section-label">
-              <span class="psec-dot"></span>Key Skills Achieved
-            </div>
+            <div class="proj-section-label"><span class="psec-dot"></span>Key Skills Achieved</div>
             <div class="skills-achieved-grid">
               <div class="skill-achieved-item">
                 <span class="sa-icon">⚙</span>
@@ -255,7 +234,7 @@
             </div>
           </div>
 
-          <!-- ── 6. GALLERY ──────────────────────────────── -->
+          <!-- 6 · GALLERY -->
           <div class="proj-section proj-section--full">
             <div class="proj-section-label">
               <span class="psec-dot"></span>Gallery
@@ -279,25 +258,20 @@
     </article>
 
 
-    <!-- ═══════════════════════════════════════════════════
+    <!-- ═══════════════════════════════════════════════════════
     HOW TO ADD A NEW PROJECT
     ────────────────────────
     1. Copy the entire <article class="project-entry"> block above.
-    2. Change id="proj-draco" → e.g. id="proj-02"
-    3. Remove "is-open" from the article tag (or keep it to auto-expand).
-    4. Update: proj-num, proj-domain-tag, proj-title, proj-tagline,
-               proj-duration, proj-full-name, proj-one-liner,
-               proj-ref-link href + domain text,
-               dev-flow stages,
-               application area text + app-tags,
-               keyword-cloud spans,
-               role-phase content (rename phases as needed),
-               skills-achieved-grid items,
-               gallery images (or remove the Gallery section entirely).
-    5. Save. The accordion and lightbox wire up automatically.
-    ══════════════════════════════════════════════════════ -->
+    2. Change id="proj-draco" to a new id e.g. id="proj-02".
+    3. Remove "is-open" from the <article> tag (so it starts collapsed).
+    4. Update all content: proj-num, domain tag, title, tagline, duration,
+       full name, one-liner, ref link href, dev-flow stages,
+       application area + tags, keywords, role phases + lists,
+       skills achieved items, and gallery images.
+    5. To omit the gallery, simply delete that entire proj-section block.
+    6. Save — accordion and lightbox wire up automatically.
+    ════════════════════════════════════════════════════════ -->
 
-    <!-- UPCOMING PLACEHOLDER -->
     <div class="project-upcoming">
       <div class="upcoming-inner">
         <span class="upcoming-label">Coming Soon</span>
@@ -306,10 +280,9 @@
       </div>
     </div>
 
-  </div><!-- /projects-page-inner -->
+  </div>
 </section>
 
-<!-- FOOTER -->
 <footer class="footer">
   <div class="footer-inner">
     <span class="footer-brand">Jithin Machath</span>
@@ -318,7 +291,6 @@
   </div>
 </footer>
 
-<!-- LIGHTBOX -->
 <div class="lightbox" id="lightbox" onclick="closeLightbox()">
   <button class="lightbox-close" onclick="event.stopPropagation(); closeLightbox()">✕</button>
   <img class="lightbox-img" id="lightbox-img" src="" alt="">
@@ -326,7 +298,6 @@
 
 <script src="main.js"></script>
 <script>
-  // Gallery lightbox
   document.querySelectorAll('.gallery-item img').forEach(img => {
     img.addEventListener('click', e => {
       e.stopPropagation();
