@@ -1,340 +1,357 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jithin Machath | Mechanical Design Engineer</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jithin Machath — Mechanical Design Engineer</title>
+<link rel="stylesheet" href="style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
 </head>
-
 <body>
 
-<!-- FLOATING DARK MODE BUTTON -->
-<button id="theme-toggle">🌙</button>
+<!-- CURSOR -->
+<div class="cursor" id="cursor"></div>
+<div class="cursor-follower" id="cursor-follower"></div>
 
-<nav class="navbar">
-    <div class="nav-container">
-<a href="index.html" class="nav-logo">Jithin Machath</a>
+<!-- THEME TOGGLE -->
+<button id="theme-toggle" aria-label="Toggle theme">
+  <span class="toggle-icon">◑</span>
+</button>
 
-        <ul class="nav-links">
-            <li><a href="#about">About</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#education">Education</a></li>
-            <li><a href="#projects">Projects</a></li>
-        </ul>
-
-        <a href="resume.pdf" class="resume-btn" download>Download CV</a>
-    </div>
+<!-- NAVBAR -->
+<nav class="navbar" id="navbar">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-brand">
+      <span class="brand-jm">JM</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#about" class="nav-link">About</a></li>
+      <li><a href="#experience" class="nav-link">Experience</a></li>
+      <li><a href="#skills" class="nav-link">Skills</a></li>
+      <li><a href="#education" class="nav-link">Education</a></li>
+      <li><a href="projects.html" class="nav-link nav-link--cta">Projects</a></li>
+    </ul>
+    <a href="resume.pdf" class="nav-cv" download>
+      <span>CV</span>
+      <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M6 1v7M3 5l3 3 3-3M1 10h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </a>
+  </div>
 </nav>
 
-<header class="hero">
-    <div class="hero-container">
-
-        <!-- LEFT -->
-        <div class="hero-text">
-            <h1>Jithin Machath</h1>
-            <p class="role">Mechanical Design Engineer</p>
-            <p class="subtext">Industrial Systems | Product Development | R&D</p>
-        </div>
-
-        <!-- RIGHT (QUOTE) -->
-       <div class="hero-quote">
-    <p>
-        Great engineering is proven in the field,<br>
-        where it matters most.
+<!-- HERO -->
+<section class="hero" id="hero">
+  <div class="hero-bg-grid"></div>
+  <div class="hero-content">
+    <div class="hero-eyebrow">
+      <span class="eyebrow-dot"></span>
+      <span>Mechanical Design Engineer</span>
+    </div>
+    <h1 class="hero-name">
+      <span class="name-line">Jithin</span>
+      <span class="name-line name-line--italic">Machath</span>
+    </h1>
+    <p class="hero-descriptor">
+      Industrial Systems &nbsp;·&nbsp; Product Development &nbsp;·&nbsp; R&amp;D
     </p>
-</div>
-
+    <div class="hero-quote-block">
+      <span class="quote-mark">"</span>
+      <blockquote>Great engineering is proven in the field,<br>where it matters most.</blockquote>
     </div>
-</header>
-
-<!-- INTRO (cleaned, no quote duplication) -->
-<section class="intro">
-    <div class="intro-header">
-        <img src="images/profile.png" class="profile-img">
-
-        <div>
-            <h2>JITHIN MACHATH</h2>
-        </div>
+    <div class="hero-actions">
+      <a href="projects.html" class="btn-primary">View Projects</a>
+      <a href="#about" class="btn-ghost">About Me ↓</a>
     </div>
+  </div>
+  <div class="hero-side">
+    <div class="hero-stats">
+      <div class="stat-item">
+        <span class="stat-num">4+</span>
+        <span class="stat-label">Years Experience</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat-item">
+        <span class="stat-num">R&amp;D</span>
+        <span class="stat-label">Oil &amp; Gas Robotics</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat-item">
+        <span class="stat-num">⬡</span>
+        <span class="stat-label">Field Deployed</span>
+      </div>
+    </div>
+    <div class="hero-img-wrap">
+      <img src="images/profile.png" alt="Jithin Machath" class="hero-portrait">
+      <div class="portrait-ring"></div>
+    </div>
+  </div>
+  <div class="hero-scroll-hint">
+    <span>Scroll</span>
+    <div class="scroll-line"></div>
+  </div>
 </section>
 
-<section class="container">
-
-    <!-- ABOUT -->
-    <article class="card" id="about">
-        <h2>👤 About Me</h2>
-       <p>
-I am a Mechanical Design Engineer with over 4 years of experience building real-world, field-deployed systems in robotics and industrial environments. I enjoy taking ideas from concept to deployment—translating complex engineering challenges into practical, reliable, and manufacturable solutions.
-</p>
-
-<p>
-My work has involved system-level mechanical design, hydraulic integration, structural optimisation, and validation under actual operating conditions—ensuring safety, durability, and performance where it truly matters. I have worked across multiple robotic and industrial systems, with a strong focus on electro-mechanical integration, material selection, and design for manufacturability.
-</p>
-
-<p>
-I’m particularly drawn to solving problems with high constraints—tight spaces, harsh environments, and safety-critical requirements. Beyond design, I have coordinated cross-functional teams and supported engineering activities across design, fabrication, and testing phases, helping drive projects from development to deployment.
-</p>
-
-<p>
-I value clarity in design, simplicity in solutions, and systems that perform reliably in the field—not just on paper. My core tools include SolidWorks, AutoCAD, and ANSYS (FEA), which I use to support design, analysis, and validation in demanding applications.
-</p>
-    </article>
-
-    <!-- SKILLS -->
-    <article class="card" id="skills">
-        <h2>🛠 Skills</h2>
-        
-   <div class="skills-block">
-
-    <p><strong>Mechanical Design & CAD</strong><br>
-    3D Part & Assembly Modelling (SolidWorks), 2D Manufacturing Drawings & Detailing (Solidworks & AutoCAD), GD&T (Geometric Dimensioning & Tolerancing), Tolerance Stack-up Analysis, DFMA (Design for Manufacturing & Assembly), Material Selection, Sheet Metal & Weldment Assemblies Design</p>
-
-    <p><strong>Systems Engineering & Integration</strong><br>
-    Electro-mechanical System Integration, Hydraulic System Design & Integration, Component Selection & System Matching, System-Level Design Considerations, Cross-functional Design Collaboration</p>
-
-    <p><strong>Product Development</strong><br>
-    Concept Development, Product Design & Development, NPD Process Awareness, Prototype Development, Design Iteration & Optimization, Engineering Change Management (ECN/ECR), Product Lifecycle Management (PLM Awareness), Product Documentation & Design Release</p>
-
-    <p><strong>Analysis & Simulation (CAE)</strong><br>
-    FEA using ANSYS, Structural Analysis & Design Validation, Performance Evaluation, Engineering Calculations, DFMEA (Design Failure Mode & Effects Analysis), Risk Assessment</p>
-
-    <p><strong>Manufacturing & Industrialization</strong><br>
-    Manufacturing Processes Awareness (Machining, Fabrication, Welded Structures), DFM / DFA Implementation, BOM Management, Supplier & Vendor Coordination, Assembly Planning, Cost Optimization</p>
-
-    <p><strong>Testing, Validation & Prototyping</strong><br>
-    Prototype Build & Evaluation, Test Planning & Execution, Product Design Verification, Field Testing & Validation, System Verification & Acceptance, Commissioning Support</p>
-
-    <p><strong>Engineering Process & Quality</strong><br>
-    Root Cause Analysis (RCA), Process Flow Awareness, Quality & Reliability Engineering, SOP & Engineering Documentation, Compliance with Product Standards & Engineering Procedures</p>
-
-</div>
-    </article>
-
-    
-<!-- ENGINEERING TOOLS -->
-<article class="card" id="tools">
-
-<h2>⚙️ Engineering & Digital Tools</h2>
-
-<div class="tools-list">
-
-<div class="tool-item">
-<img src="images/icons/solidworks.png" class="tool-logo">
-<span>SolidWorks – 3D CAD, Assemblies, Manufacturing Drawings</span>
-</div>
-
-<div class="tool-item">
-<img src="images/icons/autocad.png" class="tool-logo">
-<span>AutoCAD – 2D Drafting & Layouts</span>
-</div>
-
-<div class="tool-item">
-<img src="images/icons/ansys.png" class="tool-logo">
-<span>ANSYS – FEA, Structural Analysis & Design Validation</span>
-</div>
-
-<div class="tool-item">
-<img src="images/icons/excel.png" class="tool-logo">
-<span>Microsoft Excel</span>
-</div>
-
-<div class="tool-item">
-<img src="images/icons/powerpoint.png" class="tool-logo">
-<span>Microsoft PowerPoint</span>
-</div>
-
-<div class="tool-item">
-<img src="images/icons/word.png" class="tool-logo">
-<span>Microsoft Word</span>
-</div>
-
-</div>
-
-</article>
-
-    
-<!-- ACHIEVEMENTS -->
-<article class="card" id="impact">
-    <h2>🚀 Impact</h2>
-
-    <p>
-    Over the course of my work, I’ve focused on delivering systems that perform reliably in real operating environments. This has led to measurable improvements in system efficiency, reliability, and validation effectiveness across multiple projects.
-    </p>
-
-    <p>
-    Through system-level design optimization and iterative development, I’ve contributed to improving overall performance and reducing testing overhead, while ensuring designs remain practical and manufacturable.
-    </p>
-
-    <p>
- My work has also contributed to innovation initiatives including supporting patent disclosures, participating in engineering design reviews, and helping establish structured SOP frameworks within the R&D environment to improve development consistency.
-    </p>
-
-</article>
+<!-- ABOUT -->
+<section class="section" id="about">
+  <div class="section-inner">
+    <div class="section-label">
+      <span class="label-num">01</span>
+      <span>About</span>
+    </div>
+    <div class="about-grid">
+      <div class="about-text">
+        <h2 class="section-title">Building systems that perform <em>where it counts</em></h2>
+        <p>I'm a Mechanical Design Engineer with over 4 years of experience building real-world, field-deployed systems in robotics and industrial environments. I take ideas from concept to deployment — translating complex engineering challenges into practical, reliable, and manufacturable solutions.</p>
+        <p>My work spans system-level mechanical design, hydraulic integration, structural optimisation, and validation under actual operating conditions — ensuring safety, durability, and performance where it truly matters.</p>
+        <p>I'm particularly drawn to high-constraint problems: tight spaces, harsh environments, and safety-critical requirements. Beyond design, I coordinate cross-functional teams and support engineering activities across design, fabrication, and testing phases.</p>
+      </div>
+      <div class="about-cards">
+        <div class="about-card">
+          <div class="about-card-icon">⚙</div>
+          <h4>System-Level Design</h4>
+          <p>Electro-mechanical integration, hydraulic systems, structural optimisation</p>
+        </div>
+        <div class="about-card">
+          <div class="about-card-icon">🔬</div>
+          <h4>Analysis & Validation</h4>
+          <p>FEA, DFMEA, engineering calculations, prototype testing</p>
+        </div>
+        <div class="about-card">
+          <div class="about-card-icon">🏭</div>
+          <h4>Field Deployment</h4>
+          <p>Real-world validation in oil & gas and hazardous environments</p>
+        </div>
+        <div class="about-card">
+          <div class="about-card-icon">📋</div>
+          <h4>Project Leadership</h4>
+          <p>Cross-functional coordination across design, fab, and testing</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
 <!-- EXPERIENCE -->
-<article class="card" id="experience">
-    <h2>💼 Experience</h2>
+<section class="section section--alt" id="experience">
+  <div class="section-inner">
+    <div class="section-label">
+      <span class="label-num">02</span>
+      <span>Experience</span>
+    </div>
+    <h2 class="section-title">Work History</h2>
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="timeline-meta">
+          <span class="timeline-year">2021 – 2025</span>
+        </div>
+        <div class="timeline-content">
+          <h3>Mechanical Design Engineer → Engineering Project Lead</h3>
+          <p class="timeline-org">Robotics & Industrial Systems</p>
+          <p>Contributed across the full product development lifecycle — from concept evaluation through engineering design, prototype development, testing, and field validation.</p>
+          <p>Led development of the DRACO tank-cleaning robot: designed the piston pump subsystem, hydraulic system architecture, engineering analysis and validation. Later served as Engineering Project Lead, guiding technical execution and coordinating engineering activities across design, testing, and deployment.</p>
+          <div class="timeline-tags">
+            <span>Hydraulic Systems</span>
+            <span>Oil &amp; Gas</span>
+            <span>Hazardous Area Engineering</span>
+            <span>Project Leadership</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="impact-strip">
+      <div class="impact-item">
+        <span class="impact-label">Patent Disclosures</span>
+        <span class="impact-desc">Supported innovation documentation</span>
+      </div>
+      <div class="impact-item">
+        <span class="impact-label">SOP Frameworks</span>
+        <span class="impact-desc">Established R&D development standards</span>
+      </div>
+      <div class="impact-item">
+        <span class="impact-label">Field Validation</span>
+        <span class="impact-desc">Deployed systems in live industrial environments</span>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <div class="exp-block">
+<!-- SKILLS -->
+<section class="section" id="skills">
+  <div class="section-inner">
+    <div class="section-label">
+      <span class="label-num">03</span>
+      <span>Skills</span>
+    </div>
+    <h2 class="section-title">Technical Expertise</h2>
+    <div class="skills-grid">
 
-        <h3>Building Systems from Concept to Field Deployment</h3>
-        <p class="exp-meta">Robotics & Industrial Systems | 2021 – 2025 </p>
+      <div class="skill-block">
+        <h4>Mechanical Design & CAD</h4>
+        <ul>
+          <li>3D Part & Assembly Modelling — SolidWorks</li>
+          <li>2D Manufacturing Drawings — SolidWorks & AutoCAD</li>
+          <li>GD&T, Tolerance Stack-up Analysis</li>
+          <li>DFMA, Material Selection</li>
+          <li>Sheet Metal & Weldment Design</li>
+        </ul>
+      </div>
 
-        <p>
-My work focuses on developing robotic and industrial systems designed to operate in demanding real-world environments. I have contributed across the product development lifecycle including concept evaluation, engineering design, prototype development, testing, and field validation.
-</p>
+      <div class="skill-block">
+        <h4>Systems Engineering</h4>
+        <ul>
+          <li>Electro-mechanical System Integration</li>
+          <li>Hydraulic System Design & Integration</li>
+          <li>Component Selection & System Matching</li>
+          <li>Cross-functional Design Collaboration</li>
+        </ul>
+      </div>
 
-<p>
-During the development of the DRACO tank-cleaning robot, I worked on subsystem design including piston pump development and hydraulic system integration, along with engineering analysis and validation activities.
-</p>
+      <div class="skill-block">
+        <h4>Analysis & Simulation</h4>
+        <ul>
+          <li>FEA using ANSYS</li>
+          <li>Structural Analysis & Design Validation</li>
+          <li>Engineering Calculations & Performance Eval</li>
+          <li>DFMEA, Risk Assessment</li>
+        </ul>
+      </div>
 
-<p>
-As the project progressed, I later served as Engineering Project Lead during key development phases, guiding technical execution, coordinating engineering activities across design, testing, and deployment stages, and supporting decision-making during system validation and field implementation.
-</p>
+      <div class="skill-block">
+        <h4>Product Development</h4>
+        <ul>
+          <li>Concept Development & NPD Process</li>
+          <li>Prototype Development & Iteration</li>
+          <li>Engineering Change Management (ECN/ECR)</li>
+          <li>PLM Awareness, BOM Management</li>
+        </ul>
+      </div>
 
-<p>
-This experience provided exposure to oil & gas operational environments, hazardous area engineering considerations, and the practical challenges of deploying complex mechanical systems in safety-critical industrial applications.
-</p>
+      <div class="skill-block">
+        <h4>Manufacturing & Industrialization</h4>
+        <ul>
+          <li>DFM / DFA Implementation</li>
+          <li>Supplier & Vendor Coordination</li>
+          <li>Assembly Planning, Cost Optimization</li>
+        </ul>
+      </div>
+
+      <div class="skill-block">
+        <h4>Process & Quality</h4>
+        <ul>
+          <li>Root Cause Analysis (RCA)</li>
+          <li>Quality & Reliability Engineering</li>
+          <li>SOP & Engineering Documentation</li>
+          <li>Lean Six Sigma Black Belt</li>
+        </ul>
+      </div>
 
     </div>
 
-</article>
-
-
-    
-    <!-- EDUCATION -->
-    <article class="card" id="education">
-        <h2>🎓 Education & Certifications</h2>
-
-        <h3 class="sub-heading">Education</h3>
-
-        <div class="edu-block">
-            <img src="images/gec.jpg" class="edu-logo">
-            <div>
-                <h4>B.Tech – Mechanical Engineering</h4>
-                <p><strong>2012 – 2016</strong></p>
-
-                <p>
-                    <a href="https://gectcr.ac.in/" target="_blank" class="edu-link-main">
-                        Government Engineering College, Thrissur
-                    </a>
-                </p>
-
-                <p class="edu-desc">
-                Built a strong foundation in thermodynamics, mechanics, fluid systems, machine design, and manufacturing.
-                Developed practical exposure through labs and workshops, understanding how engineering concepts translate
-                into real-world applications. Also gained awareness of operations and system-level decision-making.
-                </p>
-            </div>
+    <!-- TOOLS ROW -->
+    <div class="tools-row">
+      <h4 class="tools-heading">Tools & Software</h4>
+      <div class="tools-chips">
+        <div class="tool-chip">
+          <img src="images/icons/solidworks.png" alt="SolidWorks">
+          <span>SolidWorks</span>
         </div>
-
-        <div class="edu-block">
-            <img src="images/iiitdm.png" class="edu-logo">
-            <div>
-                <h4>M.Des – Mechanical Systems</h4>
-                <p><strong>2017 – 2019</strong></p>
-
-                <p>
-                    <a href="https://www.iiitdm.ac.in/" target="_blank" class="edu-link-main">
-                        IIITDM Kancheepuram
-                    </a>
-                </p>
-
-                <p class="edu-desc">
-                Specialized in product engineering, system-level design, mechatronics, FEA, and simulation-driven development.
-                The program was highly project-oriented, enabling development from concept to functional prototypes.
-                </p>
-            </div>
+        <div class="tool-chip">
+          <img src="images/icons/autocad.png" alt="AutoCAD">
+          <span>AutoCAD</span>
         </div>
-
-        <h3 class="sub-heading">Certifications</h3>
-
-        <div class="edu-block">
-            <img src="images/imc.png" class="edu-logo">
-            <div>
-                <h4>Lean Six Sigma Black Belt</h4>
-                <p><strong>2025</strong></p>
-
-                <p>
-                    <a href="https://imccertifications.com/" target="_blank" class="edu-link-main">
-                        International Management Consultancy (IMC)
-                    </a>
-                </p>
-
-                <p class="edu-links">
-                    <a href="https://imccertifications.com/certificates/C-2025-51795.pdf" target="_blank">IMC Certificate</a>
-                    <a href="https://imccertifications.com/certificates/CPD-C-2025-51795.pdf" target="_blank">CPD Certificate</a>
-                </p>
-
-                <p class="edu-desc">
-                Applied DMAIC methodology and statistical tools for process improvement, focusing on root cause analysis,
-                quality enhancement, and efficiency optimization.
-                </p>
-            </div>
+        <div class="tool-chip">
+          <img src="images/icons/ansys.png" alt="ANSYS">
+          <span>ANSYS</span>
         </div>
-
-    </article>
-
+        <div class="tool-chip">
+          <img src="images/icons/excel.png" alt="Excel">
+          <span>Excel</span>
+        </div>
+        <div class="tool-chip">
+          <img src="images/icons/powerpoint.png" alt="PowerPoint">
+          <span>PowerPoint</span>
+        </div>
+        <div class="tool-chip">
+          <img src="images/icons/word.png" alt="Word">
+          <span>Word</span>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
 
-<!-- PROJECT -->
-<section class="projects-section" id="projects">
+<!-- EDUCATION -->
+<section class="section section--alt" id="education">
+  <div class="section-inner">
+    <div class="section-label">
+      <span class="label-num">04</span>
+      <span>Education</span>
+    </div>
+    <h2 class="section-title">Academic Background</h2>
+    <div class="edu-timeline">
 
-<h2>🚀 Engineering Projects</h2>
+      <div class="edu-item">
+        <div class="edu-logo-wrap">
+          <img src="images/iiitdm.png" alt="IIITDM" class="edu-logo">
+        </div>
+        <div class="edu-body">
+          <div class="edu-year">2017 – 2019</div>
+          <h3>M.Des – Mechanical Systems</h3>
+          <a href="https://www.iiitdm.ac.in/" target="_blank" class="edu-inst">IIITDM Kancheepuram</a>
+          <p>Specialized in product engineering, system-level design, mechatronics, FEA, and simulation-driven development. Highly project-oriented program enabling concept-to-prototype development.</p>
+        </div>
+      </div>
 
-<a href="project-1.html" class="project-link">
+      <div class="edu-item">
+        <div class="edu-logo-wrap">
+          <img src="images/gec.jpg" alt="GEC Thrissur" class="edu-logo">
+        </div>
+        <div class="edu-body">
+          <div class="edu-year">2012 – 2016</div>
+          <h3>B.Tech – Mechanical Engineering</h3>
+          <a href="https://gectcr.ac.in/" target="_blank" class="edu-inst">Government Engineering College, Thrissur</a>
+          <p>Strong foundation in thermodynamics, mechanics, fluid systems, machine design, and manufacturing. Practical lab exposure translating theory into real-world applications.</p>
+        </div>
+      </div>
 
-<article class="project-card">
+      <div class="edu-item edu-item--cert">
+        <div class="edu-logo-wrap">
+          <img src="images/imc.png" alt="IMC" class="edu-logo">
+        </div>
+        <div class="edu-body">
+          <div class="edu-year">2025</div>
+          <h3>Lean Six Sigma Black Belt</h3>
+          <a href="https://imccertifications.com/" target="_blank" class="edu-inst">International Management Consultancy (IMC)</a>
+          <p>Applied DMAIC methodology and statistical tools for process improvement, root cause analysis, quality enhancement, and efficiency optimization.</p>
+          <div class="cert-links">
+            <a href="https://imccertifications.com/certificates/C-2025-51795.pdf" target="_blank">IMC Certificate ↗</a>
+            <a href="https://imccertifications.com/certificates/CPD-C-2025-51795.pdf" target="_blank">CPD Certificate ↗</a>
+          </div>
+        </div>
+      </div>
 
-<span class="project-tag">Featured Engineering Project</span>
-
-<h3>Robotic Tank Cleaning System</h3>
-
-<p class="project-story">
-Engineering development of a robotic system designed for in-service cleaning of crude oil storage tanks in hazardous oil & gas environments.
-</p>
-
-<div class="project-flow">
-
-<span>Feasibility</span>
-<span>Concept Design</span>
-<span>Subsystem Design</span>
-<span>Prototype Development</span>
-<span>Testing</span>
-<span>Field Validation</span>
-
-</div>
-
-<p class="project-role">
-Designed the piston pump subsystem and hydraulic system architecture, performed engineering analysis, and later coordinated engineering execution during prototype development and testing phases.
-</p>
-
-<span class="case-btn">View Project →</span>
-
-</article>
-
-</a>
-
+    </div>
+  </div>
 </section>
 
-<!-- THEME SCRIPT -->
-<script>
-const toggle = document.getElementById("theme-toggle");
+<!-- CTA -->
+<section class="section section--cta">
+  <div class="section-inner cta-inner">
+    <h2>Explore Engineering Projects</h2>
+    <p>Detailed case studies of real-world system development — from hydraulics to field deployment.</p>
+    <a href="projects.html" class="btn-primary btn-primary--large">View All Projects →</a>
+  </div>
+</section>
 
-toggle.onclick = () => {
-    document.body.classList.toggle("dark");
-    localStorage.setItem("theme", document.body.classList.contains("dark") ? "dark" : "light");
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-inner">
+    <span class="footer-brand">Jithin Machath</span>
+    <span class="footer-role">Mechanical Design Engineer</span>
+    <a href="https://research.genrobotics.com/draco/" target="_blank" class="footer-link">Project Reference ↗</a>
+  </div>
+</footer>
 
-    toggle.innerText = document.body.classList.contains("dark") ? "☀️" : "🌙";
-};
-
-if(localStorage.getItem("theme") === "dark"){
-    document.body.classList.add("dark");
-    toggle.innerText = "☀️";
-}
-</script>
-
+<script src="main.js"></script>
 </body>
 </html>
