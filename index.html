@@ -7,36 +7,28 @@
 <link rel="stylesheet" href="style.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
-<!-- Prevent flash of wrong theme -->
 <script>
   (function(){
     var t = localStorage.getItem('jm-theme');
-    if(t === 'dark') document.documentElement.setAttribute('data-theme','dark');
+    if (t === 'dark') document.documentElement.setAttribute('data-theme','dark');
   })();
 </script>
 </head>
 <body>
 
-<!-- CURSOR -->
 <div class="cursor" id="cursor"></div>
 <div class="cursor-follower" id="cursor-follower"></div>
 
-<!-- THEME TOGGLE -->
-<button id="theme-toggle" aria-label="Toggle theme">
-  <span class="toggle-icon">◑</span>
-</button>
+<button id="theme-toggle" aria-label="Toggle theme"><span class="toggle-icon">◑</span></button>
 
-<!-- NAVBAR -->
 <nav class="navbar" id="navbar">
   <div class="nav-inner">
-    <a href="index.html" class="nav-brand">
-      <span class="brand-jm">JM</span>
-    </a>
+    <a href="index.html" class="nav-brand"><span class="brand-jm">JM</span></a>
     <ul class="nav-links">
-      <li><a href="#about" class="nav-link">About</a></li>
-      <li><a href="#experience" class="nav-link">Experience</a></li>
-      <li><a href="#skills" class="nav-link">Skills</a></li>
-      <li><a href="#education" class="nav-link">Education</a></li>
+      <li><a href="#about"        class="nav-link">About</a></li>
+      <li><a href="#experience"   class="nav-link">Experience</a></li>
+      <li><a href="#skills"       class="nav-link">Skills</a></li>
+      <li><a href="#education"    class="nav-link">Education</a></li>
       <li><a href="projects.html" class="nav-link nav-link--cta">Projects</a></li>
     </ul>
     <a href="resume.pdf" class="nav-cv" download>
@@ -50,17 +42,12 @@
 <section class="hero" id="hero">
   <div class="hero-bg-grid"></div>
   <div class="hero-content">
-    <div class="hero-eyebrow">
-      <span class="eyebrow-dot"></span>
-      <span>Mechanical Design Engineer</span>
-    </div>
+    <div class="hero-eyebrow"><span class="eyebrow-dot"></span><span>Mechanical Design Engineer</span></div>
     <h1 class="hero-name">
       <span class="name-line">Jithin</span>
       <span class="name-line name-line--italic">Machath</span>
     </h1>
-    <p class="hero-descriptor">
-      Industrial Systems &nbsp;·&nbsp; Product Development &nbsp;·&nbsp; R&amp;D
-    </p>
+    <p class="hero-descriptor">Industrial Systems &nbsp;·&nbsp; Product Development &nbsp;·&nbsp; R&amp;D</p>
     <div class="hero-quote-block">
       <span class="quote-mark">"</span>
       <blockquote>Great engineering is proven in the field,<br>where it matters most.</blockquote>
@@ -72,39 +59,24 @@
   </div>
   <div class="hero-side">
     <div class="hero-stats">
-      <div class="stat-item">
-        <span class="stat-num">4+</span>
-        <span class="stat-label">Years Experience</span>
-      </div>
+      <div class="stat-item"><span class="stat-num">4+</span><span class="stat-label">Years Experience</span></div>
       <div class="stat-divider"></div>
-      <div class="stat-item">
-        <span class="stat-num">R&amp;D</span>
-        <span class="stat-label">Oil &amp; Gas Robotics</span>
-      </div>
+      <div class="stat-item"><span class="stat-num">R&amp;D</span><span class="stat-label">Oil &amp; Gas Robotics</span></div>
       <div class="stat-divider"></div>
-      <div class="stat-item">
-        <span class="stat-num">⬡</span>
-        <span class="stat-label">Field Deployed</span>
-      </div>
+      <div class="stat-item"><span class="stat-num">⬡</span><span class="stat-label">Field Deployed</span></div>
     </div>
     <div class="hero-img-wrap">
       <img src="images/profile.png" alt="Jithin Machath" class="hero-portrait">
       <div class="portrait-ring"></div>
     </div>
   </div>
-  <div class="hero-scroll-hint">
-    <span>Scroll</span>
-    <div class="scroll-line"></div>
-  </div>
+  <div class="hero-scroll-hint"><span>Scroll</span><div class="scroll-line"></div></div>
 </section>
 
 <!-- ABOUT -->
 <section class="section" id="about">
   <div class="section-inner">
-    <div class="section-label">
-      <span class="label-num">01</span>
-      <span>About</span>
-    </div>
+    <div class="section-label"><span class="label-num">01</span><span>About</span></div>
     <div class="about-grid">
       <div class="about-text">
         <h2 class="section-title">Building systems that perform <em>where it counts</em></h2>
@@ -113,26 +85,10 @@
         <p>I'm particularly drawn to high-constraint problems: tight spaces, harsh environments, and safety-critical requirements. Beyond design, I coordinate cross-functional teams and support engineering activities across design, fabrication, and testing phases.</p>
       </div>
       <div class="about-cards">
-        <div class="about-card">
-          <div class="about-card-icon">⚙</div>
-          <h4>System-Level Design</h4>
-          <p>Electro-mechanical integration, hydraulic systems, structural optimisation</p>
-        </div>
-        <div class="about-card">
-          <div class="about-card-icon">🔬</div>
-          <h4>Analysis & Validation</h4>
-          <p>FEA, DFMEA, engineering calculations, prototype testing</p>
-        </div>
-        <div class="about-card">
-          <div class="about-card-icon">🏭</div>
-          <h4>Field Deployment</h4>
-          <p>Real-world validation in oil & gas and hazardous environments</p>
-        </div>
-        <div class="about-card">
-          <div class="about-card-icon">📋</div>
-          <h4>Project Leadership</h4>
-          <p>Cross-functional coordination across design, fab, and testing</p>
-        </div>
+        <div class="about-card"><div class="about-card-icon">⚙</div><h4>System-Level Design</h4><p>Electro-mechanical integration, hydraulic systems, structural optimisation</p></div>
+        <div class="about-card"><div class="about-card-icon">🔬</div><h4>Analysis &amp; Validation</h4><p>FEA, DFMEA, engineering calculations, prototype testing</p></div>
+        <div class="about-card"><div class="about-card-icon">🏭</div><h4>Field Deployment</h4><p>Real-world validation in oil &amp; gas and hazardous environments</p></div>
+        <div class="about-card"><div class="about-card-icon">📋</div><h4>Project Leadership</h4><p>Cross-functional coordination across design, fab, and testing</p></div>
       </div>
     </div>
   </div>
@@ -141,21 +97,16 @@
 <!-- EXPERIENCE -->
 <section class="section section--alt" id="experience">
   <div class="section-inner">
-    <div class="section-label">
-      <span class="label-num">02</span>
-      <span>Experience</span>
-    </div>
+    <div class="section-label"><span class="label-num">02</span><span>Experience</span></div>
     <h2 class="section-title">Work History</h2>
     <div class="timeline">
       <div class="timeline-item">
-        <div class="timeline-meta">
-          <span class="timeline-year">2021 – 2025</span>
-        </div>
+        <div class="timeline-meta"><span class="timeline-year">2021 – 2025</span></div>
         <div class="timeline-content">
           <h3>Mechanical Design Engineer → Engineering Project Lead</h3>
-          <p class="timeline-org">Genrobotics &nbsp;·&nbsp; Robotics &amp; Industrial Systems</p>
+          <p class="timeline-org"><a href="https://www.genrobotics.com/" target="_blank" class="org-link">Genrobotics</a> &nbsp;·&nbsp; Robotics &amp; Industrial Systems</p>
           <p>Contributed across the full product development lifecycle — from concept evaluation through engineering design, prototype development, testing, and field validation.</p>
-          <p>Led development of the DRACO tank-cleaning robot: designed the piston pump subsystem, hydraulic system architecture, engineering analysis and validation. Later served as Engineering Project Lead, guiding technical execution and coordinating engineering activities across design, testing, and deployment.</p>
+          <p>During development of the DRACO tank-cleaning robot, designed the piston pump subsystem, hydraulic system architecture, and conducted engineering analysis and validation. Later served as Engineering Project Lead, guiding technical execution and coordinating engineering activities across design, testing, and deployment.</p>
           <div class="timeline-tags">
             <span>Hydraulic Systems</span>
             <span>Oil &amp; Gas</span>
@@ -166,18 +117,9 @@
       </div>
     </div>
     <div class="impact-strip">
-      <div class="impact-item">
-        <span class="impact-label">Patent Disclosures</span>
-        <span class="impact-desc">Supported innovation documentation</span>
-      </div>
-      <div class="impact-item">
-        <span class="impact-label">SOP Frameworks</span>
-        <span class="impact-desc">Established R&D development standards</span>
-      </div>
-      <div class="impact-item">
-        <span class="impact-label">Field Validation</span>
-        <span class="impact-desc">Deployed systems in live industrial environments</span>
-      </div>
+      <div class="impact-item"><span class="impact-label">Patent Disclosures</span><span class="impact-desc">Supported innovation documentation</span></div>
+      <div class="impact-item"><span class="impact-label">SOP Frameworks</span><span class="impact-desc">Established R&amp;D development standards</span></div>
+      <div class="impact-item"><span class="impact-label">Field Validation</span><span class="impact-desc">Deployed systems in live industrial environments</span></div>
     </div>
   </div>
 </section>
@@ -185,103 +127,25 @@
 <!-- SKILLS -->
 <section class="section" id="skills">
   <div class="section-inner">
-    <div class="section-label">
-      <span class="label-num">03</span>
-      <span>Skills</span>
-    </div>
+    <div class="section-label"><span class="label-num">03</span><span>Skills</span></div>
     <h2 class="section-title">Technical Expertise</h2>
     <div class="skills-grid">
-
-      <div class="skill-block">
-        <h4>Mechanical Design & CAD</h4>
-        <ul>
-          <li>3D Part & Assembly Modelling — SolidWorks</li>
-          <li>2D Manufacturing Drawings — SolidWorks & AutoCAD</li>
-          <li>GD&T, Tolerance Stack-up Analysis</li>
-          <li>DFMA, Material Selection</li>
-          <li>Sheet Metal & Weldment Design</li>
-        </ul>
-      </div>
-
-      <div class="skill-block">
-        <h4>Systems Engineering</h4>
-        <ul>
-          <li>Electro-mechanical System Integration</li>
-          <li>Hydraulic System Design & Integration</li>
-          <li>Component Selection & System Matching</li>
-          <li>Cross-functional Design Collaboration</li>
-        </ul>
-      </div>
-
-      <div class="skill-block">
-        <h4>Analysis & Simulation</h4>
-        <ul>
-          <li>FEA using ANSYS</li>
-          <li>Structural Analysis & Design Validation</li>
-          <li>Engineering Calculations & Performance Eval</li>
-          <li>DFMEA, Risk Assessment</li>
-        </ul>
-      </div>
-
-      <div class="skill-block">
-        <h4>Product Development</h4>
-        <ul>
-          <li>Concept Development & NPD Process</li>
-          <li>Prototype Development & Iteration</li>
-          <li>Engineering Change Management (ECN/ECR)</li>
-          <li>PLM Awareness, BOM Management</li>
-        </ul>
-      </div>
-
-      <div class="skill-block">
-        <h4>Manufacturing & Industrialization</h4>
-        <ul>
-          <li>DFM / DFA Implementation</li>
-          <li>Supplier & Vendor Coordination</li>
-          <li>Assembly Planning, Cost Optimization</li>
-        </ul>
-      </div>
-
-      <div class="skill-block">
-        <h4>Process & Quality</h4>
-        <ul>
-          <li>Root Cause Analysis (RCA)</li>
-          <li>Quality & Reliability Engineering</li>
-          <li>SOP & Engineering Documentation</li>
-          <li>Lean Six Sigma Black Belt</li>
-        </ul>
-      </div>
-
+      <div class="skill-block"><h4>Mechanical Design &amp; CAD</h4><ul><li>3D Part &amp; Assembly Modelling — SolidWorks</li><li>2D Manufacturing Drawings — SolidWorks &amp; AutoCAD</li><li>GD&amp;T, Tolerance Stack-up Analysis</li><li>DFMA, Material Selection</li><li>Sheet Metal &amp; Weldment Design</li></ul></div>
+      <div class="skill-block"><h4>Systems Engineering</h4><ul><li>Electro-mechanical System Integration</li><li>Hydraulic System Design &amp; Integration</li><li>Component Selection &amp; System Matching</li><li>Cross-functional Design Collaboration</li></ul></div>
+      <div class="skill-block"><h4>Analysis &amp; Simulation</h4><ul><li>FEA using ANSYS</li><li>Structural Analysis &amp; Design Validation</li><li>Engineering Calculations &amp; Performance Eval</li><li>DFMEA, Risk Assessment</li></ul></div>
+      <div class="skill-block"><h4>Product Development</h4><ul><li>Concept Development &amp; NPD Process</li><li>Prototype Development &amp; Iteration</li><li>Engineering Change Management (ECN/ECR)</li><li>PLM Awareness, BOM Management</li></ul></div>
+      <div class="skill-block"><h4>Manufacturing &amp; Industrialization</h4><ul><li>DFM / DFA Implementation</li><li>Supplier &amp; Vendor Coordination</li><li>Assembly Planning, Cost Optimization</li></ul></div>
+      <div class="skill-block"><h4>Process &amp; Quality</h4><ul><li>Root Cause Analysis (RCA)</li><li>Quality &amp; Reliability Engineering</li><li>SOP &amp; Engineering Documentation</li><li>Lean Six Sigma Black Belt</li></ul></div>
     </div>
-
-    <!-- TOOLS ROW -->
     <div class="tools-row">
-      <h4 class="tools-heading">Tools & Software</h4>
+      <h4 class="tools-heading">Tools &amp; Software</h4>
       <div class="tools-chips">
-        <div class="tool-chip">
-          <img src="images/icons/solidworks.png" alt="SolidWorks">
-          <span>SolidWorks</span>
-        </div>
-        <div class="tool-chip">
-          <img src="images/icons/autocad.png" alt="AutoCAD">
-          <span>AutoCAD</span>
-        </div>
-        <div class="tool-chip">
-          <img src="images/icons/ansys.png" alt="ANSYS">
-          <span>ANSYS</span>
-        </div>
-        <div class="tool-chip">
-          <img src="images/icons/excel.png" alt="Excel">
-          <span>Excel</span>
-        </div>
-        <div class="tool-chip">
-          <img src="images/icons/powerpoint.png" alt="PowerPoint">
-          <span>PowerPoint</span>
-        </div>
-        <div class="tool-chip">
-          <img src="images/icons/word.png" alt="Word">
-          <span>Word</span>
-        </div>
+        <div class="tool-chip"><img src="images/icons/solidworks.png" alt="SolidWorks"><span>SolidWorks</span></div>
+        <div class="tool-chip"><img src="images/icons/autocad.png"    alt="AutoCAD"><span>AutoCAD</span></div>
+        <div class="tool-chip"><img src="images/icons/ansys.png"      alt="ANSYS"><span>ANSYS</span></div>
+        <div class="tool-chip"><img src="images/icons/excel.png"      alt="Excel"><span>Excel</span></div>
+        <div class="tool-chip"><img src="images/icons/powerpoint.png" alt="PowerPoint"><span>PowerPoint</span></div>
+        <div class="tool-chip"><img src="images/icons/word.png"       alt="Word"><span>Word</span></div>
       </div>
     </div>
   </div>
@@ -290,17 +154,11 @@
 <!-- EDUCATION -->
 <section class="section section--alt" id="education">
   <div class="section-inner">
-    <div class="section-label">
-      <span class="label-num">04</span>
-      <span>Education</span>
-    </div>
+    <div class="section-label"><span class="label-num">04</span><span>Education</span></div>
     <h2 class="section-title">Academic Background</h2>
     <div class="edu-timeline">
-
       <div class="edu-item">
-        <div class="edu-logo-wrap">
-          <img src="images/iiitdm.png" alt="IIITDM" class="edu-logo">
-        </div>
+        <div class="edu-logo-wrap"><img src="images/iiitdm.png" alt="IIITDM" class="edu-logo"></div>
         <div class="edu-body">
           <div class="edu-year">2017 – 2019</div>
           <h3>M.Des – Mechanical Systems</h3>
@@ -308,11 +166,8 @@
           <p>Specialized in product engineering, system-level design, mechatronics, FEA, and simulation-driven development. Highly project-oriented program enabling concept-to-prototype development.</p>
         </div>
       </div>
-
       <div class="edu-item">
-        <div class="edu-logo-wrap">
-          <img src="images/gec.jpg" alt="GEC Thrissur" class="edu-logo">
-        </div>
+        <div class="edu-logo-wrap"><img src="images/gec.jpg" alt="GEC Thrissur" class="edu-logo"></div>
         <div class="edu-body">
           <div class="edu-year">2012 – 2016</div>
           <h3>B.Tech – Mechanical Engineering</h3>
@@ -320,23 +175,19 @@
           <p>Strong foundation in thermodynamics, mechanics, fluid systems, machine design, and manufacturing. Practical lab exposure translating theory into real-world applications.</p>
         </div>
       </div>
-
       <div class="edu-item edu-item--cert">
-        <div class="edu-logo-wrap">
-          <img src="images/imc.png" alt="IMC" class="edu-logo">
-        </div>
+        <div class="edu-logo-wrap"><img src="images/imc.png" alt="IMC" class="edu-logo"></div>
         <div class="edu-body">
           <div class="edu-year">2025</div>
           <h3>Lean Six Sigma Black Belt</h3>
           <a href="https://imccertifications.com/" target="_blank" class="edu-inst">International Management Consultancy (IMC)</a>
           <p>Applied DMAIC methodology and statistical tools for process improvement, root cause analysis, quality enhancement, and efficiency optimization.</p>
           <div class="cert-links">
-            <a href="https://imccertifications.com/certificates/C-2025-51795.pdf" target="_blank">IMC Certificate ↗</a>
+            <a href="https://imccertifications.com/certificates/C-2025-51795.pdf"     target="_blank">IMC Certificate ↗</a>
             <a href="https://imccertifications.com/certificates/CPD-C-2025-51795.pdf" target="_blank">CPD Certificate ↗</a>
           </div>
         </div>
       </div>
-
     </div>
   </div>
 </section>
