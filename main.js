@@ -111,3 +111,28 @@ document.addEventListener('DOMContentLoaded', () => {
     img.addEventListener('dragstart', e => e.preventDefault());
   });
 });
+
+// ── MOBILE MENU ───────────────────────────────────────────
+function toggleMenu() {
+  const links = document.getElementById('nav-links');
+  const btn   = document.getElementById('hamburger');
+  if (!links || !btn) return;
+  const isOpen = links.classList.toggle('is-open');
+  btn.classList.toggle('is-open', isOpen);
+  btn.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
+}
+
+function closeMenu() {
+  const links = document.getElementById('nav-links');
+  const btn   = document.getElementById('hamburger');
+  if (!links || !btn) return;
+  links.classList.remove('is-open');
+  btn.classList.remove('is-open');
+  btn.setAttribute('aria-label', 'Open menu');
+}
+
+// Close menu when clicking outside
+document.addEventListener('click', e => {
+  const navbar = document.getElementById('navbar');
+  if (navbar && !navbar.contains(e.target)) closeMenu();
+});
