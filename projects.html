@@ -1,247 +1,265 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Engineering Project – Robotic Tank Cleaning System | Jithin Machath</title>
-
+<title>Engineering Projects — Jithin Machath</title>
 <link rel="stylesheet" href="style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
 </head>
-
 <body>
 
+<!-- CURSOR -->
+<div class="cursor" id="cursor"></div>
+<div class="cursor-follower" id="cursor-follower"></div>
+
+<!-- THEME TOGGLE -->
+<button id="theme-toggle" aria-label="Toggle theme">
+  <span class="toggle-icon">◑</span>
+</button>
+
 <!-- NAVBAR -->
-<nav class="navbar">
-<div class="nav-container">
-
-<a href="index.html" class="nav-logo">Jithin Machath</a>
-
-<a href="index.html">← Back</a>
-
-</div>
+<nav class="navbar" id="navbar">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-brand">
+      <span class="brand-jm">JM</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html#about" class="nav-link">About</a></li>
+      <li><a href="index.html#experience" class="nav-link">Experience</a></li>
+      <li><a href="index.html#skills" class="nav-link">Skills</a></li>
+      <li><a href="index.html#education" class="nav-link">Education</a></li>
+      <li><a href="projects.html" class="nav-link nav-link--active">Projects</a></li>
+    </ul>
+    <a href="resume.pdf" class="nav-cv" download>
+      <span>CV</span>
+      <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M6 1v7M3 5l3 3 3-3M1 10h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </a>
+  </div>
 </nav>
 
-
-<!-- PROJECT HEADER -->
-
-<section class="case-header">
-
-<h1>Robotic Tank Cleaning System</h1>
-
-<p class="case-subtitle">
-Engineering development of a robotic system designed for in-service cleaning of crude oil storage tanks in hazardous environments.
-</p>
-
+<!-- PAGE HEADER -->
+<section class="page-header">
+  <div class="page-header-inner">
+    <a href="index.html" class="back-link">← Back to Portfolio</a>
+    <div class="page-header-text">
+      <div class="section-label" style="margin-bottom:16px">
+        <span class="label-num">Projects</span>
+        <span>Engineering Case Studies</span>
+      </div>
+      <h1 class="page-title">Real Systems.<br><em>Real Environments.</em></h1>
+      <p class="page-subtitle">A record of engineering work across robotics, hydraulics, and industrial system development — from concept to field deployment.</p>
+    </div>
+  </div>
 </section>
 
-  
-<!-- PROJECT SNAPSHOT-->
-  
-<div class="case-container">
-
-<div class="case-block project-snapshot">
-
-<h2>Project Snapshot</h2>
-
-<div class="snapshot-grid">
-
-<div class="snapshot-item">
-<strong>Domain</strong>
-<p>Oil & Gas Robotics</p>
-</div>
-
-<div class="snapshot-item">
-<strong>Role</strong>
-<p>Mechanical Design Engineer & Engineering Project Lead</p>
-</div>
-
-<div class="snapshot-item">
-<strong>Duration</strong>
-<p>~3 Year Development Program</p>
-</div>
-
-<div class="snapshot-item">
-<strong>Key Work</strong>
-<p>Piston Pump Design • Hydraulic System Development</p>
-</div>
-
-<div class="snapshot-item">
-<strong>Project Reference</strong>
-<p>
-<a href="https://research.genrobotics.com/draco/" target="_blank">
-Official Project Page
-</a>
-</p>
-</div>
-
-</div>
-
-</div>
-
-  <div class="case-container">
-
-<div class="project-disclaimer">
-
-<p>
-This page summarizes my engineering contributions during the development of the system. 
-Information presented here is based on publicly available details and personal experience, 
-and does not disclose confidential or proprietary project information.
-</p>
-
-</div>
-
-</div>
-
-<!-- PROJECT CONTENT -->
-
-<section class="case-container">
-
-
-<!-- PROJECT OVERVIEW -->
-
-<div class="case-block">
-
-<h2>Project</h2>
-
-<p>
-Development of a robotic system capable of mobilizing and removing sludge from crude oil storage tanks without requiring tank shutdown.  
-The system was designed for operation in hazardous oil & gas environments while improving operational safety and reducing manual tank entry.
-</p>
-
-</div>
-
-
-
-<!-- APPLICATION -->
-
-<div class="case-block">
-
-<h2>Applications</h2>
-
-<ul>
-
-<li>Crude oil storage tank maintenance</li>
-
-<li>Sludge mobilisation and pumping</li>
-
-<li>Reducing manual entry into hazardous tanks</li>
-
-<li>Improving operational safety in oil & gas facilities</li>
-
-</ul>
-
-</div>
-
-
-
-<!-- MY ENGINEERING CONTRIBUTIONS -->
-
-<div class="case-block">
-
-<h2>My Engineering Contributions</h2>
-
-<ul>
-
-<li>Designed the piston pump subsystem used for sludge mobilisation and pumping.</li>
-
-<li>Developed hydraulic circuit architecture and selected hydraulic components suitable for hazardous environments.</li>
-
-<li>Performed hydraulic calculations including flow estimation, pressure losses, and system performance analysis.</li>
-
-<li>Conducted structural analysis to support subsystem design decisions.</li>
-
-<li>Designed inductive proximity-sensor based position sensing for hydraulic cylinder control.</li>
-
-<li>Participated in DFMA / DFX design reviews and recommended design improvements.</li>
-
-<li>Performed engineering risk assessments including ignition hazard analysis, DFMEA and Job Safety Analysis.</li>
-
-<li>Later coordinated engineering activities during prototype development, testing, and field validation phases.</li>
-
-</ul>
-
-</div>
-
-
-
-<!-- LEARNINGS -->
-
-<div class="case-block">
-
-<h2>Key Learnings</h2>
-
-<ul>
-
-<li>Exposure to engineering development for oil & gas industry applications.</li>
-
-<li>Understanding of hazardous area engineering and explosion protection principles.</li>
-
-<li>Practical experience in hydraulic system design and subsystem integration.</li>
-
-<li>Engineering decision making through iterative prototyping and testing.</li>
-
-<li>Working with multidisciplinary teams across design, fabrication and testing.</li>
-
-</ul>
-
-</div>
-
-
-
-<!-- TOOLS -->
-
-<div class="case-block">
-
-<h2>Tools & Technologies</h2>
-
-<p class="tech-stack">
-
-SolidWorks  
-<span>•</span>
-
-ANSYS (FEA)  
-<span>•</span>
-
-Hydraulic System Design  
-<span>•</span>
-
-Engineering Calculations  
-<span>•</span>
-
-Prototype Development  
-<span>•</span>
-
-Testing & Validation
-
-</p>
-
-</div>
-
-
-
-<!-- GALLERY -->
-
-<div class="case-block">
-
-<h2>Project Gallery</h2>
-
-<div class="case-gallery">
-
-<img src="images/draco/system1.jpg" alt="system concept">
-
-<img src="images/draco/system2.jpg" alt="prototype system">
-
-<img src="images/draco/system3.jpg" alt="testing setup">
-
-</div>
-
-</div>
-
-
+<!-- PROJECTS LIST -->
+<section class="projects-page">
+  <div class="projects-page-inner">
+
+    <!-- DISCLAIMER -->
+    <div class="global-disclaimer">
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="7" stroke="currentColor" stroke-width="1.2"/><path d="M8 7v4M8 5v.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
+      <p>Information presented is based on publicly available details and personal experience, and does not disclose confidential or proprietary project information.</p>
+    </div>
+
+    <!-- ======================================= -->
+    <!-- PROJECT 01: DRACO TANK CLEANING ROBOT   -->
+    <!-- ======================================= -->
+    <article class="project-entry" id="proj-draco">
+      <div class="project-entry-header" onclick="toggleProject('proj-draco')">
+        <div class="project-entry-left">
+          <span class="proj-num">01</span>
+          <div>
+            <div class="proj-tag">Featured · Oil &amp; Gas Robotics</div>
+            <h2 class="proj-title">Robotic Tank Cleaning System</h2>
+            <p class="proj-tagline">In-service sludge removal from crude oil storage tanks in hazardous environments.</p>
+          </div>
+        </div>
+        <div class="project-entry-right">
+          <div class="proj-meta-chips">
+            <span>~3 Year Program</span>
+            <span>Mechanical Design Lead</span>
+          </div>
+          <button class="expand-btn" aria-label="Expand project">
+            <span class="expand-icon">+</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="project-entry-body">
+
+        <!-- SNAPSHOT STRIP -->
+        <div class="snapshot-strip">
+          <div class="snap">
+            <strong>Domain</strong>
+            <span>Oil &amp; Gas Robotics</span>
+          </div>
+          <div class="snap">
+            <strong>Role</strong>
+            <span>Mechanical Design Engineer → Engineering Project Lead</span>
+          </div>
+          <div class="snap">
+            <strong>Duration</strong>
+            <span>~3 Year Development Program</span>
+          </div>
+          <div class="snap">
+            <strong>Reference</strong>
+            <span><a href="https://research.genrobotics.com/draco/" target="_blank">Official Project Page ↗</a></span>
+          </div>
+        </div>
+
+        <!-- DEVELOPMENT FLOW -->
+        <div class="dev-flow">
+          <span>Feasibility</span>
+          <svg class="flow-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span>Concept Design</span>
+          <svg class="flow-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span>Subsystem Design</span>
+          <svg class="flow-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span>Prototype Development</span>
+          <svg class="flow-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span>Testing</span>
+          <svg class="flow-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span>Field Validation</span>
+        </div>
+
+        <!-- CONTENT GRID -->
+        <div class="project-detail-grid">
+
+          <div class="detail-col">
+            <div class="detail-block">
+              <h4>Project Overview</h4>
+              <p>Development of a robotic system capable of mobilizing and removing sludge from crude oil storage tanks without requiring tank shutdown. The system was designed for operation in hazardous oil & gas environments while improving operational safety and reducing manual tank entry.</p>
+            </div>
+            <div class="detail-block">
+              <h4>Applications</h4>
+              <ul>
+                <li>Crude oil storage tank maintenance</li>
+                <li>Sludge mobilisation and pumping</li>
+                <li>Reducing manual entry into hazardous tanks</li>
+                <li>Improving operational safety in oil &amp; gas facilities</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="detail-col">
+            <div class="detail-block">
+              <h4>My Engineering Contributions</h4>
+              <ul>
+                <li>Designed the piston pump subsystem for sludge mobilisation and pumping</li>
+                <li>Developed hydraulic circuit architecture and selected components for hazardous environments</li>
+                <li>Performed hydraulic calculations: flow estimation, pressure losses, system performance analysis</li>
+                <li>Conducted structural analysis to support subsystem design decisions</li>
+                <li>Designed inductive proximity-sensor based position sensing for hydraulic cylinder control</li>
+                <li>Participated in DFMA / DFX design reviews and recommended design improvements</li>
+                <li>Performed engineering risk assessments: ignition hazard analysis, DFMEA, Job Safety Analysis</li>
+                <li>Coordinated engineering activities during prototype development, testing, and field validation</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="detail-col">
+            <div class="detail-block">
+              <h4>Key Learnings</h4>
+              <ul>
+                <li>Exposure to engineering development for oil &amp; gas industry applications</li>
+                <li>Understanding of hazardous area engineering and explosion protection principles</li>
+                <li>Practical experience in hydraulic system design and subsystem integration</li>
+                <li>Engineering decision making through iterative prototyping and testing</li>
+                <li>Working with multidisciplinary teams across design, fabrication and testing</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="detail-col">
+            <div class="detail-block">
+              <h4>Tools &amp; Technologies</h4>
+              <div class="detail-tools">
+                <span>SolidWorks</span>
+                <span>ANSYS (FEA)</span>
+                <span>Hydraulic System Design</span>
+                <span>Engineering Calculations</span>
+                <span>Prototype Development</span>
+                <span>Testing &amp; Validation</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- GALLERY -->
+        <div class="project-gallery">
+          <h4>Project Gallery</h4>
+          <div class="gallery-grid">
+            <div class="gallery-item">
+              <img src="images/draco/system1.jpg" alt="System concept" loading="lazy">
+            </div>
+            <div class="gallery-item">
+              <img src="images/draco/system2.jpg" alt="Prototype system" loading="lazy">
+            </div>
+            <div class="gallery-item">
+              <img src="images/draco/system3.jpg" alt="Testing setup" loading="lazy">
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </article>
+
+
+    <!-- ======================================= -->
+    <!-- PROJECT 02: PLACEHOLDER — ADD MORE HERE -->
+    <!-- ======================================= -->
+    <!-- 
+      To add a new project, copy the <article class="project-entry"> block above,
+      change the id (e.g. id="proj-02"), update the proj-num, title, tagline,
+      snapshot, content blocks, gallery images, and flow steps.
+      The accordion open/close is handled automatically by the JS below.
+    -->
+
+    <!-- EMPTY STATE — UPCOMING PROJECT PLACEHOLDER -->
+    <div class="project-upcoming">
+      <div class="upcoming-inner">
+        <span class="upcoming-label">Coming Soon</span>
+        <h3>More Projects</h3>
+        <p>Additional case studies are being documented and will be added here.</p>
+      </div>
+    </div>
+
+  </div>
 </section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-inner">
+    <span class="footer-brand">Jithin Machath</span>
+    <span class="footer-role">Mechanical Design Engineer</span>
+    <a href="https://research.genrobotics.com/draco/" target="_blank" class="footer-link">Project Reference ↗</a>
+  </div>
+</footer>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox" onclick="closeLightbox()">
+  <button class="lightbox-close">✕</button>
+  <img class="lightbox-img" id="lightbox-img" src="" alt="">
+</div>
+
+<script src="main.js"></script>
+<script>
+// Gallery lightbox
+document.querySelectorAll('.gallery-item img').forEach(img => {
+  img.addEventListener('click', e => {
+    e.stopPropagation();
+    document.getElementById('lightbox-img').src = img.src;
+    document.getElementById('lightbox').classList.add('active');
+  });
+});
+function closeLightbox() {
+  document.getElementById('lightbox').classList.remove('active');
+}
+</script>
 
 </body>
-
 </html>
