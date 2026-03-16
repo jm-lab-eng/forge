@@ -100,3 +100,14 @@ function toggleProject(id) {
     }, 80);
   }
 }
+
+// ── IMAGE PROTECTION ──────────────────────────────────────
+document.addEventListener('contextmenu', e => {
+  if (e.target.tagName === 'IMG') e.preventDefault();
+});
+document.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('img').forEach(img => {
+    img.setAttribute('draggable', 'false');
+    img.addEventListener('dragstart', e => e.preventDefault());
+  });
+});
