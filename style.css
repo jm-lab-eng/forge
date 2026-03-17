@@ -780,3 +780,23 @@ h1,h2,h3,h4 { line-height: 1.2; }
   .proj-title { font-size: 20px; }
   .skills-achieved-grid { grid-template-columns: 1fr; }
 }
+
+/* ── GALLERY PLACEHOLDER ─────────────────────────────────── */
+.gallery-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 40px;
+  background: var(--surface-2);
+  border: 1.5px dashed var(--border);
+  border-radius: var(--radius);
+  color: var(--text-3);
+  text-align: center;
+}
+.gallery-placeholder p {
+  font-size: 13px;
+  margin: 0;
+}
+
