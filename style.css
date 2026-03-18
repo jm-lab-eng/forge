@@ -1,49 +1,51 @@
 /* ============================================================
    JITHIN MACHATH — Portfolio CSS
-   Aesthetic: Refined Industrial · Warm Neutral · Engineering
+   Aesthetic: Iridescent · Blue-Violet · Engineering
    ============================================================ */
 
 @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap');
 
 /* ── TOKENS ──────────────────────────────────────────────── */
 :root {
-  /* Peacock Light */
-  --bg:          #F0F7F7;
-  --bg-alt:      #E3F0EF;
+  /* Iridescent Light — blue-violet-lavender */
+  --bg:          #F2F2FA;
+  --bg-alt:      #EAEAF5;
   --surface:     #FFFFFF;
-  --surface-2:   #EAF4F4;
-  --border:      #B2D4D4;
-  --text:        #0D2B2B;
-  --text-2:      #2E5C5C;
-  --text-3:      #6A9A9A;
-  --accent:      #007A7A;
-  --accent-2:    #C9A84C;
-  --accent-glow: rgba(0,122,122,.14);
+  --surface-2:   #EDEDF8;
+  --border:      #C8C8E8;
+  --text:        #0F0F2A;
+  --text-2:      #3A3A6A;
+  --text-3:      #7A7AAA;
+  --accent:      #4B3FD8;
+  --accent-2:    #A855C8;
+  --accent-glow: rgba(75,63,216,.14);
+  --grad-hero:   linear-gradient(135deg, #3B5BE0 0%, #5548C8 40%, #9B4FBF 75%, #C45BA8 100%);
   --font-display:'DM Serif Display', Georgia, serif;
   --font-body:   'DM Sans', sans-serif;
   --font-mono:   'Space Mono', monospace;
   --radius:      10px;
   --radius-lg:   18px;
-  --shadow:      0 2px 16px rgba(13,43,43,.08);
-  --shadow-md:   0 6px 32px rgba(13,43,43,.13);
+  --shadow:      0 2px 16px rgba(15,15,42,.08);
+  --shadow-md:   0 6px 32px rgba(15,15,42,.14);
   --transition:  0.28s cubic-bezier(.4,0,.2,1);
 }
 
 [data-theme="dark"] {
-  /* Peacock Dark */
-  --bg:          #071818;
-  --bg-alt:      #0D2222;
-  --surface:     #102C2C;
-  --surface-2:   #153535;
-  --border:      #1E4A4A;
-  --text:        #E0F4F4;
-  --text-2:      #8FCFCF;
-  --text-3:      #4A8A8A;
-  --accent:      #00C8C8;
-  --accent-2:    #D4A843;
-  --accent-glow: rgba(0,200,200,.18);
-  --shadow:      0 2px 16px rgba(0,0,0,.35);
-  --shadow-md:   0 6px 32px rgba(0,0,0,.5);
+  /* Iridescent Dark */
+  --bg:          #08081A;
+  --bg-alt:      #0E0E24;
+  --surface:     #12122C;
+  --surface-2:   #181838;
+  --border:      #252550;
+  --text:        #EEEEff;
+  --text-2:      #9898CC;
+  --text-3:      #5555AA;
+  --accent:      #7B6EFF;
+  --accent-2:    #C87FE8;
+  --accent-glow: rgba(123,110,255,.2);
+  --grad-hero:   linear-gradient(135deg, #1A2A80 0%, #2E2080 40%, #5A1A7A 75%, #7A1A60 100%);
+  --shadow:      0 2px 16px rgba(0,0,0,.4);
+  --shadow-md:   0 6px 32px rgba(0,0,0,.6);
 }
 
 /* ── RESET ───────────────────────────────────────────────── */
@@ -57,6 +59,21 @@ body {
   transition: background var(--transition), color var(--transition);
   overflow-x: hidden;
 }
+
+/* Iridescent ambient glow — top of page */
+body::before {
+  content: '';
+  position: fixed;
+  top: -200px; left: -10%;
+  width: 120%; height: 700px;
+  background: var(--grad-hero);
+  opacity: 0.06;
+  filter: blur(80px);
+  pointer-events: none;
+  z-index: 0;
+  border-radius: 50%;
+}
+[data-theme="dark"] body::before { opacity: 0.18; }
 img { max-width: 100%; display: block; }
 a { color: inherit; }
 h1,h2,h3,h4 { line-height: 1.2; }
@@ -164,11 +181,21 @@ h1,h2,h3,h4 { line-height: 1.2; }
 }
 .hero-bg-grid {
   position: fixed; inset: 0; pointer-events: none; z-index: 0;
-  background-image:
-    linear-gradient(var(--border) 1px, transparent 1px),
-    linear-gradient(90deg, var(--border) 1px, transparent 1px);
-  background-size: 60px 60px;
-  opacity: 0.35;
+}
+/* Iridescent full-page background layer */
+.hero-bg-grid::before {
+  content: '';
+  position: absolute; inset: 0;
+  background: var(--grad-hero);
+  opacity: 0.07;
+}
+/* Grain texture overlay */
+.hero-bg-grid::after {
+  content: '';
+  position: absolute; inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.4'/%3E%3C/svg%3E");
+  background-size: 200px 200px;
+  opacity: 0.025;
 }
 .hero-content {
   position: relative; z-index: 1;
@@ -191,7 +218,7 @@ h1,h2,h3,h4 { line-height: 1.2; }
 }
 @keyframes pulse {
   0%,100% { box-shadow: 0 0 0 0 var(--accent-glow); }
-  50% { box-shadow: 0 0 0 7px transparent; }
+  50% { box-shadow: 0 0 0 7px transparent; } /* iridescent pulse */
 }
 .hero-name {
   font-family: var(--font-display);
@@ -305,7 +332,7 @@ h1,h2,h3,h4 { line-height: 1.2; }
 /* ── SECTIONS ────────────────────────────────────────────── */
 .section { padding: 100px 40px; }
 .section--alt { background: var(--bg-alt); }
-.section--cta { background: var(--text); color: var(--bg); }
+.section--cta { background: linear-gradient(135deg, #0F0F2A 0%, #1E1050 60%, #2A1040 100%); color: var(--bg); }
 .section--cta h2 { font-family: var(--font-display); font-size: 36px; color: var(--bg); margin-bottom: 12px; }
 .section--cta p { color: var(--bg-alt); margin-bottom: 28px; }
 .section-inner { max-width: 1160px; margin: auto; }
