@@ -7,41 +7,43 @@
 
 /* ── TOKENS ──────────────────────────────────────────────── */
 :root {
-  --bg:          #F5F2ED;
-  --bg-alt:      #EDE9E2;
+  /* Peacock Light */
+  --bg:          #F0F7F7;
+  --bg-alt:      #E3F0EF;
   --surface:     #FFFFFF;
-  --surface-2:   #F0ECE6;
-  --border:      #D8D2C8;
-  --text:        #1A1714;
-  --text-2:      #5C5449;
-  --text-3:      #8C8479;
-  --accent:      #B85C38;
-  --accent-2:    #2E5FA3;
-  --accent-glow: rgba(184,92,56,.15);
+  --surface-2:   #EAF4F4;
+  --border:      #B2D4D4;
+  --text:        #0D2B2B;
+  --text-2:      #2E5C5C;
+  --text-3:      #6A9A9A;
+  --accent:      #007A7A;
+  --accent-2:    #C9A84C;
+  --accent-glow: rgba(0,122,122,.14);
   --font-display:'DM Serif Display', Georgia, serif;
   --font-body:   'DM Sans', sans-serif;
   --font-mono:   'Space Mono', monospace;
   --radius:      10px;
   --radius-lg:   18px;
-  --shadow:      0 2px 16px rgba(26,23,20,.07);
-  --shadow-md:   0 6px 32px rgba(26,23,20,.10);
+  --shadow:      0 2px 16px rgba(13,43,43,.08);
+  --shadow-md:   0 6px 32px rgba(13,43,43,.13);
   --transition:  0.28s cubic-bezier(.4,0,.2,1);
 }
 
 [data-theme="dark"] {
-  --bg:          #111210;
-  --bg-alt:      #191816;
-  --surface:     #1F1E1B;
-  --surface-2:   #272521;
-  --border:      #2E2C28;
-  --text:        #F0EDE8;
-  --text-2:      #A8A49E;
-  --text-3:      #6E6A64;
-  --accent:      #D9774F;
-  --accent-2:    #5B8FD4;
-  --accent-glow: rgba(217,119,79,.18);
-  --shadow:      0 2px 16px rgba(0,0,0,.25);
-  --shadow-md:   0 6px 32px rgba(0,0,0,.35);
+  /* Peacock Dark */
+  --bg:          #071818;
+  --bg-alt:      #0D2222;
+  --surface:     #102C2C;
+  --surface-2:   #153535;
+  --border:      #1E4A4A;
+  --text:        #E0F4F4;
+  --text-2:      #8FCFCF;
+  --text-3:      #4A8A8A;
+  --accent:      #00C8C8;
+  --accent-2:    #D4A843;
+  --accent-glow: rgba(0,200,200,.18);
+  --shadow:      0 2px 16px rgba(0,0,0,.35);
+  --shadow-md:   0 6px 32px rgba(0,0,0,.5);
 }
 
 /* ── RESET ───────────────────────────────────────────────── */
@@ -800,3 +802,17 @@ h1,h2,h3,h4 { line-height: 1.2; }
   margin: 0;
 }
 
+/* ── PROJ CODENAME ───────────────────────────────────────── */
+.proj-codename {
+  font-family: var(--font-mono);
+  font-size: 0.85em;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: var(--accent);
+  background: var(--surface-2);
+  border: 1.5px solid var(--border);
+  padding: 1px 8px;
+  border-radius: 4px;
+  margin-right: 6px;
+  vertical-align: middle;
+}
