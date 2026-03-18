@@ -496,15 +496,18 @@ h1,h2,h3,h4 { line-height: 1.2; }
 
 /* PROJECT ENTRY CARD */
 .project-entry {
-  background: var(--surface); border: 1px solid var(--border);
-  border-radius: var(--radius-lg); overflow: hidden;
-  margin-bottom: 20px; transition: border-color var(--transition), box-shadow var(--transition);
+  background: var(--proj-color-bg, var(--surface));
+  border: none;
+  border-radius: var(--radius-lg);
+  margin-bottom: 20px;
+  transition: box-shadow var(--transition);
 }
 /* is-open styles now per-project — see PER-PROJECT ACCENT COLOURS */
 
 .project-entry-header {
   display: flex; justify-content: space-between; align-items: center;
   padding: 30px 32px; cursor: pointer; user-select: none; gap: 24px;
+  position: relative; z-index: 1;
 }
 /* expand-btn hover now per-project */
 
@@ -544,18 +547,21 @@ h1,h2,h3,h4 { line-height: 1.2; }
   padding: 28px 32px 36px;
   border-top: 1px solid var(--border);
   animation: fadeUp .4s ease both;
+  position: relative; z-index: 1;
 }
 .project-entry.is-open .project-entry-body { display: block; }
 
 /* ── PER-PROJECT ACCENT COLOURS ─────────────────────────── */
-#proj-draco     { --proj-color: #0E7C7B; --proj-color-glow: rgba(14,124,123,.12); }
-#proj-bandicoot { --proj-color: #C4622D; --proj-color-glow: rgba(196,98,45,.12); }
-#proj-ggaiter   { --proj-color: #C2446E; --proj-color-glow: rgba(194,68,110,.12); }
-#proj-mobilityplus { --proj-color: #6B8F3E; --proj-color-glow: rgba(107,143,62,.12); }
-#proj-genbot    { --proj-color: #2E6DA4; --proj-color-glow: rgba(46,109,164,.12); }
-#proj-wilboar   { --proj-color: #C47D0E; --proj-color-glow: rgba(196,125,14,.12); }
-#proj-gmammoth  { --proj-color: #6B3FA0; --proj-color-glow: rgba(107,63,160,.12); }
-#proj-gbot      { --proj-color: #3A7A8A; --proj-color-glow: rgba(58,122,138,.12); }
+#proj-draco     { --proj-color: #0E7C7B; --proj-color-glow: rgba(14,124,123,.12);  --proj-color-bg: rgba(14,124,123,.06); }
+#proj-bandicoot { --proj-color: #C4622D; --proj-color-glow: rgba(196,98,45,.12);   --proj-color-bg: rgba(196,98,45,.06); }
+#proj-ggaiter   { --proj-color: #C2446E; --proj-color-glow: rgba(194,68,110,.12);  --proj-color-bg: rgba(194,68,110,.06); }
+#proj-mobilityplus { --proj-color: #6B8F3E; --proj-color-glow: rgba(107,143,62,.12); --proj-color-bg: rgba(107,143,62,.06); }
+#proj-genbot    { --proj-color: #2E6DA4; --proj-color-glow: rgba(46,109,164,.12);  --proj-color-bg: rgba(46,109,164,.06); }
+#proj-wilboar   { --proj-color: #C47D0E; --proj-color-glow: rgba(196,125,14,.12);  --proj-color-bg: rgba(196,125,14,.06); }
+#proj-gmammoth  { --proj-color: #6B3FA0; --proj-color-glow: rgba(107,63,160,.12);  --proj-color-bg: rgba(107,63,160,.06); }
+#proj-gbot      { --proj-color: #3A7A8A; --proj-color-glow: rgba(58,122,138,.12);  --proj-color-bg: rgba(58,122,138,.06); }
+
+/* Tinted card background applied via base rule above */
 
 /* Apply per-project colour to key elements */
 .project-entry .proj-domain-tag  { color: var(--proj-color, var(--accent)); }
@@ -743,6 +749,67 @@ h1,h2,h3,h4 { line-height: 1.2; }
 .footer-role { font-size: 12px; color: var(--text-3); }
 .footer-link { margin-left: auto; font-size: 12px; color: var(--accent-2); text-decoration: none; font-family: var(--font-mono); transition: color var(--transition); }
 .footer-link:hover { color: var(--accent); }
+
+
+/* ── COMET BORDER ANIMATION ─────────────────────────────── */
+.project-entry {
+  position: relative;
+}
+
+.project-entry::before,
+.project-entry::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: var(--radius-lg);
+  pointer-events: none;
+}
+
+/* Static base border */
+.project-entry::before {
+  border: 2px solid var(--proj-color, var(--border));
+  opacity: 0.25;
+}
+
+/* Comet streak using conic-gradient + animation */
+.project-entry::after {
+  padding: 2px;
+  background: conic-gradient(
+    from var(--comet-angle, 0deg),
+    transparent 0deg,
+    transparent 300deg,
+    var(--proj-color, var(--accent)) 340deg,
+    white 355deg,
+    transparent 360deg
+  );
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  animation: comet-run 3s linear infinite;
+}
+
+@property --comet-angle {
+  syntax: '<angle>';
+  initial-value: 0deg;
+  inherits: false;
+}
+
+@keyframes comet-run {
+  from { --comet-angle: 0deg; }
+  to   { --comet-angle: 360deg; }
+}
+
+/* Each project gets slightly different speed for variety */
+#proj-draco     ::after { animation-duration: 3.0s; }
+#proj-bandicoot ::after { animation-duration: 3.4s; }
+#proj-ggaiter   ::after { animation-duration: 2.8s; }
+#proj-mobilityplus ::after { animation-duration: 3.6s; }
+#proj-genbot    ::after { animation-duration: 3.2s; }
+#proj-wilboar   ::after { animation-duration: 2.6s; }
+#proj-gmammoth  ::after { animation-duration: 3.8s; }
+#proj-gbot      ::after { animation-duration: 3.1s; }
 
 /* ── ANIMATION ───────────────────────────────────────────── */
 @keyframes fadeUp {
