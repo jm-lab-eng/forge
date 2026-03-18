@@ -500,20 +500,20 @@ h1,h2,h3,h4 { line-height: 1.2; }
   border-radius: var(--radius-lg); overflow: hidden;
   margin-bottom: 20px; transition: border-color var(--transition), box-shadow var(--transition);
 }
-.project-entry.is-open { border-color: var(--accent); box-shadow: var(--shadow-md); }
+/* is-open styles now per-project — see PER-PROJECT ACCENT COLOURS */
 
 .project-entry-header {
   display: flex; justify-content: space-between; align-items: center;
   padding: 30px 32px; cursor: pointer; user-select: none; gap: 24px;
 }
-.project-entry-header:hover .expand-btn { border-color: var(--accent); color: var(--accent); }
+/* expand-btn hover now per-project */
 
 .peh-left { display: flex; gap: 20px; align-items: flex-start; }
 .proj-num {
   font-family: var(--font-mono); font-size: 28px; font-weight: 700;
   color: var(--border); flex-shrink: 0; line-height: 1; padding-top: 4px; transition: color var(--transition);
 }
-.project-entry.is-open .proj-num { color: var(--accent); }
+/* proj-num open colour now per-project */
 
 .peh-meta { }
 .proj-domain-tag {
@@ -546,6 +546,31 @@ h1,h2,h3,h4 { line-height: 1.2; }
   animation: fadeUp .4s ease both;
 }
 .project-entry.is-open .project-entry-body { display: block; }
+
+/* ── PER-PROJECT ACCENT COLOURS ─────────────────────────── */
+#proj-draco     { --proj-color: #0E7C7B; --proj-color-glow: rgba(14,124,123,.12); }
+#proj-bandicoot { --proj-color: #C4622D; --proj-color-glow: rgba(196,98,45,.12); }
+#proj-ggaiter   { --proj-color: #C2446E; --proj-color-glow: rgba(194,68,110,.12); }
+#proj-mobilityplus { --proj-color: #6B8F3E; --proj-color-glow: rgba(107,143,62,.12); }
+#proj-genbot    { --proj-color: #2E6DA4; --proj-color-glow: rgba(46,109,164,.12); }
+#proj-wilboar   { --proj-color: #C47D0E; --proj-color-glow: rgba(196,125,14,.12); }
+#proj-gmammoth  { --proj-color: #6B3FA0; --proj-color-glow: rgba(107,63,160,.12); }
+#proj-gbot      { --proj-color: #3A7A8A; --proj-color-glow: rgba(58,122,138,.12); }
+
+/* Apply per-project colour to key elements */
+.project-entry .proj-domain-tag  { color: var(--proj-color, var(--accent)); }
+.project-entry.is-open            { border-color: var(--proj-color, var(--accent)); box-shadow: 0 6px 32px var(--proj-color-glow, var(--accent-glow)); }
+.project-entry.is-open .proj-num  { color: var(--proj-color, var(--accent)); }
+.project-entry-header:hover .expand-btn { border-color: var(--proj-color, var(--accent)); color: var(--proj-color, var(--accent)); }
+.project-entry .psec-dot          { background: var(--proj-color, var(--accent)); }
+.project-entry .proj-ref-link     { color: var(--proj-color, var(--accent-2)); border-color: var(--proj-color, var(--accent-2)); }
+.project-entry .proj-ref-link:hover { color: var(--proj-color, var(--accent)); filter: brightness(1.15); }
+.project-entry .phase-badge       { background: var(--proj-color, var(--accent)); }
+.project-entry .contribution-list li::before { color: var(--proj-color, var(--accent)); }
+.project-entry .keyword-cloud span:hover { border-color: var(--proj-color, var(--accent)); color: var(--proj-color, var(--accent)); }
+.project-entry .skill-achieved-item:hover { border-color: var(--proj-color, var(--accent)); }
+.project-entry .contact-card-icon { color: var(--proj-color, var(--accent)); }
+
 
 /* ── PROJECT SECTIONS ────────────────────────────────────── */
 .proj-section--name-ref {
