@@ -1,51 +1,51 @@
 /* ============================================================
    JITHIN MACHATH — Portfolio CSS
-   Aesthetic: Cream + Deep Navy/Teal · Engineering
+   Aesthetic: Cream+Lavender Light · Navy+Magenta Dark
    ============================================================ */
 
 @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap');
 
 /* ── TOKENS ──────────────────────────────────────────────── */
 :root {
-  /* Light — Cream + Deep Navy/Teal */
-  --bg:          #F5F2ED;
-  --bg-alt:      #EDE9E2;
-  --surface:     #FFFFFF;
-  --surface-2:   #F0ECE6;
-  --border:      #D4CEC6;
-  --text:        #0A0A2E;
-  --text-2:      #2A4A5A;
-  --text-3:      #7A8FA0;
-  --accent:      #0D3D6E;
-  --accent-2:    #2E7D8A;
-  --accent-glow: rgba(13,61,110,.12);
-  --grad-hero:   linear-gradient(135deg, #0A0A3A 0%, #1A4A6A 35%, #2E7D8A 70%, #3BBFB0 100%);
+  /* Light — Cream + Muted Teal + Lavender */
+  --bg:          #EEE9E0;
+  --bg-alt:      #E4DED5;
+  --surface:     #F8F5F0;
+  --surface-2:   #E8E3DA;
+  --border:      #C8C0B8;
+  --text:        #1A1420;
+  --text-2:      #3D3550;
+  --text-3:      #7A7090;
+  --accent:      #7A6098;
+  --accent-2:    #5A9098;
+  --accent-glow: rgba(122,96,152,.13);
+  --grad-hero:   linear-gradient(135deg, #B8D0D4 0%, #C4A8C8 50%, #9E8AB0 100%);
   --font-display:'DM Serif Display', Georgia, serif;
   --font-body:   'DM Sans', sans-serif;
   --font-mono:   'Space Mono', monospace;
   --radius:      10px;
   --radius-lg:   18px;
-  --shadow:      0 2px 16px rgba(10,10,46,.07);
-  --shadow-md:   0 6px 32px rgba(10,10,46,.12);
+  --shadow:      0 2px 16px rgba(26,20,32,.07);
+  --shadow-md:   0 6px 32px rgba(26,20,32,.12);
   --transition:  0.28s cubic-bezier(.4,0,.2,1);
 }
 
 [data-theme="dark"] {
-  /* Dark — Deep Navy/Teal + Pure White Text */
-  --bg:          #070714;
-  --bg-alt:      #0C0C1E;
-  --surface:     #111128;
-  --surface-2:   #181832;
-  --border:      #252550;
+  /* Dark — Midnight Navy + Deep Purple + Magenta */
+  --bg:          #050520;
+  --bg-alt:      #0A0830;
+  --surface:     #140B3A;
+  --surface-2:   #1E1050;
+  --border:      #3A1A60;
   --text:        #FFFFFF;
-  --text-2:      #D0D8E8;
-  --text-3:      #7890A8;
-  --accent:      #3BBFB0;
-  --accent-2:    #5BA8D8;
-  --accent-glow: rgba(59,191,176,.2);
-  --grad-hero:   linear-gradient(135deg, #050520 0%, #0D2A4A 35%, #1A5A6A 70%, #2A9A8A 100%);
-  --shadow:      0 2px 16px rgba(0,0,0,.4);
-  --shadow-md:   0 6px 32px rgba(0,0,0,.6);
+  --text-2:      #DDD0EE;
+  --text-3:      #9070B0;
+  --accent:      #C0409A;
+  --accent-2:    #8855CC;
+  --accent-glow: rgba(192,64,154,.22);
+  --grad-hero:   linear-gradient(135deg, #050520 0%, #2D1054 50%, #8B0057 85%, #A0006A 100%);
+  --shadow:      0 2px 16px rgba(0,0,0,.45);
+  --shadow-md:   0 6px 32px rgba(0,0,0,.65);
 }
 
 /* ── RESET ───────────────────────────────────────────────── */
@@ -332,7 +332,7 @@ h1,h2,h3,h4 { line-height: 1.2; }
 /* ── SECTIONS ────────────────────────────────────────────── */
 .section { padding: 100px 40px; }
 .section--alt { background: var(--bg-alt); }
-.section--cta { background: linear-gradient(135deg, #0A0A2E 0%, #0D3D6E 60%, #2E7D8A 100%); color: #FFFFFF; }
+.section--cta { background: linear-gradient(135deg, #1A1420 0%, #2D1054 60%, #8B0057 100%); color: #FFFFFF; }
 .section--cta h2 { color: #FFFFFF !important; }
 .section--cta p { color: rgba(255,255,255,0.80) !important; }
 .section--cta h2 { font-family: var(--font-display); font-size: 36px; color: var(--bg); margin-bottom: 12px; }
