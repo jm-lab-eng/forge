@@ -578,16 +578,9 @@ h1,h2,h3,h4 { line-height: 1.2; }
 .ref-link-domain { display: none; }
 
 /* DEV FLOW */
-.dev-flow {
-  display: flex; flex-wrap: wrap; align-items: center; gap: 8px;
-  padding: 20px 0 28px;
-}
-.dev-flow span {
-  font-size: 12px; font-weight: 600;
-  background: var(--surface-2); border: 1px solid var(--border);
-  color: var(--text-2); padding: 5px 12px; border-radius: 5px;
-}
-.flow-arr { color: var(--text-3); flex-shrink: 0; }
+
+
+
 
 /* BODY GRID */
 .proj-body-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; padding-top: 4px; }
