@@ -683,7 +683,7 @@ h1,h2,h3,h4 { line-height: 1.2; }
 
 /* Watermark on lightbox */
 .lightbox::after {
-  content: '© Jithin Machath';
+  content: 'Jithin Machath';
   position: absolute;
   bottom: calc(50% - 44vh);
   right: calc(50% - 44vw);
