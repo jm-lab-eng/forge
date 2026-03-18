@@ -558,14 +558,24 @@ h1,h2,h3,h4 { line-height: 1.2; }
 .proj-one-liner { font-size: 14px; color: var(--text-2); line-height: 1.65; max-width: 560px; }
 
 .proj-ref-link {
-  display: flex; align-items: center; gap: 12px;
-  background: var(--surface-2); border: 1.5px solid var(--border);
-  border-radius: var(--radius); padding: 12px 18px;
-  text-decoration: none; color: var(--text); transition: var(--transition); flex-shrink: 0;
+  display: inline-flex; align-items: center; gap: 6px;
+  text-decoration: none;
+  font-size: 12px;
+  font-family: var(--font-mono);
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  color: var(--accent-2);
+  border-bottom: 1px dashed var(--accent-2);
+  padding-bottom: 1px;
+  transition: var(--transition);
+  flex-shrink: 0;
+  align-self: flex-start;
+  margin-top: 6px;
 }
-.proj-ref-link:hover { border-color: var(--accent-2); background: var(--surface); box-shadow: var(--shadow); }
-.ref-link-label { display: block; font-size: 13px; font-weight: 600; color: var(--text); }
-.ref-link-domain { display: block; font-size: 11px; font-family: var(--font-mono); color: var(--accent-2); margin-top: 2px; }
+.proj-ref-link:hover { color: var(--accent); border-color: var(--accent); }
+.proj-ref-link svg { flex-shrink: 0; }
+.ref-link-label { display: none; }
+.ref-link-domain { display: none; }
 
 /* DEV FLOW */
 .dev-flow {
@@ -798,7 +808,7 @@ h1,h2,h3,h4 { line-height: 1.2; }
   .role-grid { grid-template-columns: 1fr; }
   .skills-achieved-grid { grid-template-columns: 1fr 1fr; }
   .proj-section--name-ref { flex-direction: column; }
-  .proj-ref-link { width: 100%; }
+  .proj-ref-link { width: auto; }
 }
 
 @media (max-width: 600px) {
