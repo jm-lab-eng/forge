@@ -497,10 +497,10 @@ h1,h2,h3,h4 { line-height: 1.2; }
 /* PROJECT ENTRY CARD */
 .project-entry {
   background: var(--proj-color-bg, var(--surface));
-  border: none;
+  border: 1.5px solid var(--proj-color, var(--border));
   border-radius: var(--radius-lg);
   margin-bottom: 20px;
-  transition: box-shadow var(--transition);
+  transition: border-color var(--transition), box-shadow var(--transition);
 }
 /* is-open styles now per-project — see PER-PROJECT ACCENT COLOURS */
 
@@ -751,84 +751,7 @@ h1,h2,h3,h4 { line-height: 1.2; }
 .footer-link:hover { color: var(--accent); }
 
 
-/* ── COMET BORDER ANIMATION ─────────────────────────────── */
-.project-entry {
-  position: relative;
-}
-
-.project-entry::before,
-.project-entry::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  border-radius: var(--radius-lg);
-  pointer-events: none;
-}
-
-/* Static base border */
-.project-entry::before {
-  border: 2px solid var(--proj-color, var(--border));
-  opacity: 0.25;
-}
-
-/* Comet streak — smooth long tail */
-.project-entry::after {
-  padding: 2px;
-  background: conic-gradient(
-    from var(--comet-angle, 0deg),
-    transparent 0deg,
-    transparent 200deg,
-    color-mix(in srgb, var(--proj-color, var(--accent)) 10%, transparent) 240deg,
-    color-mix(in srgb, var(--proj-color, var(--accent)) 30%, transparent) 270deg,
-    color-mix(in srgb, var(--proj-color, var(--accent)) 60%, transparent) 300deg,
-    var(--proj-color, var(--accent)) 340deg,
-    white 352deg,
-    color-mix(in srgb, var(--proj-color, var(--accent)) 40%, transparent) 357deg,
-    transparent 360deg
-  );
-  -webkit-mask:
-    linear-gradient(#fff 0 0) content-box,
-    linear-gradient(#fff 0 0);
-  -webkit-mask-composite: xor;
-  mask-composite: exclude;
-  animation: comet-run 4s linear infinite;
-  will-change: --comet-angle;
-}
-
-@property --comet-angle {
-  syntax: '<angle>';
-  initial-value: 0deg;
-  inherits: false;
-}
-
-@keyframes comet-run {
-  from { --comet-angle: 0deg; }
-  to   { --comet-angle: 360deg; }
-}
-
-/* Slightly varied speeds per project */
-#proj-draco        { --comet-speed: 4.0s; }
-#proj-bandicoot    { --comet-speed: 4.6s; }
-#proj-ggaiter      { --comet-speed: 3.8s; }
-#proj-mobilityplus { --comet-speed: 5.0s; }
-#proj-genbot       { --comet-speed: 4.4s; }
-#proj-wilboar      { --comet-speed: 3.6s; }
-#proj-gmammoth     { --comet-speed: 5.2s; }
-#proj-gbot         { --comet-speed: 4.2s; }
-
-#proj-draco::after        { animation-duration: 4.0s; }
-#proj-bandicoot::after    { animation-duration: 4.6s; }
-#proj-ggaiter::after      { animation-duration: 3.8s; }
-#proj-mobilityplus::after { animation-duration: 5.0s; }
-#proj-genbot::after       { animation-duration: 4.4s; }
-#proj-wilboar::after      { animation-duration: 3.6s; }
-#proj-gmammoth::after     { animation-duration: 5.2s; }
-#proj-gbot::after         { animation-duration: 4.2s; }
-
-/* Respect reduced motion preference */
-@media (prefers-reduced-motion: reduce) {
-  .project-entry::after { animation: none; }
-}
+/* Comet border animation removed */
 
 /* ── ANIMATION ───────────────────────────────────────────── */
 @keyframes fadeUp {
