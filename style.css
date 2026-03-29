@@ -1039,25 +1039,40 @@ h1,h2,h3,h4 { line-height: 1.2; }
 
 .contact-card:hover .contact-arrow { opacity: 1; }
 
+.email-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .contact-email-wrap {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 8px;
+  margin-top: 6px;
 }
 
 .copy-btn {
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   background: var(--surface-2);
   border: 1px solid var(--border);
   border-radius: 6px;
-  padding: 4px 8px;
+
   cursor: pointer;
   font-size: 12px;
+
   transition: var(--transition);
 }
 
 .copy-btn:hover {
   border-color: var(--accent);
   color: var(--accent);
+  transform: translateY(-1px);
 }
 
 /* Footer links */
