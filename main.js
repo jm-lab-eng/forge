@@ -142,17 +142,15 @@ document.addEventListener('click', e => {
 const copyBtn = document.getElementById('copy-email');
 
 if (copyBtn) {
-  copyBtn.addEventListener('click', () => {
-  const email = "jithinmachath@gmail.com";
+copyBtn.addEventListener('click', () => {
+  const email = "jithinmachath@outlook.com";
 
   navigator.clipboard.writeText(email).then(() => {
     copyBtn.textContent = "✓";
-    copyBtn.setAttribute("title", "Copied!");
 
     setTimeout(() => {
       copyBtn.textContent = "⧉";
-      copyBtn.setAttribute("title", "Copy email");
-    }, 1500);
+    }, 1200);
   });
 });
 }
