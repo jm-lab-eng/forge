@@ -136,3 +136,23 @@ document.addEventListener('click', e => {
   const navbar = document.getElementById('navbar');
   if (navbar && !navbar.contains(e.target)) closeMenu();
 });
+
+
+// ── COPY EMAIL ─────────────────────────────────────────
+const copyBtn = document.getElementById('copy-email');
+
+if (copyBtn) {
+  copyBtn.addEventListener('click', () => {
+  const email = "jithinmachath@gmail.com";
+
+  navigator.clipboard.writeText(email).then(() => {
+    copyBtn.textContent = "✓";
+    copyBtn.setAttribute("title", "Copied!");
+
+    setTimeout(() => {
+      copyBtn.textContent = "⧉";
+      copyBtn.setAttribute("title", "Copy email");
+    }, 1500);
+  });
+});
+}
