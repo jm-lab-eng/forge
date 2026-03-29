@@ -1039,6 +1039,27 @@ h1,h2,h3,h4 { line-height: 1.2; }
 
 .contact-card:hover .contact-arrow { opacity: 1; }
 
+.contact-email-wrap {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.copy-btn {
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 4px 8px;
+  cursor: pointer;
+  font-size: 12px;
+  transition: var(--transition);
+}
+
+.copy-btn:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
 /* Footer links */
 .footer-links {
   margin-left: auto;
