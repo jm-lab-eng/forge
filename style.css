@@ -444,8 +444,6 @@ h1,h2,h3,h4 { line-height: 1.2; }
 .tool-chip span { font-size: 13px; font-weight: 500; }
 
 /* ── EDUCATION ───────────────────────────────────────────── */
-
-.edu-summary {  font-size: 14px;  color: var(--text-2);  max-width: 680px;  margin-bottom: 40px;  line-height: 1.7;  border-left: 3px solid var(--accent);  padding-left: 16px;}
 .edu-timeline { display: flex; flex-direction: column; gap: 20px; }
 .edu-item {
   display: flex; gap: 24px; align-items: flex-start;
@@ -469,6 +467,19 @@ h1,h2,h3,h4 { line-height: 1.2; }
 .cert-links { display: flex; gap: 16px; margin-top: 12px; }
 .cert-links a { font-size: 12px; font-weight: 600; font-family: var(--font-mono); color: var(--accent-2); text-decoration: none; letter-spacing: 0.04em; transition: color var(--transition); }
 .cert-links a:hover { color: var(--accent); }
+
+
+/* ── EDUCATION-NEW ADDITIONS ─────────────────────────────────────────── */
+.edu-focus { font-size: 11px; font-family: var(--font-mono); letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent); margin-bottom: 8px; display: block; }
+.edu-item--cert .edu-focus { color: var(--accent-2); }
+.edu-body p { margin-bottom: 10px; line-height: 1.7; } .edu-body p:last-child { margin-bottom: 0; }
+.edu-body h3 { margin-bottom: 6px; } .edu-inst { display: inline-block; margin-bottom: 10px; }
+.edu-item--cert { border-left: 3px solid var(--accent); padding-left: 20px; }
+.edu-item { align-items: flex-start; }
+.edu-item:hover { transform: translateY(-2px); box-shadow: var(--shadow); transition: var(--transition); }
+.edu-summary { font-size: 14px; color: var(--text-2); max-width: 680px; margin-bottom: 40px; line-height: 1.7; border-left: 3px solid var(--accent); padding-left: 16px; }
+
+
 /* ── PAGE HEADER ─────────────────────────────────────────── */
 .page-header { background: var(--bg-alt); border-bottom: 1px solid var(--border); padding: 80px 40px 60px; }
 .page-header-inner { max-width: 1160px; margin: auto; }
