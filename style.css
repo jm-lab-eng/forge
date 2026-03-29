@@ -444,6 +444,8 @@ h1,h2,h3,h4 { line-height: 1.2; }
 .tool-chip span { font-size: 13px; font-weight: 500; }
 
 /* ── EDUCATION ───────────────────────────────────────────── */
+
+.edu-summary {  font-size: 14px;  color: var(--text-2);  max-width: 680px;  margin-bottom: 40px;  line-height: 1.7;  border-left: 3px solid var(--accent);  padding-left: 16px;}
 .edu-timeline { display: flex; flex-direction: column; gap: 20px; }
 .edu-item {
   display: flex; gap: 24px; align-items: flex-start;
@@ -467,7 +469,6 @@ h1,h2,h3,h4 { line-height: 1.2; }
 .cert-links { display: flex; gap: 16px; margin-top: 12px; }
 .cert-links a { font-size: 12px; font-weight: 600; font-family: var(--font-mono); color: var(--accent-2); text-decoration: none; letter-spacing: 0.04em; transition: color var(--transition); }
 .cert-links a:hover { color: var(--accent); }
-
 /* ── PAGE HEADER ─────────────────────────────────────────── */
 .page-header { background: var(--bg-alt); border-bottom: 1px solid var(--border); padding: 80px 40px 60px; }
 .page-header-inner { max-width: 1160px; margin: auto; }
