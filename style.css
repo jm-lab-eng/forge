@@ -470,8 +470,9 @@ h1,h2,h3,h4 { line-height: 1.2; }
 
 
 /* ── EDUCATION-NEW ADDITIONS ─────────────────────────────────────────── */
-.edu-focus { font-size: 11px; font-family: var(--font-mono); letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent); margin-bottom: 8px; display: block; }
-.edu-item--cert .edu-focus { color: var(--accent-2); }
+.edu-focus { font-size: 11px; font-family: var(--font-mono); letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-3);   /* ← KEY CHANGE */ margin-bottom: 10px; display: block; }
+.edu-item--cert .edu-focus {  color: var(--accent);   /* not accent-2 */}
+.edu-focus { opacity: 0.85; }
 .edu-body p { margin-bottom: 10px; line-height: 1.7; } .edu-body p:last-child { margin-bottom: 0; }
 .edu-body h3 { margin-bottom: 6px; } .edu-inst { display: inline-block; margin-bottom: 10px; }
 .edu-item--cert { border-left: 3px solid var(--accent); padding-left: 20px; }
