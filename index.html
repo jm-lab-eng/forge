@@ -3,6 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https:; font-src 'self' https://fonts.gstatic.com data:; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'; upgrade-insecure-requests">
+<meta name="referrer" content="no-referrer">
+<meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=()">
+<meta http-equiv="X-Content-Type-Options" content="nosniff">
 <title>Jithin Machath — Mechanical Design Engineer</title>
 <link rel="stylesheet" href="style.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -28,79 +32,7 @@
       <li><a href="#about"        class="nav-link" onclick="closeMenu()">About</a></li>
       <li><a href="#experience"   class="nav-link" onclick="closeMenu()">Experience</a></li>
       <li><a href="#skills"       class="nav-link" onclick="closeMenu()">Skills</a></li>
-      <li><a href="#education"    class="nav-link" onclick="closeMenu()">Education</a></li>
-      <li><a href="#contact"      class="nav-link" onclick="closeMenu()">Contact</a></li>
-      <li><a href="projects.html" class="nav-link nav-link--cta">Projects</a></li>
-    </ul>
-    <a href="resume.pdf" class="nav-cv" download>
-      <span>CV</span>
-      <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M6 1v7M3 5l3 3 3-3M1 10h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-    </a>
-    <button class="hamburger" id="hamburger" aria-label="Open menu" onclick="toggleMenu()">
-      <span></span><span></span><span></span>
-    </button>
-  </div>
-</nav>
-
-<!-- HERO -->
-<section class="hero" id="hero">
-  <div class="hero-bg-grid"></div>
-  <div class="hero-content">
-    <div class="hero-eyebrow"><span class="eyebrow-dot"></span><span>Mechanical Design Engineer — Engineering Design, Analysis &amp; System Development</span></div>
-    <h1 class="hero-name">
-      <span class="name-line">Jithin</span>
-      <span class="name-line name-line--italic">Machath</span>
-    </h1>
-    <p class="hero-descriptor">Industrial Systems &nbsp;·&nbsp; Product Development &nbsp;·&nbsp; R&amp;D</p>
-    <div class="hero-quote-block">
-      <span class="quote-mark">"</span>
-      <blockquote>Great engineering is proven in the field,<br>where it matters most.</blockquote>
-    </div>
-    <div class="hero-actions">
-      <a href="projects.html" class="btn-primary">View Projects</a>
-      <a href="#about" class="btn-ghost">About Me ↓</a>
-    </div>
-  </div>
-  <div class="hero-side">
-    <div class="hero-stats">
-      <div class="stat-item"><span class="stat-num">4+</span><span class="stat-label">Years Experience</span></div>
-      <div class="stat-divider"></div>
-      <div class="stat-item"><span class="stat-num">R&amp;D</span><span class="stat-label">Oil &amp; Gas Robotics</span></div>
-      <div class="stat-divider"></div>
-      <div class="stat-item"><span class="stat-num">⬡</span><span class="stat-label">Field Deployed</span></div>
-    </div>
-    <div class="hero-img-wrap">
-      <img src="images/profile.png" alt="Jithin Machath" class="hero-portrait">
-      <div class="portrait-ring"></div>
-    </div>
-  </div>
-  <div class="hero-scroll-hint"><span>Scroll</span><div class="scroll-line"></div></div>
-</section>
-
-<!-- ABOUT -->
-<section class="section" id="about">
-  <div class="section-inner">
-    <div class="section-label"><span class="label-num">01</span><span>About</span></div>
-    <div class="about-grid">
-      <div class="about-text">
-        <h2 class="section-title">Engineering systems that perform <em>in the field</em></h2>
-        <p>
-        I am a Mechanical Design Engineer with 4+ years of experience working on design, analysis, and system development across robotics, industrial systems, and safety-critical applications in oil &amp; gas, sanitation, defence, and medical sectors.
-        </p>
-        
-        <p>
-        My work covers the full product development cycle — from feasibility and concept development to detailed CAD design, engineering analysis, prototyping, testing, and field validation. I have been involved in system-level engineering, including hydraulic systems, structural optimisation, and electro-mechanical integration for real-world conditions.
-        </p>
-        
-        <p>
-        I enjoy building systems that actually work in the field. My experience includes hydraulic system design, component selection, and working in hazardous environments with considerations like ignition risk and ATEX/IECEx alignment.
-        </p>
-        
-        <p>
-        I have worked with cross-functional teams across design, fabrication, testing, and manufacturing, contributing to projects from early R&amp;D stages through to deployment, with a focus on reliability, safety, and practical performance.
-        </p>
-        
-        <p>
+@@ -104,87 +108,87 @@
         I primarily work with CAD tools such as SolidWorks and AutoCAD for 3D modelling and manufacturing drawings, and use ANSYS Workbench for structural analysis and validation. I also hold a Lean Six Sigma Black Belt, which I use for structured problem solving and continuous improvement.
         </p>
       </div>
@@ -127,6 +59,7 @@
         <div class="timeline-content">
           <h3>Project Lead Engineer</h3>
           <p class="timeline-org"><a href="https://www.genrobotics.com/" target="_blank" class="org-link">Genrobotics</a> &nbsp;·&nbsp; Robotics &amp; Industrial Systems</p>
+          <p class="timeline-org"><a href="https://www.genrobotics.com/" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer" class="org-link">Genrobotics</a> &nbsp;·&nbsp; Robotics &amp; Industrial Systems</p>
           <p>Led R&D delivery of DRACO (robotic tank cleaning system) and G-Mammoth (suction-cum-jetting system), owning system-level mechanical architecture across hydraulics, structures, and materials to improve reliability, durability, and lifecycle performance.</p>
           <p>Coordinated cross-functional teams of 10–15 engineers across engineering, procurement, and manufacturing. Defined validation plans, test protocols, and acceptance criteria, including safety-critical evaluation and audit readiness.Drove design improvements through RCA, Lean, and value engineering — achieving zero major audit non-conformities and 96% on-time delivery.</p>
           <div class="timeline-tags">
@@ -145,6 +78,7 @@
         <div class="timeline-content">
           <h3>Senior Mechanical Design Engineer</h3>
           <p class="timeline-org"><a href="https://www.genrobotics.com/" target="_blank" class="org-link">Genrobotics</a> &nbsp;·&nbsp; Robotics &amp; Industrial Systems</p>
+          <p class="timeline-org"><a href="https://www.genrobotics.com/" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer" class="org-link">Genrobotics</a> &nbsp;·&nbsp; Robotics &amp; Industrial Systems</p>
           <p>Led end-to-end mechanical design and prototyping of DRACO, improving sludge extraction and buoyancy performance by 30%. Designed and deployed test rigs, cutting validation cost by 20% and cycle time by 25%.</p>
           <p>Conducted linear and non-linear FEA studies in ANSYS Workbench across systems such as Genbot, Wilboar, and G-Gaiter. Performed design calculations, tolerance analysis, and material selection. Resolved multiple design-to-production issues in coordination with manufacturing teams.</p>
           <div class="timeline-tags">
@@ -163,6 +97,7 @@
         <div class="timeline-content">
           <h3>Mechanical Design Engineer</h3>
           <p class="timeline-org"><a href="https://www.genrobotics.com/" target="_blank" class="org-link">Genrobotics</a> &nbsp;·&nbsp; Robotics &amp; Industrial Systems</p>
+          <p class="timeline-org"><a href="https://www.genrobotics.com/" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer" class="org-link">Genrobotics</a> &nbsp;·&nbsp; Robotics &amp; Industrial Systems</p>
           <p>Designed mechanical subsystems for Bandicoot, Wilboar, G-Gaiter, and Mobility+, including 3D modelling, assemblies, and manufacturing drawings using SolidWorks and AutoCAD. Prepared and managed BOMs for manufacturing, procurement, and quality.</p>
           <p>Conducted feasibility studies and structural analysis to improve durability and reduce cost. Supported prototype builds and field trials, incorporating test feedback into iterative design improvements.</p>
           <div class="timeline-tags">
@@ -188,92 +123,7 @@
         <span class="impact-desc">Through design optimisation and value engineering</span>
       </div>
       <div class="impact-item">
-        <span class="impact-label">Extensive BOM Management</span>
-        <span class="impact-desc">Across multiple robotic development programs</span>
-      </div>
-      <div class="impact-item">
-        <span class="impact-label">Zero Audit NCs</span>
-        <span class="impact-desc">Structured validation &amp; documentation</span>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-<!-- SKILLS -->
-<section class="section" id="skills">
-  <div class="section-inner">
-    <div class="section-label"><span class="label-num">03</span><span>Skills</span></div>
-    <h2 class="section-title">Technical Expertise</h2>
-    <div class="skills-grid">
-
-  <div class="skill-block">
-    <h4>Mechanical Design &amp; CAD</h4>
-    <ul>
-      <li>3D Part &amp; Assembly Modelling — SolidWorks</li>
-      <li>2D Manufacturing Drawings — SolidWorks, AutoCAD</li>
-      <li>GD&amp;T, Tolerance Stack-up Analysis</li>
-      <li>DFMA, Material Selection</li>
-      <li>Sheet Metal &amp; Weldment Design</li>
-    </ul>
-  </div>
-
-  <div class="skill-block">
-    <h4>Systems Engineering</h4>
-    <ul>
-      <li>Electro-mechanical System Integration</li>
-      <li>Hydraulic Systems — Circuit Design, Component Selection, Actuation</li>
-      <li>Component Selection &amp; System Matching</li>
-      <li>Cross-functional Design Collaboration</li>
-      <li>Engineering for Hazardous Environments (Ignition Risk, ATEX/IECEx Considerations)</li>
-    </ul>
-  </div>
-
-  <div class="skill-block">
-    <h4>Analysis &amp; Simulation</h4>
-    <ul>
-      <li>FEA using ANSYS</li>
-      <li>Structural Analysis &amp; Design Validation</li>
-      <li>Load Calculations &amp; Structural Validation</li>
-      <li>Engineering Calculations &amp; Performance Evaluation</li>
-      <li>DFMEA, Risk Assessment</li>
-    </ul>
-  </div>
-
-  <div class="skill-block">
-    <h4>Product Development</h4>
-    <ul>
-      <li>Concept Development &amp; NPD Process</li>
-      <li>Prototype Development &amp; Iteration</li>
-      <li>Engineering Change Management (ECN/ECR)</li>
-      <li>PLM Awareness, BOM Management</li>
-    </ul>
-  </div>
-
-  <div class="skill-block">
-    <h4>Manufacturing &amp; Industrialization</h4>
-    <ul>
-      <li>DFM / DFA Implementation</li>
-      <li>Supplier &amp; Vendor Coordination</li>
-      <li>Assembly Planning, Cost Optimization</li>
-    </ul>
-  </div>
-
-  <div class="skill-block">
-    <h4>Process &amp; Quality</h4>
-    <ul>
-      <li>Root Cause Analysis (RCA)</li>
-      <li>Quality &amp; Reliability Engineering</li>
-      <li>SOP &amp; Engineering Documentation</li>
-      <li>Lean Six Sigma Black Belt</li>
-    </ul>
-  </div>
-
-</div>
-    <div class="tools-row">
-      <h4 class="tools-heading">Tools &amp; Software</h4>
-      <div class="tools-chips">
-        <div class="tool-chip"><img src="images/icons/solidworks.png" alt="SolidWorks"><span>SolidWorks</span></div>
+@@ -277,106 +281,106 @@
         <div class="tool-chip"><img src="images/icons/autocad.png"    alt="AutoCAD"><span>AutoCAD</span></div>
         <div class="tool-chip"><img src="images/icons/ansys.png"      alt="ANSYS"><span>ANSYS</span></div>
         <div class="tool-chip"><img src="images/icons/excel.png"      alt="Excel"><span>Excel</span></div>
@@ -300,6 +150,7 @@ My academic journey progressed from strong mechanical fundamentals to system-lev
           <div class="edu-year">2017 – 2019</div>
           <h3>M.Des – Mechanical Systems</h3>
           <a href="https://www.iiitdm.ac.in/" target="_blank" class="edu-inst">IIITDM Kancheepuram</a>
+          <a href="https://www.iiitdm.ac.in/" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer" class="edu-inst">IIITDM Kancheepuram</a>
           <p class="edu-focus"> System Design · Mechatronics · FEA · Product Development </p>
           <p>
 I completed my Master of Design (M.Des) in Mechanical Systems from IIITDM Kancheepuram, a programme focused on hands-on product engineering and system-level design.
@@ -320,6 +171,7 @@ This phase helped me move from component-level thinking to system-level design, 
           <div class="edu-year">2012 – 2016</div>
           <h3>B.Tech – Mechanical Engineering</h3>
           <a href="https://gectcr.ac.in/" target="_blank" class="edu-inst">Government Engineering College, Thrissur</a>
+          <a href="https://gectcr.ac.in/" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer" class="edu-inst">Government Engineering College, Thrissur</a>
           <p class="edu-focus"> Core Mechanics · Manufacturing · Fluid Systems · Engineering Fundamentals </p>
           <p>
 I completed my B.Tech in Mechanical Engineering from Government Engineering College, Thrissur, building a strong foundation in thermodynamics, mechanics, fluid systems, machine design, and manufacturing.
@@ -340,6 +192,7 @@ Most of my learning came through labs, workshops, and projects, shaping a practi
           <div class="edu-year">2025</div>
           <h3>Lean Six Sigma Black Belt</h3>
           <a href="https://imccertifications.com/" target="_blank" class="edu-inst">International Management Consultancy (IMC)</a>
+          <a href="https://imccertifications.com/" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer" class="edu-inst">International Management Consultancy (IMC)</a>
           <p class="edu-focus"> DMAIC · Root Cause Analysis · Process Improvement · Data-Driven Decisions </p>
           <p>
 I completed Lean Six Sigma Black Belt certification, where I learned to approach engineering and process problems in a structured, data-driven way.
@@ -355,6 +208,8 @@ This added a strong problem-solving and continuous improvement perspective to my
           <div class="cert-links">
             <a href="https://imccertifications.com/certificates/C-2025-51795.pdf"     target="_blank">IMC Certificate ↗</a>
             <a href="https://imccertifications.com/certificates/CPD-C-2025-51795.pdf" target="_blank">CPD Certificate ↗</a>
+            <a href="https://imccertifications.com/certificates/C-2025-51795.pdf"     target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer">IMC Certificate ↗</a>
+            <a href="https://imccertifications.com/certificates/CPD-C-2025-51795.pdf" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer">CPD Certificate ↗</a>
           </div>
         </div>
       </div>
@@ -380,8 +235,7 @@ This added a strong problem-solving and continuous improvement perspective to my
       <div class="contact-left">
         <div class="section-label" style="margin-bottom:16px">
           <span class="label-num">05</span>
-          <span>Contact</span>
-        </div>
+@@ -385,89 +389,89 @@ This added a strong problem-solving and continuous improvement perspective to my
         <h2 class="section-title" style="margin-bottom:16px">Let's <em>connect</em></h2>
         <p class="contact-desc">Open to new opportunities, collaborations, and conversations about engineering challenges. Feel free to reach out through any of the channels below.</p>
         <div class="contact-availability">
@@ -408,6 +262,7 @@ This added a strong problem-solving and continuous improvement perspective to my
   </div>
 </div>
         <a href="https://www.linkedin.com/in/jithin-machath/" target="_blank" class="contact-card">
+        <a href="https://www.linkedin.com/in/jithin-machath/" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer" class="contact-card">
           <div class="contact-card-icon">
             <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
               <rect x="2" y="2" width="18" height="18" rx="3" stroke="currentColor" stroke-width="1.5"/>
@@ -424,6 +279,7 @@ This added a strong problem-solving and continuous improvement perspective to my
         </a>
 
         <a href="https://wa.me/918086587592" target="_blank" class="contact-card">
+        <a href="https://wa.me/918086587592" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer" class="contact-card">
           <div class="contact-card-icon">
             <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
               <path d="M11 2a9 9 0 0 1 7.36 14.18L20 20l-3.93-1.03A9 9 0 1 1 11 2z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
@@ -464,6 +320,8 @@ This added a strong problem-solving and continuous improvement perspective to my
       <a href="/cdn-cgi/l/email-protection#1d777469757473707c7e757c69755d72686971727276337e7270" class="footer-link">Email</a>
       <a href="https://www.linkedin.com/in/jithin-machath/" target="_blank" class="footer-link">LinkedIn</a>
       <a href="https://wa.me/918086587592" target="_blank" class="footer-link">WhatsApp</a>
+      <a href="https://www.linkedin.com/in/jithin-machath/" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer" class="footer-link">LinkedIn</a>
+      <a href="https://wa.me/918086587592" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer" class="footer-link">WhatsApp</a>
     </div>
   </div>
 </footer>
