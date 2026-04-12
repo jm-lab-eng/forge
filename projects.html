@@ -3,6 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https:; font-src 'self' https://fonts.gstatic.com data:; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'; upgrade-insecure-requests">
+<meta name="referrer" content="no-referrer">
+<meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=()">
+<meta http-equiv="X-Content-Type-Options" content="nosniff">
 <title>Engineering Projects — Jithin Machath</title>
 <link rel="stylesheet" href="style.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -28,49 +32,7 @@
   <div class="nav-inner">
     <a href="index.html" class="nav-brand"><span class="brand-jm">JM</span></a>
     <ul class="nav-links" id="nav-links">
-      <li><a href="index.html#about"      class="nav-link" onclick="closeMenu()">About</a></li>
-      <li><a href="index.html#experience" class="nav-link" onclick="closeMenu()">Experience</a></li>
-      <li><a href="index.html#skills"     class="nav-link" onclick="closeMenu()">Skills</a></li>
-      <li><a href="index.html#education"  class="nav-link" onclick="closeMenu()">Education</a></li>
-      <li><a href="projects.html"         class="nav-link nav-link--active">Projects</a></li>
-    </ul>
-    <a href="resume.pdf" class="nav-cv" download>
-      <span>CV</span>
-      <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M6 1v7M3 5l3 3 3-3M1 10h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-    </a>
-    <button class="hamburger" id="hamburger" aria-label="Open menu" onclick="toggleMenu()">
-      <span></span><span></span><span></span>
-    </button>
-  </div>
-</nav>
-
-<section class="page-header">
-  <div class="page-header-inner">
-    <a href="index.html" class="back-link">← Back to Portfolio</a>
-    <div class="page-header-text">
-      <div class="section-label" style="margin-bottom:16px">
-        <span class="label-num">Projects</span>
-        <span>Engineering Case Studies</span>
-      </div>
-      <h1 class="page-title">Real Systems.<br><em>Real Environments.</em></h1>
-      <p class="page-subtitle">Engineering work across robotics, hydraulics, and industrial system development — concept through field deployment.</p>
-    </div>
-  </div>
-</section>
-
-<section class="projects-page">
-  <div class="projects-page-inner">
-
-    <div class="global-disclaimer">
-      <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="7" stroke="currentColor" stroke-width="1.2"/><path d="M8 7v4M8 5v.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
-      <p>This page documents my engineering contributions from prior employment. Project details are based on publicly available information and personal professional experience. No confidential, proprietary, or internal information is disclosed.</p>
-    </div>
-
-
-    <!-- ═══════════════════════════════════════════════════ -->
-    <!--  PROJECT 01 · DRACO — ROBOTIC TANK CLEANING SYSTEM  -->
-    <!-- ═══════════════════════════════════════════════════ -->
-    <article class="project-entry" id="proj-draco">
+@@ -74,51 +78,51 @@
 
       <div class="project-entry-header" onclick="toggleProject('proj-draco')">
         <div class="peh-left">
@@ -97,6 +59,7 @@
             <p class="proj-one-liner">A field-deployed robotic platform designed for in-service cleaning of crude oil storage tanks, eliminating tank shutdown and reducing hazardous manual entry.</p>
           </div>
           <a href="https://research.genrobotics.com/draco/" target="_blank" class="proj-ref-link">Project Reference ↗</a>
+          <a href="https://research.genrobotics.com/draco/" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer" class="proj-ref-link">Project Reference ↗</a>
         </div>
 
         <!-- DEVELOPMENT FLOW -->
@@ -122,132 +85,7 @@
             <div class="keyword-cloud">
               <span>Robotics</span>
               <span>Hydraulic Systems</span>
-              <span>Piston Pump Design</span>
-              <span>Hazardous Area Engineering</span>
-              <span>Explosion Protection</span>
-              <span>ATEX / IECEx</span>
-              <span>Sludge Pumping</span>
-              <span>Proximity Sensing</span>
-              <span>FEA / ANSYS</span>
-              <span>DFMEA</span>
-              <span>Oil &amp; Gas R&amp;D</span>
-              <span>Electro-mechanical Integration</span>
-              <span>Ignition Hazard Analysis</span>
-              <span>Prototype Validation</span>
-            </div>
-          </div>
-
-          <!-- 4 · MY ROLE & CONTRIBUTION -->
-          <div class="proj-section proj-section--full">
-            <div class="proj-section-label"><span class="psec-dot"></span>My Role &amp; Contribution</div>
-            <div class="role-grid">
-              <div class="role-phase">
-                <div class="role-phase-title"><span class="phase-badge">Design Phase</span></div>
-                <ul class="contribution-list">
-                  <li>Designed the piston pump subsystem for sludge mobilisation and pumping</li>
-                  <li>Developed hydraulic circuit architecture; selected components suitable for hazardous environments</li>
-                  <li>Performed hydraulic calculations — flow estimation, pressure losses, system performance analysis</li>
-                  <li>Conducted structural analysis to support subsystem design decisions</li>
-                  <li>Designed inductive proximity-sensor based position sensing for hydraulic cylinder control</li>
-                  <li>Participated in DFMA / DFX design reviews and recommended design improvements</li>
-                </ul>
-              </div>
-              <div class="role-phase">
-                <div class="role-phase-title"><span class="phase-badge phase-badge--b">Development &amp; Validation Phase</span></div>
-                <ul class="contribution-list">
-                  <li>Performed engineering risk assessments — ignition hazard analysis, DFMEA, Job Safety Analysis</li>
-                  <li>Coordinated engineering activities across design, fabrication, and testing phases</li>
-                  <li>Supported prototype build, integration, and iterative testing</li>
-                  <li>Led technical execution as Engineering Project Lead during field validation</li>
-                  <li>Supported decision-making during system verification and field implementation</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-          <!-- 5 · KEY SKILLS ACHIEVED -->
-          <div class="proj-section proj-section--full">
-            <div class="proj-section-label"><span class="psec-dot"></span>Key Skills Achieved</div>
-            <div class="skills-achieved-grid">
-              <div class="skill-achieved-item">
-                <span class="sa-icon">⚙</span>
-                <div>
-                  <strong>Hydraulic System Design</strong>
-                  <p>Full circuit architecture, component selection, and performance calculations for industrial hydraulics in hazardous environments</p>
-                </div>
-              </div>
-              <div class="skill-achieved-item">
-                <span class="sa-icon">🔥</span>
-                <div>
-                  <strong>Hazardous Area Engineering</strong>
-                  <p>Explosion protection principles, ignition hazard analysis, and ATEX-compliant design in live oil &amp; gas environments</p>
-                </div>
-              </div>
-              <div class="skill-achieved-item">
-                <span class="sa-icon">📐</span>
-                <div>
-                  <strong>Subsystem Mechanical Design</strong>
-                  <p>Piston pump design, structural analysis, sensor integration, and electro-mechanical assembly under tight constraints</p>
-                </div>
-              </div>
-              <div class="skill-achieved-item">
-                <span class="sa-icon">🏭</span>
-                <div>
-                  <strong>Field Deployment &amp; Validation</strong>
-                  <p>Leading prototype testing and live industrial field validation — from bench-level to operational deployment</p>
-                </div>
-              </div>
-              <div class="skill-achieved-item">
-                <span class="sa-icon">📋</span>
-                <div>
-                  <strong>Engineering Risk Assessment</strong>
-                  <p>DFMEA, Job Safety Analysis, and ignition hazard assessment for safety-critical industrial robotics</p>
-                </div>
-              </div>
-              <div class="skill-achieved-item">
-                <span class="sa-icon">🤝</span>
-                <div>
-                  <strong>Cross-functional Leadership</strong>
-                  <p>Coordinating design, fabrication, and test teams as Engineering Project Lead across a multi-year R&amp;D program</p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- 6 · GALLERY -->
-          <div class="proj-section proj-section--full">
-            <div class="proj-section-label">
-              <span class="psec-dot"></span>Gallery
-              <span class="gallery-hint">— click to enlarge</span>
-            </div>
-            <div class="gallery-grid">
-              <div class="gallery-item">
-                <img src="images/draco/system1.jpg" alt="System concept" loading="lazy">
-              </div>
-              <div class="gallery-item">
-                <img src="images/draco/system2.jpg" alt="Prototype system" loading="lazy">
-              </div>
-              <div class="gallery-item">
-                <img src="images/draco/system3.jpg" alt="Testing setup" loading="lazy">
-              </div>
-            </div>
-          </div>
-
-        </div><!-- /proj-body-grid -->
-      </div><!-- /project-entry-body -->
-    </article>
-
-
-    <!-- ═══════════════════════════════════════════════════════
-    HOW TO ADD A NEW PROJECT
-    ────────────────────────
-    1. Copy the entire <article class="project-entry"> block above.
-    2. Change id="proj-draco" to a new id e.g. id="proj-02".
-    3. Remove "is-open" from the <article> tag (so it starts collapsed).
-    4. Update all content: proj-num, domain tag, title, tagline, duration,
-       full name, one-liner, ref link href, dev-flow stages,
-       application area + tags, keywords, role phases + lists,
-       skills achieved items, and gallery images.
+@@ -251,51 +255,51 @@
     5. To omit the gallery, simply delete that entire proj-section block.
     6. Save — accordion and lightbox wire up automatically.
     ════════════════════════════════════════════════════════ -->
@@ -274,6 +112,7 @@
             <p class="proj-one-liner">A spider-like robotic unit with a grabber, shovel, and legs — pneumatically actuated and stepper motor driven — designed to remove hazardous waste from manholes and sewers without any human entry.</p>
           </div>
           <a href="https://www.sanitation.genrobotics.com/bandicoot/" target="_blank" class="proj-ref-link">Project Reference ↗</a>
+          <a href="https://www.sanitation.genrobotics.com/bandicoot/" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer" class="proj-ref-link">Project Reference ↗</a>
         </div>
         <div class="proj-body-grid">
           <div class="proj-section">
@@ -299,29 +138,7 @@
                 </ul>
               </div>
               <div class="role-phase">
-                <div class="role-phase-title"><span class="phase-badge phase-badge--b">Development &amp; Documentation</span></div>
-                <ul class="contribution-list">
-                  <li>Contributed to design, drawings, and 3D modelling as part of the engineering team</li>
-                  <li>Participated in prototype testing and iterative design improvements</li>
-                  <li>Maintained structured engineering documentation throughout the project</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div class="proj-section proj-section--full">
-            <div class="proj-section-label"><span class="psec-dot"></span>Key Skills Achieved</div>
-            <div class="skills-achieved-grid">
-              <div class="skill-achieved-item"><span class="sa-icon">💨</span><div><strong>Pneumatic Systems</strong><p>Hands-on study of compressors, pneumatic cylinders, actuation logic, and system operation in a deployed robotic product</p></div></div>
-              <div class="skill-achieved-item"><span class="sa-icon">📐</span><div><strong>Structural Analysis</strong><p>FEA-based strength verification and optimisation of robotic components under operational load conditions</p></div></div>
-              <div class="skill-achieved-item"><span class="sa-icon">🧪</span><div><strong>Advanced Materials</strong><p>Study of carbon fibre properties and its structural application in lightweight robotics</p></div></div>
-              <div class="skill-achieved-item"><span class="sa-icon">🔩</span><div><strong>Component Selection</strong><p>Theoretical calculations to support selection of mechanical and actuation components for a live product</p></div></div>
-              <div class="skill-achieved-item"><span class="sa-icon">📋</span><div><strong>Engineering Documentation</strong><p>Structured documentation practice as part of a multidisciplinary product development team</p></div></div>
-            </div>
-          </div>
-          <div class="proj-section proj-section--full">
-            <div class="proj-section-label"><span class="psec-dot"></span>Gallery<span class="gallery-hint"> — images to be added</span></div>
-            <div class="gallery-placeholder"><svg width="32" height="32" viewBox="0 0 32 32" fill="none"><rect x="2" y="6" width="28" height="20" rx="3" stroke="currentColor" stroke-width="1.5"/><circle cx="10" cy="13" r="2.5" stroke="currentColor" stroke-width="1.5"/><path d="M2 22l7-6 5 5 4-3 7 7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg><p>Images will be added here</p></div>
-          </div>
+@@ -325,51 +329,51 @@
         </div>
       </div>
     </article>
@@ -348,6 +165,7 @@
             <p class="proj-one-liner">An advanced rehabilitation exoskeleton using pneumatic actuators to provide motorized walking support for patients with paraplegic conditions — designed for hospitals and PMR centres, classified as medical electrical equipment under IEC 60601.</p>
           </div>
           <a href="https://medical.genrobotics.com/g-gaiter/" target="_blank" class="proj-ref-link">Project Reference ↗</a>
+          <a href="https://medical.genrobotics.com/g-gaiter/" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer" class="proj-ref-link">Project Reference ↗</a>
         </div>
         <div class="proj-body-grid">
           <div class="proj-section">
@@ -373,26 +191,7 @@
               <div class="role-phase">
                 <div class="role-phase-title"><span class="phase-badge phase-badge--b">Compliance &amp; Documentation</span></div>
                 <ul class="contribution-list">
-                  <li>Worked with IEC 60601 standard (mechanical safety aspects) during beta prototype testing phase</li>
-                  <li>Documented engineering studies and verification records aligned with medical device compliance requirements</li>
-                  <li>Collaborated with control system engineers, providing mechanical and dynamic system inputs</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div class="proj-section proj-section--full">
-            <div class="proj-section-label"><span class="psec-dot"></span>Key Skills Achieved</div>
-            <div class="skills-achieved-grid">
-              <div class="skill-achieved-item"><span class="sa-icon">🏥</span><div><strong>Medical Device Engineering</strong><p>Exposure to IEC 60601 mechanical safety requirements for medical electrical equipment in a beta prototype environment</p></div></div>
-              <div class="skill-achieved-item"><span class="sa-icon">📐</span><div><strong>Structural Analysis</strong><p>FEA-based safety verification and optimisation of exoskeleton components under biomechanical load conditions</p></div></div>
-              <div class="skill-achieved-item"><span class="sa-icon">🤝</span><div><strong>Cross-discipline Collaboration</strong><p>Translating mechanical dynamics into usable inputs for control system engineers</p></div></div>
-              <div class="skill-achieved-item"><span class="sa-icon">📋</span><div><strong>Compliance Documentation</strong><p>Structured verification and documentation aligned with international medical device standards</p></div></div>
-            </div>
-          </div>
-          <div class="proj-section proj-section--full">
-            <div class="proj-section-label"><span class="psec-dot"></span>Gallery<span class="gallery-hint"> — images to be added</span></div>
-            <div class="gallery-placeholder"><svg width="32" height="32" viewBox="0 0 32 32" fill="none"><rect x="2" y="6" width="28" height="20" rx="3" stroke="currentColor" stroke-width="1.5"/><circle cx="10" cy="13" r="2.5" stroke="currentColor" stroke-width="1.5"/><path d="M2 22l7-6 5 5 4-3 7 7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg><p>Images will be added here</p></div>
-          </div>
+@@ -396,51 +400,51 @@
         </div>
       </div>
     </article>
@@ -419,6 +218,7 @@
             <p class="proj-one-liner">An advanced vehicle-mounted robotic system integrating the Bandicoot robot for end-to-end automated manhole cleaning — featuring automated positioning, hydraulic sludge suction, and a smart waste dumping tray, operating with its own independent power source.</p>
           </div>
           <a href="https://sanitation.genrobotics.com/mobility+/" target="_blank" class="proj-ref-link">Project Reference ↗</a>
+          <a href="https://sanitation.genrobotics.com/mobility+/" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer" class="proj-ref-link">Project Reference ↗</a>
         </div>
         <div class="proj-body-grid">
           <div class="proj-section">
@@ -444,30 +244,7 @@
                   <li>Selected mechanical and hydraulic components based on system requirements</li>
                 </ul>
               </div>
-              <div class="role-phase">
-                <div class="role-phase-title"><span class="phase-badge phase-badge--b">Development &amp; Testing</span></div>
-                <ul class="contribution-list">
-                  <li>Studied and implemented hydraulic system for the vehicle-mounted unit</li>
-                  <li>Supported prototype development and system integration</li>
-                  <li>Conducted prototype testing, analysed results, and fed findings back into design iterations</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div class="proj-section proj-section--full">
-            <div class="proj-section-label"><span class="psec-dot"></span>Key Skills Achieved</div>
-            <div class="skills-achieved-grid">
-              <div class="skill-achieved-item"><span class="sa-icon">🚛</span><div><strong>Vehicle-Mounted System Integration</strong><p>Integrating complex robotic and hydraulic systems onto a vehicle platform for field deployment</p></div></div>
-              <div class="skill-achieved-item"><span class="sa-icon">⚙</span><div><strong>Hydraulic System Implementation</strong><p>Practical application of hydraulics for actuation of robotic and waste suction functions on a mobile platform</p></div></div>
-              <div class="skill-achieved-item"><span class="sa-icon">📐</span><div><strong>Weldment Frame Optimisation</strong><p>Structural optimisation of fabricated weldment frames using ANSYS Workbench for strength and weight efficiency</p></div></div>
-              <div class="skill-achieved-item"><span class="sa-icon">🔬</span><div><strong>Feasibility to Prototype</strong><p>End-to-end involvement from feasibility study through system design, analysis, prototype build, and test-driven iteration</p></div></div>
-              <div class="skill-achieved-item"><span class="sa-icon">🔩</span><div><strong>Component Selection</strong><p>Selection of mechanical and hydraulic components matched to system performance and operational requirements</p></div></div>
-            </div>
-          </div>
-          <div class="proj-section proj-section--full">
-            <div class="proj-section-label"><span class="psec-dot"></span>Gallery<span class="gallery-hint"> — images to be added</span></div>
-            <div class="gallery-placeholder"><svg width="32" height="32" viewBox="0 0 32 32" fill="none"><rect x="2" y="6" width="28" height="20" rx="3" stroke="currentColor" stroke-width="1.5"/><circle cx="10" cy="13" r="2.5" stroke="currentColor" stroke-width="1.5"/><path d="M2 22l7-6 5 5 4-3 7 7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg><p>Images will be added here</p></div>
-          </div>
+@@ -471,51 +475,51 @@
         </div>
       </div>
     </article>
@@ -494,6 +271,7 @@
             <p class="proj-one-liner">A hydraulically actuated semi-humanoid robot for extreme, dangerous, and high-risk tasks — including reconnaissance, bomb disposal, heavy equipment handling, and industrial maintenance. Currently under active R&amp;D.</p>
           </div>
           <a href="https://research.genrobotics.com/genbot/" target="_blank" class="proj-ref-link">Project Reference ↗</a>
+          <a href="https://research.genrobotics.com/genbot/" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer" class="proj-ref-link">Project Reference ↗</a>
         </div>
         <div class="proj-body-grid">
           <div class="proj-section">
@@ -519,30 +297,7 @@
               </div>
               <div class="role-phase">
                 <div class="role-phase-title"><span class="phase-badge phase-badge--b">Genbot v2.0 — Hydraulic &amp; Mechanical Systems Advisor</span></div>
-                <ul class="contribution-list">
-                  <li>Guided the engineering team on hydraulic system design — components, working principles, selection, and operation</li>
-                  <li>Reviewed mechanical load calculations and hydraulic system power calculations</li>
-                  <li>Reviewed structural analysis work conducted by the team</li>
-                  <li>Supported troubleshooting of hydraulic system issues during operation</li>
-                  <li>Advised on performance criteria, system behaviour, and theoretical interpretation of operational problems</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div class="proj-section proj-section--full">
-            <div class="proj-section-label"><span class="psec-dot"></span>Key Skills Achieved</div>
-            <div class="skills-achieved-grid">
-              <div class="skill-achieved-item"><span class="sa-icon">⚙</span><div><strong>Deep Hydraulic Systems Expertise</strong><p>Comprehensive knowledge of hydraulic cylinders, motors, valves, hoses, connectors — selection, operation, performance, and troubleshooting</p></div></div>
-              <div class="skill-achieved-item"><span class="sa-icon">🤖</span><div><strong>Humanoid Robotics — Mechanical Design</strong><p>Feasibility and design work for a complex semi-humanoid platform — load conditions, dimensional requirements, actuation systems</p></div></div>
-              <div class="skill-achieved-item"><span class="sa-icon">🔍</span><div><strong>Market &amp; Feasibility Analysis</strong><p>Comparative study of robotic platforms and systematic feasibility evaluation to support design direction</p></div></div>
-              <div class="skill-achieved-item"><span class="sa-icon">🏭</span><div><strong>Vendor &amp; Procurement Coordination</strong><p>Technical communication with vendors for actuator and component procurement — specification preparation and evaluation</p></div></div>
-              <div class="skill-achieved-item"><span class="sa-icon">🎓</span><div><strong>Technical Mentoring</strong><p>Guiding a junior engineering team through hydraulic system design, review, and troubleshooting as subject matter expert</p></div></div>
-            </div>
-          </div>
-          <div class="proj-section proj-section--full">
-            <div class="proj-section-label"><span class="psec-dot"></span>Gallery<span class="gallery-hint"> — images to be added</span></div>
-            <div class="gallery-placeholder"><svg width="32" height="32" viewBox="0 0 32 32" fill="none"><rect x="2" y="6" width="28" height="20" rx="3" stroke="currentColor" stroke-width="1.5"/><circle cx="10" cy="13" r="2.5" stroke="currentColor" stroke-width="1.5"/><path d="M2 22l7-6 5 5 4-3 7 7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg><p>Images will be added here</p></div>
-          </div>
+@@ -546,51 +550,51 @@
         </div>
       </div>
     </article>
@@ -569,6 +324,7 @@
             <p class="proj-one-liner">A hydraulically powered tracked robotic rover with vacuum suction or onboard pump unit and a stirrer mixing unit — designed for unmanned removal of dry waste, solid waste, and sludge from STP wells, stormwater drains, and confined spaces.</p>
           </div>
           <a href="https://sanitation.genrobotics.com/wilboar/" target="_blank" class="proj-ref-link">Project Reference ↗</a>
+          <a href="https://sanitation.genrobotics.com/wilboar/" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer" class="proj-ref-link">Project Reference ↗</a>
         </div>
         <div class="proj-body-grid">
           <div class="proj-section">
@@ -594,31 +350,7 @@
                   <li>Designed suction mouth end configurations</li>
                 </ul>
               </div>
-              <div class="role-phase">
-                <div class="role-phase-title"><span class="phase-badge phase-badge--b">Testing &amp; Development</span></div>
-                <ul class="contribution-list">
-                  <li>Conducted testing with different prototype configurations and analysed results for design modifications</li>
-                  <li>Studied centrifugal and submersible pump systems — performance characteristics and selection criteria</li>
-                  <li>Compared positive displacement vs centrifugal pumps for different application requirements</li>
-                  <li>Contributed to project documentation throughout the development cycle</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div class="proj-section proj-section--full">
-            <div class="proj-section-label"><span class="psec-dot"></span>Key Skills Achieved</div>
-            <div class="skills-achieved-grid">
-              <div class="skill-achieved-item"><span class="sa-icon">💧</span><div><strong>Vacuum &amp; Suction Systems</strong><p>In-depth understanding of vacuum system performance under varying conditions — dry, wet, and liquid suction — and suction mouth design</p></div></div>
-              <div class="skill-achieved-item"><span class="sa-icon">⚙</span><div><strong>Pump Engineering</strong><p>Study and selection of centrifugal, submersible, and positive displacement pumps — performance characteristics and application-specific selection</p></div></div>
-              <div class="skill-achieved-item"><span class="sa-icon">📐</span><div><strong>Structural Analysis</strong><p>FEA-based strength verification and optimisation of robotic rover components in confined and uneven terrain conditions</p></div></div>
-              <div class="skill-achieved-item"><span class="sa-icon">🧪</span><div><strong>Configuration Testing</strong><p>Hands-on prototype testing across multiple configurations, analysing results to drive iterative design improvements</p></div></div>
-              <div class="skill-achieved-item"><span class="sa-icon">🔩</span><div><strong>Component Selection</strong><p>Selection of hydraulic components, bearings, and rubber elements for confined-space robotic operating conditions</p></div></div>
-            </div>
-          </div>
-          <div class="proj-section proj-section--full">
-            <div class="proj-section-label"><span class="psec-dot"></span>Gallery<span class="gallery-hint"> — images to be added</span></div>
-            <div class="gallery-placeholder"><svg width="32" height="32" viewBox="0 0 32 32" fill="none"><rect x="2" y="6" width="28" height="20" rx="3" stroke="currentColor" stroke-width="1.5"/><circle cx="10" cy="13" r="2.5" stroke="currentColor" stroke-width="1.5"/><path d="M2 22l7-6 5 5 4-3 7 7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg><p>Images will be added here</p></div>
-          </div>
+@@ -622,51 +626,51 @@
         </div>
       </div>
     </article>
@@ -645,6 +377,7 @@
             <p class="proj-one-liner">An advanced 4-in-1 vehicle combining high-pressure jetting, powerful suction, desilting, and inspection in a single automated platform — designed to eliminate manual scavenging and tackle hard sediment, fatbergs, and heavy sludge across urban, industrial, and municipal infrastructure.</p>
           </div>
           <a href="https://sanitation.genrobotics.com/g-mammoth/" target="_blank" class="proj-ref-link">Project Reference ↗</a>
+          <a href="https://sanitation.genrobotics.com/g-mammoth/" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer" class="proj-ref-link">Project Reference ↗</a>
         </div>
         <div class="proj-body-grid">
           <div class="proj-section">
@@ -670,29 +403,7 @@
               <div class="role-phase">
                 <div class="role-phase-title"><span class="phase-badge phase-badge--b">Project Lead Engineer</span></div>
                 <ul class="contribution-list">
-                  <li>Owned full project responsibility — design confirmation, manufacturing oversight, BOM management, testing protocols, and quality assurance planning</li>
-                  <li>Managed version control and engineering change records throughout development</li>
-                  <li>Coordinated across business, procurement, fabrication, and QA/QC teams as technical lead</li>
-                  <li>Managed outsourced manufacturing with third-party suppliers — technical specifications, coordination, and quality oversight</li>
-                  <li>Oversaw design modifications in response to changes in system specifications</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div class="proj-section proj-section--full">
-            <div class="proj-section-label"><span class="psec-dot"></span>Key Skills Achieved</div>
-            <div class="skills-achieved-grid">
-              <div class="skill-achieved-item"><span class="sa-icon">🚛</span><div><strong>Truck &amp; Vehicle System Integration</strong><p>Understanding of integrating vacuum and hydraulic systems onto truck platforms — power take-off methods, mounting, and operational considerations</p></div></div>
-              <div class="skill-achieved-item"><span class="sa-icon">💨</span><div><strong>Vacuum System Engineering</strong><p>Comprehensive knowledge of vacuum suction systems — components, selection, manufacturing, materials, operation, and maintenance</p></div></div>
-              <div class="skill-achieved-item"><span class="sa-icon">📋</span><div><strong>Project Leadership</strong><p>Full ownership of a complex engineering project — design confirmation through outsourced manufacturing, testing, and quality assurance</p></div></div>
-              <div class="skill-achieved-item"><span class="sa-icon">🏭</span><div><strong>Outsourced Manufacturing Management</strong><p>Managing third-party manufacturing — technical specifications, supplier coordination, and quality oversight</p></div></div>
-              <div class="skill-achieved-item"><span class="sa-icon">🤝</span><div><strong>Stakeholder Communication</strong><p>Technical lead for cross-functional communication across business, procurement, fabrication, and QA/QC teams</p></div></div>
-            </div>
-          </div>
-          <div class="proj-section proj-section--full">
-            <div class="proj-section-label"><span class="psec-dot"></span>Gallery<span class="gallery-hint"> — images to be added</span></div>
-            <div class="gallery-placeholder"><svg width="32" height="32" viewBox="0 0 32 32" fill="none"><rect x="2" y="6" width="28" height="20" rx="3" stroke="currentColor" stroke-width="1.5"/><circle cx="10" cy="13" r="2.5" stroke="currentColor" stroke-width="1.5"/><path d="M2 22l7-6 5 5 4-3 7 7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg><p>Images will be added here</p></div>
-          </div>
+@@ -696,51 +700,51 @@
         </div>
       </div>
     </article>
@@ -719,6 +430,7 @@
             <p class="proj-one-liner">An early-stage R&amp;D initiative for a fully humanoid robotic platform. Focused on literature research, joint design studies, and rigid body dynamics simulation. No physical prototype developed — project currently on hold.</p>
           </div>
           <a href="https://research.genrobotics.com/g-bot/" target="_blank" class="proj-ref-link">Project Reference ↗</a>
+          <a href="https://research.genrobotics.com/g-bot/" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer" class="proj-ref-link">Project Reference ↗</a>
         </div>
         <div class="proj-body-grid">
           <div class="proj-section">
@@ -744,8 +456,7 @@
               <div class="role-phase">
                 <div class="role-phase-title"><span class="phase-badge phase-badge--b">Project Status</span></div>
                 <ul class="contribution-list">
-                  <li>Contributed during the initial R&amp;D and feasibility phase</li>
-                  <li>Project subsequently placed on hold — no physical prototype developed</li>
+@@ -749,51 +753,51 @@
                   <li>Foundational research and simulation work completed as basis for potential future development</li>
                 </ul>
               </div>
@@ -772,6 +483,7 @@
     <span class="footer-brand">Jithin Machath</span>
     <span class="footer-role">Mechanical Design Engineer</span>
     <a href="https://research.genrobotics.com/draco/" target="_blank" class="footer-link">Published Project Reference ↗</a>
+    <a href="https://research.genrobotics.com/draco/" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer" class="footer-link">Published Project Reference ↗</a>
   </div>
 </footer>
 
@@ -797,4 +509,3 @@
   });
 </script>
 </body>
-</html>
