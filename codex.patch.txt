@@ -1,0 +1,943 @@
+ (cd "$(git rev-parse --show-toplevel)" && git apply --3way <<'EOF' 
+diff --git a/index.html b/index.html
+index 5b23e536e98dc4c5d2b835b933c09ef27561cd2b..d0e84fc14e9bbbab033e15190b94a9f7a5770091 100644
+--- a/index.html
++++ b/index.html
+@@ -1,30 +1,34 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
++<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https:; font-src 'self' https://fonts.gstatic.com data:; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'; upgrade-insecure-requests">
++<meta name="referrer" content="no-referrer">
++<meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=()">
++<meta http-equiv="X-Content-Type-Options" content="nosniff">
+ <title>Jithin Machath — Mechanical Design Engineer</title>
+ <link rel="stylesheet" href="style.css">
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+ <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+ <script>
+   (function(){
+     var t = localStorage.getItem('jm-theme');
+     if (t === 'dark') document.documentElement.setAttribute('data-theme','dark');
+   })();
+ </script>
+ </head>
+ <body>
+ 
+ <div class="cursor" id="cursor"></div>
+ <div class="cursor-follower" id="cursor-follower"></div>
+ 
+ <button id="theme-toggle" aria-label="Toggle theme"><span class="toggle-icon">◑</span></button>
+ 
+ <nav class="navbar" id="navbar">
+   <div class="nav-inner">
+     <a href="index.html" class="nav-brand"><span class="brand-jm">JM</span></a>
+     <ul class="nav-links" id="nav-links">
+       <li><a href="#about"        class="nav-link" onclick="closeMenu()">About</a></li>
+       <li><a href="#experience"   class="nav-link" onclick="closeMenu()">Experience</a></li>
+       <li><a href="#skills"       class="nav-link" onclick="closeMenu()">Skills</a></li>
+@@ -104,87 +108,87 @@
+         I primarily work with CAD tools such as SolidWorks and AutoCAD for 3D modelling and manufacturing drawings, and use ANSYS Workbench for structural analysis and validation. I also hold a Lean Six Sigma Black Belt, which I use for structured problem solving and continuous improvement.
+         </p>
+       </div>
+       <div class="about-cards">
+         <div class="about-card"><div class="about-card-icon">⚙</div><h4>System-Level Design</h4><p>Electro-mechanical integration, hydraulic systems, structural optimisation</p></div>
+         <div class="about-card"><div class="about-card-icon">🔬</div><h4>Analysis &amp; Validation</h4><p>FEA, DFMEA, engineering calculations, prototype testing</p></div>
+         <div class="about-card"><div class="about-card-icon">🏭</div><h4>Field Deployment</h4><p>Real-world validation in oil &amp; gas, sanitation, and hazardous environments</p></div>
+         <div class="about-card"><div class="about-card-icon">📋</div><h4>Project Leadership</h4><p>Leading cross-functional teams across design, fabrication, and testing</p></div>
+       </div>
+     </div>
+   </div>
+ </section>
+ 
+ <!-- EXPERIENCE -->
+ <section class="section section--alt" id="experience">
+   <div class="section-inner">
+     <div class="section-label"><span class="label-num">02</span><span>Experience</span></div>
+     <h2 class="section-title">Work History</h2>
+     <div class="timeline">
+ 
+       <!-- ROLE 3 -->
+       <div class="timeline-item">
+         <div class="timeline-meta"><span class="timeline-year">Apr 2025 – Oct 2025</span></div>
+         <div class="timeline-content">
+           <h3>Project Lead Engineer</h3>
+-          <p class="timeline-org"><a href="https://www.genrobotics.com/" target="_blank" class="org-link">Genrobotics</a> &nbsp;·&nbsp; Robotics &amp; Industrial Systems</p>
++          <p class="timeline-org"><a href="https://www.genrobotics.com/" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer" class="org-link">Genrobotics</a> &nbsp;·&nbsp; Robotics &amp; Industrial Systems</p>
+           <p>Led R&D delivery of DRACO (robotic tank cleaning system) and G-Mammoth (suction-cum-jetting system), owning system-level mechanical architecture across hydraulics, structures, and materials to improve reliability, durability, and lifecycle performance.</p>
+           <p>Coordinated cross-functional teams of 10–15 engineers across engineering, procurement, and manufacturing. Defined validation plans, test protocols, and acceptance criteria, including safety-critical evaluation and audit readiness.Drove design improvements through RCA, Lean, and value engineering — achieving zero major audit non-conformities and 96% on-time delivery.</p>
+           <div class="timeline-tags">
+             <span>Project Leadership</span>
+             <span>Cross-functional Teams</span>
+             <span>System Architecture</span>
+             <span>Validation &amp; QA</span>
+             <span>Lean / RCA</span>
+           </div>
+         </div>
+       </div>
+ 
+       <!-- ROLE 2 -->
+       <div class="timeline-item">
+         <div class="timeline-meta"><span class="timeline-year">Apr 2024 – Mar 2025</span></div>
+         <div class="timeline-content">
+           <h3>Senior Mechanical Design Engineer</h3>
+-          <p class="timeline-org"><a href="https://www.genrobotics.com/" target="_blank" class="org-link">Genrobotics</a> &nbsp;·&nbsp; Robotics &amp; Industrial Systems</p>
++          <p class="timeline-org"><a href="https://www.genrobotics.com/" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer" class="org-link">Genrobotics</a> &nbsp;·&nbsp; Robotics &amp; Industrial Systems</p>
+           <p>Led end-to-end mechanical design and prototyping of DRACO, improving sludge extraction and buoyancy performance by 30%. Designed and deployed test rigs, cutting validation cost by 20% and cycle time by 25%.</p>
+           <p>Conducted linear and non-linear FEA studies in ANSYS Workbench across systems such as Genbot, Wilboar, and G-Gaiter. Performed design calculations, tolerance analysis, and material selection. Resolved multiple design-to-production issues in coordination with manufacturing teams.</p>
+           <div class="timeline-tags">
+             <span>Mechanical Design</span>
+             <span>FEA / ANSYS</span>
+             <span>Prototyping</span>
+             <span>Test Rig Design</span>
+             <span>Tolerance Analysis</span>
+           </div>
+         </div>
+       </div>
+ 
+       <!-- ROLE 1 -->
+       <div class="timeline-item">
+         <div class="timeline-meta"><span class="timeline-year">Apr 2021 – Mar 2024</span></div>
+         <div class="timeline-content">
+           <h3>Mechanical Design Engineer</h3>
+-          <p class="timeline-org"><a href="https://www.genrobotics.com/" target="_blank" class="org-link">Genrobotics</a> &nbsp;·&nbsp; Robotics &amp; Industrial Systems</p>
++          <p class="timeline-org"><a href="https://www.genrobotics.com/" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer" class="org-link">Genrobotics</a> &nbsp;·&nbsp; Robotics &amp; Industrial Systems</p>
+           <p>Designed mechanical subsystems for Bandicoot, Wilboar, G-Gaiter, and Mobility+, including 3D modelling, assemblies, and manufacturing drawings using SolidWorks and AutoCAD. Prepared and managed BOMs for manufacturing, procurement, and quality.</p>
+           <p>Conducted feasibility studies and structural analysis to improve durability and reduce cost. Supported prototype builds and field trials, incorporating test feedback into iterative design improvements.</p>
+           <div class="timeline-tags">
+             <span>SolidWorks / AutoCAD</span>
+             <span>BOM Management</span>
+             <span>Structural Analysis</span>
+             <span>Prototype Development</span>
+             <span>Field Trials</span>
+           </div>
+         </div>
+       </div>
+ 
+     </div>
+ 
+     <!-- IMPACT STRIP -->
+     <div class="impact-strip">
+       <div class="impact-item">
+         <span class="impact-label">Efficiency Improvements</span>
+         <span class="impact-desc">System optimisation across robotic programs</span>
+       </div>
+       <div class="impact-item">
+         <span class="impact-label">Cost Reduction</span>
+         <span class="impact-desc">Through design optimisation and value engineering</span>
+       </div>
+       <div class="impact-item">
+@@ -277,106 +281,106 @@
+         <div class="tool-chip"><img src="images/icons/autocad.png"    alt="AutoCAD"><span>AutoCAD</span></div>
+         <div class="tool-chip"><img src="images/icons/ansys.png"      alt="ANSYS"><span>ANSYS</span></div>
+         <div class="tool-chip"><img src="images/icons/excel.png"      alt="Excel"><span>Excel</span></div>
+         <div class="tool-chip"><img src="images/icons/powerpoint.png" alt="PowerPoint"><span>PowerPoint</span></div>
+         <div class="tool-chip"><img src="images/icons/word.png"       alt="Word"><span>Word</span></div>
+       </div>
+     </div>
+   </div>
+ </section>
+ 
+ <!-- EDUCATION -->
+ <section class="section section--alt" id="education">
+   <div class="section-inner">
+     <div class="section-label"><span class="label-num">04</span><span>Education</span></div>
+     <h2 class="section-title">Academic Background</h2>
+ <p class="edu-summary">
+ My academic journey progressed from strong mechanical fundamentals to system-level design, and further into structured, data-driven problem solving and process improvement.
+ </p>
+     
+     <div class="edu-timeline">
+       <div class="edu-item">
+         <div class="edu-logo-wrap"><img src="images/iiitdm.png" alt="IIITDM" class="edu-logo"></div>
+         <div class="edu-body">
+           <div class="edu-year">2017 – 2019</div>
+           <h3>M.Des – Mechanical Systems</h3>
+-          <a href="https://www.iiitdm.ac.in/" target="_blank" class="edu-inst">IIITDM Kancheepuram</a>
++          <a href="https://www.iiitdm.ac.in/" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer" class="edu-inst">IIITDM Kancheepuram</a>
+           <p class="edu-focus"> System Design · Mechatronics · FEA · Product Development </p>
+           <p>
+ I completed my Master of Design (M.Des) in Mechanical Systems from IIITDM Kancheepuram, a programme focused on hands-on product engineering and system-level design.
+ </p>
+ 
+ <p>
+ The coursework combined mechanical design with mechatronics, advanced manufacturing, and simulation-driven engineering. I worked on product development, mechatronic systems, and FEA, with a strong emphasis on taking concepts from idea to working systems.
+ </p>
+ 
+ <p>
+ This phase helped me move from component-level thinking to system-level design, understanding how different elements integrate in real engineering applications.
+ </p>
+         </div>
+       </div>
+       <div class="edu-item">
+         <div class="edu-logo-wrap"><img src="images/gec.jpg" alt="GEC Thrissur" class="edu-logo"></div>
+         <div class="edu-body">
+           <div class="edu-year">2012 – 2016</div>
+           <h3>B.Tech – Mechanical Engineering</h3>
+-          <a href="https://gectcr.ac.in/" target="_blank" class="edu-inst">Government Engineering College, Thrissur</a>
++          <a href="https://gectcr.ac.in/" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer" class="edu-inst">Government Engineering College, Thrissur</a>
+           <p class="edu-focus"> Core Mechanics · Manufacturing · Fluid Systems · Engineering Fundamentals </p>
+           <p>
+ I completed my B.Tech in Mechanical Engineering from Government Engineering College, Thrissur, building a strong foundation in thermodynamics, mechanics, fluid systems, machine design, and manufacturing.
+ </p>
+ 
+ <p>
+ I was also exposed to operations, supply chain, and management basics, helping me understand how engineering decisions connect to production, cost, and real-world delivery.
+ </p>
+ 
+ <p>
+ Most of my learning came through labs, workshops, and projects, shaping a practical, hands-on approach to engineering.
+ </p>
+         </div>
+       </div>
+       <div class="edu-item edu-item--cert">
+         <div class="edu-logo-wrap"><img src="images/imc.png" alt="IMC" class="edu-logo"></div>
+         <div class="edu-body">
+           <div class="edu-year">2025</div>
+           <h3>Lean Six Sigma Black Belt</h3>
+-          <a href="https://imccertifications.com/" target="_blank" class="edu-inst">International Management Consultancy (IMC)</a>
++          <a href="https://imccertifications.com/" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer" class="edu-inst">International Management Consultancy (IMC)</a>
+           <p class="edu-focus"> DMAIC · Root Cause Analysis · Process Improvement · Data-Driven Decisions </p>
+           <p>
+ I completed Lean Six Sigma Black Belt certification, where I learned to approach engineering and process problems in a structured, data-driven way.
+ </p>
+ 
+ <p>
+ The focus was on identifying root causes, improving processes, and enhancing efficiency and quality using frameworks like DMAIC and basic statistical analysis.
+ </p>
+ 
+ <p>
+ This added a strong problem-solving and continuous improvement perspective to my engineering approach.
+ </p>
+           <div class="cert-links">
+-            <a href="https://imccertifications.com/certificates/C-2025-51795.pdf"     target="_blank">IMC Certificate ↗</a>
+-            <a href="https://imccertifications.com/certificates/CPD-C-2025-51795.pdf" target="_blank">CPD Certificate ↗</a>
++            <a href="https://imccertifications.com/certificates/C-2025-51795.pdf"     target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer">IMC Certificate ↗</a>
++            <a href="https://imccertifications.com/certificates/CPD-C-2025-51795.pdf" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer">CPD Certificate ↗</a>
+           </div>
+         </div>
+       </div>
+     </div>
+   </div>
+ </section>
+ 
+ <!-- CTA -->
+ <section class="section section--cta">
+   <div class="section-inner cta-inner">
+     <h2>Explore Engineering Projects</h2>
+     <p>Detailed case studies of real-world system development — from hydraulics to field deployment.</p>
+     <a href="projects.html" class="btn-primary btn-primary--large">View All Projects →</a>
+   </div>
+ </section>
+ 
+ <!-- CONTACT -->
+ <section class="section section--contact" id="contact">
+   <div class="section-inner">
+     <div class="contact-grid">
+ 
+       <!-- LEFT -->
+       <div class="contact-left">
+         <div class="section-label" style="margin-bottom:16px">
+           <span class="label-num">05</span>
+@@ -385,89 +389,89 @@ This added a strong problem-solving and continuous improvement perspective to my
+         <h2 class="section-title" style="margin-bottom:16px">Let's <em>connect</em></h2>
+         <p class="contact-desc">Open to new opportunities, collaborations, and conversations about engineering challenges. Feel free to reach out through any of the channels below.</p>
+         <div class="contact-availability">
+           <span class="avail-dot"></span>
+           <span>Available for new roles — Immediate</span>
+         </div>
+       </div>
+ 
+       <!-- RIGHT — CONTACT CARDS -->
+             <div class="contact-right">
+ <div class="contact-card email-card">
+   <div class="contact-card-body">
+     <span class="contact-card-label">Email</span>
+ 
+     <div class="contact-email-wrap">
+       <a href="mailto:jithinmachath@gmail.com" class="contact-card-value">
+         jithinmachath@outlook.com
+       </a>
+ 
+       <button class="copy-btn" id="copy-email" title="Copy email">
+         ⧉
+       </button>
+     </div>
+   </div>
+ </div>
+-        <a href="https://www.linkedin.com/in/jithin-machath/" target="_blank" class="contact-card">
++        <a href="https://www.linkedin.com/in/jithin-machath/" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer" class="contact-card">
+           <div class="contact-card-icon">
+             <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
+               <rect x="2" y="2" width="18" height="18" rx="3" stroke="currentColor" stroke-width="1.5"/>
+               <path d="M6 9v7M6 6v.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+               <path d="M10 16v-4c0-1.5 1-2 2-2s2 .5 2 2v4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+               <path d="M10 9v7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+             </svg>
+           </div>
+           <div class="contact-card-body">
+             <span class="contact-card-label">LinkedIn</span>
+             <span class="contact-card-value">jithin-machath</span>
+           </div>
+           <svg class="contact-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 13L13 3M13 3H7M13 3v6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+         </a>
+ 
+-        <a href="https://wa.me/918086587592" target="_blank" class="contact-card">
++        <a href="https://wa.me/918086587592" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer" class="contact-card">
+           <div class="contact-card-icon">
+             <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
+               <path d="M11 2a9 9 0 0 1 7.36 14.18L20 20l-3.93-1.03A9 9 0 1 1 11 2z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+               <path d="M8 10.5c.5 1 1.5 2 2.5 2.5l1-1c.8.3 1.7.5 2.5.5 0 1-1 2-2 2A8 8 0 0 1 6 8c0-1 1-2 2-2 0 .8.2 1.7.5 2.5l-1 1z" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"/>
+             </svg>
+           </div>
+           <div class="contact-card-body">
+             <span class="contact-card-label">WhatsApp</span>
+             <span class="contact-card-value">+91 80865 87592</span>
+           </div>
+           <svg class="contact-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 13L13 3M13 3H7M13 3v6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+         </a>
+ 
+         <a href="tel:+918086587592" class="contact-card">
+           <div class="contact-card-icon">
+             <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
+               <path d="M6.5 3h3l1.5 4-2 1.5c1 2 2.5 3.5 4.5 4.5L15 11l4 1.5v3C19 17 17 19 15 19 8.4 19 3 13.6 3 7c0-2 2-4 3.5-4z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+             </svg>
+           </div>
+           <div class="contact-card-body">
+             <span class="contact-card-label">Phone</span>
+             <span class="contact-card-value">+91 80865 87592</span>
+           </div>
+           <svg class="contact-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 13L13 3M13 3H7M13 3v6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+         </a>
+ 
+       </div>
+     </div>
+   </div>
+ </section>
+ 
+ <!-- FOOTER -->
+ <footer class="footer">
+   <div class="footer-inner">
+     <span class="footer-brand">Jithin Machath</span>
+     <span class="footer-role">Mechanical Design Engineer</span>
+     <div class="footer-links">
+       <a href="/cdn-cgi/l/email-protection#1d777469757473707c7e757c69755d72686971727276337e7270" class="footer-link">Email</a>
+-      <a href="https://www.linkedin.com/in/jithin-machath/" target="_blank" class="footer-link">LinkedIn</a>
+-      <a href="https://wa.me/918086587592" target="_blank" class="footer-link">WhatsApp</a>
++      <a href="https://www.linkedin.com/in/jithin-machath/" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer" class="footer-link">LinkedIn</a>
++      <a href="https://wa.me/918086587592" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer" class="footer-link">WhatsApp</a>
+     </div>
+   </div>
+ </footer>
+ 
+ <script src="main.js"></script>
+ </body>
+ </html>
+ 
+EOF
+)
+
+
+
+ (cd "$(git rev-parse --show-toplevel)" && git apply --3way <<'EOF' 
+diff --git a/main.js b/main.js
+index 23c776bea7ab8a7b2b69846346a60d439d93ea42..e8987c4b3a11dec15633e3790418e3a7ebfed21d 100644
+--- a/main.js
++++ b/main.js
+@@ -84,52 +84,69 @@ const revealObserver = new IntersectionObserver((entries) => {
+ revealEls.forEach(el => revealObserver.observe(el));
+ 
+ // ── ACCORDION ─────────────────────────────────────────────
+ function toggleProject(id) {
+   const el = document.getElementById(id);
+   if (!el) return;
+   const wasOpen = el.classList.contains('is-open');
+ 
+   // Close all open entries
+   document.querySelectorAll('.project-entry.is-open').forEach(e => e.classList.remove('is-open'));
+ 
+   // If it wasn't open, open it and scroll to it
+   if (!wasOpen) {
+     el.classList.add('is-open');
+     setTimeout(() => {
+       el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+     }, 80);
+   }
+ }
+ 
+ // ── IMAGE PROTECTION ──────────────────────────────────────
+ document.addEventListener('contextmenu', e => {
+   if (e.target.tagName === 'IMG') e.preventDefault();
+ });
+ document.addEventListener('DOMContentLoaded', () => {
++  // External-link hardening
++  document.querySelectorAll('a[target="_blank"]').forEach(link => {
++    link.setAttribute('rel', 'noopener noreferrer');
++    link.setAttribute('referrerpolicy', 'no-referrer');
++  });
++
++  // Asset hardening hints for local downloadable documents
++  document.querySelectorAll('a[href$=".pdf"]').forEach(link => {
++    const href = link.getAttribute('href') || '';
++    if (!href.startsWith('http')) {
++      link.setAttribute('download', '');
++      link.setAttribute('type', 'application/pdf');
++    }
++  });
++
+   document.querySelectorAll('img').forEach(img => {
+     img.setAttribute('draggable', 'false');
++    img.setAttribute('loading', img.getAttribute('loading') || 'lazy');
++    img.setAttribute('decoding', 'async');
+     img.addEventListener('dragstart', e => e.preventDefault());
+   });
+ });
+ 
+ // ── MOBILE MENU ───────────────────────────────────────────
+ function toggleMenu() {
+   const links = document.getElementById('nav-links');
+   const btn   = document.getElementById('hamburger');
+   if (!links || !btn) return;
+   const isOpen = links.classList.toggle('is-open');
+   btn.classList.toggle('is-open', isOpen);
+   btn.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
+ }
+ 
+ function closeMenu() {
+   const links = document.getElementById('nav-links');
+   const btn   = document.getElementById('hamburger');
+   if (!links || !btn) return;
+   links.classList.remove('is-open');
+   btn.classList.remove('is-open');
+   btn.setAttribute('aria-label', 'Open menu');
+ }
+ 
+ // Close menu when clicking outside
+ document.addEventListener('click', e => {
+ 
+EOF
+)
+
+
+ (cd "$(git rev-parse --show-toplevel)" && git apply --3way <<'EOF' 
+diff --git a/projects.html b/projects.html
+index 4f2d2ae2860c408232102e7e82d9c9b4a2446e2b..bca682ca94dc88c7bb12c344245c7f03ee3632a4 100644
+--- a/projects.html
++++ b/projects.html
+@@ -1,30 +1,34 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
++<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https:; font-src 'self' https://fonts.gstatic.com data:; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'; upgrade-insecure-requests">
++<meta name="referrer" content="no-referrer">
++<meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=()">
++<meta http-equiv="X-Content-Type-Options" content="nosniff">
+ <title>Engineering Projects — Jithin Machath</title>
+ <link rel="stylesheet" href="style.css">
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+ <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+ <!-- Prevent flash of wrong theme -->
+ <script>
+   (function(){
+     var t = localStorage.getItem('jm-theme');
+     if(t === 'dark') document.documentElement.setAttribute('data-theme','dark');
+   })();
+ </script>
+ </head>
+ <body>
+  
+ <div class="cursor" id="cursor"></div>
+ <div class="cursor-follower" id="cursor-follower"></div>
+ 
+ <button id="theme-toggle" aria-label="Switch to dark mode">
+   <span class="toggle-icon">◑</span>
+ </button>
+ 
+ <nav class="navbar" id="navbar">
+   <div class="nav-inner">
+     <a href="index.html" class="nav-brand"><span class="brand-jm">JM</span></a>
+     <ul class="nav-links" id="nav-links">
+@@ -74,51 +78,51 @@
+ 
+       <div class="project-entry-header" onclick="toggleProject('proj-draco')">
+         <div class="peh-left">
+           <span class="proj-num">01</span>
+           <div class="peh-meta">
+             <span class="proj-domain-tag">Oil &amp; Gas Robotics</span>
+             <h2 class="proj-title">DRACO</h2>
+             <p class="proj-tagline">In-service sludge removal from crude oil storage tanks in hazardous environments.</p>
+           </div>
+         </div>
+         <div class="peh-right">
+           <button class="expand-btn" aria-label="Toggle project details">
+             <span class="expand-icon">+</span>
+           </button>
+         </div>
+       </div>
+ 
+       <div class="project-entry-body">
+ 
+         <!-- 1 · PROJECT NAME + REFERENCE -->
+         <div class="proj-section proj-section--name-ref">
+           <div class="proj-name-block">
+             <h3 class="proj-full-name">DRACO — Robotic Tank Cleaning System</h3>
+             <p class="proj-one-liner">A field-deployed robotic platform designed for in-service cleaning of crude oil storage tanks, eliminating tank shutdown and reducing hazardous manual entry.</p>
+           </div>
+-          <a href="https://research.genrobotics.com/draco/" target="_blank" class="proj-ref-link">Project Reference ↗</a>
++          <a href="https://research.genrobotics.com/draco/" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer" class="proj-ref-link">Project Reference ↗</a>
+         </div>
+ 
+         <!-- DEVELOPMENT FLOW -->
+ 
+         <div class="proj-body-grid">
+ 
+           <!-- 2 · APPLICATION AREA -->
+           <div class="proj-section">
+             <div class="proj-section-label"><span class="psec-dot"></span>Application Area</div>
+             <p class="proj-section-desc">Crude oil storage tank maintenance in active oil &amp; gas facilities — enabling in-service sludge removal without shutting down the tank or requiring personnel to enter hazardous confined spaces.</p>
+             <div class="app-tags">
+               <span>Crude Oil Storage Tanks</span>
+               <span>In-Service Maintenance</span>
+               <span>Hazardous Area Operations</span>
+               <span>Sludge Mobilisation &amp; Pumping</span>
+               <span>Confined Space Risk Reduction</span>
+             </div>
+           </div>
+ 
+           <!-- 3 · KEYWORDS -->
+           <div class="proj-section">
+             <div class="proj-section-label"><span class="psec-dot"></span>Keywords</div>
+             <div class="keyword-cloud">
+               <span>Robotics</span>
+               <span>Hydraulic Systems</span>
+@@ -251,51 +255,51 @@
+     5. To omit the gallery, simply delete that entire proj-section block.
+     6. Save — accordion and lightbox wire up automatically.
+     ════════════════════════════════════════════════════════ -->
+ 
+     <!-- PROJECT 02 · BANDICOOT -->
+     <article class="project-entry" id="proj-bandicoot">
+       <div class="project-entry-header" onclick="toggleProject('proj-bandicoot')">
+         <div class="peh-left">
+           <span class="proj-num">02</span>
+           <div class="peh-meta">
+             <span class="proj-domain-tag">Urban Sanitation Robotics</span>
+             <h2 class="proj-title">Bandicoot</h2>
+             <p class="proj-tagline">World's first robotic scavenger — eliminating manual manhole cleaning through remote-operated robotics.</p>
+           </div>
+         </div>
+         <div class="peh-right">
+           <button class="expand-btn" aria-label="Toggle"><span class="expand-icon">+</span></button>
+         </div>
+       </div>
+       <div class="project-entry-body">
+         <div class="proj-section proj-section--name-ref">
+           <div class="proj-name-block">
+             <h3 class="proj-full-name">Bandicoot — Robotic Manhole Cleaning System</h3>
+             <p class="proj-one-liner">A spider-like robotic unit with a grabber, shovel, and legs — pneumatically actuated and stepper motor driven — designed to remove hazardous waste from manholes and sewers without any human entry.</p>
+           </div>
+-          <a href="https://www.sanitation.genrobotics.com/bandicoot/" target="_blank" class="proj-ref-link">Project Reference ↗</a>
++          <a href="https://www.sanitation.genrobotics.com/bandicoot/" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer" class="proj-ref-link">Project Reference ↗</a>
+         </div>
+         <div class="proj-body-grid">
+           <div class="proj-section">
+             <div class="proj-section-label"><span class="psec-dot"></span>Application Area</div>
+             <p class="proj-section-desc">Urban sanitation — automated cleaning of manholes and sewers in municipal and industrial settings, completely eliminating manual scavenging and hazardous human entry into confined spaces.</p>
+             <div class="app-tags"><span>Manhole Cleaning</span><span>Sewer Maintenance</span><span>Urban Sanitation</span><span>Hazardous Waste Removal</span><span>Municipal Infrastructure</span></div>
+           </div>
+           <div class="proj-section">
+             <div class="proj-section-label"><span class="psec-dot"></span>Keywords</div>
+             <div class="keyword-cloud"><span>Pneumatic Systems</span><span>Pneumatic Cylinders</span><span>Compressors</span><span>Stepper Motors</span><span>Structural Analysis</span><span>FEA / ANSYS</span><span>Carbon Fibre</span><span>Component Selection</span><span>Robotic Mechanisms</span><span>Technical Documentation</span><span>Confined Space Robotics</span></div>
+           </div>
+           <div class="proj-section proj-section--full">
+             <div class="proj-section-label"><span class="psec-dot"></span>My Role &amp; Contribution</div>
+             <div class="role-grid">
+               <div class="role-phase">
+                 <div class="role-phase-title"><span class="phase-badge">Design &amp; Analysis</span></div>
+                 <ul class="contribution-list">
+                   <li>Conducted theoretical studies on the robotic system and its operating conditions</li>
+                   <li>Performed structural analysis for strength verification and design optimisation</li>
+                   <li>Carried out theoretical calculations for component selection</li>
+                   <li>Studied pneumatic systems — compressors, cylinders, actuation logic and operation</li>
+                   <li>Studied carbon fibre material properties and its application in the robotic structure</li>
+                 </ul>
+               </div>
+               <div class="role-phase">
+@@ -325,51 +329,51 @@
+         </div>
+       </div>
+     </article>
+ 
+     <!-- PROJECT 03 · G-GAITER -->
+     <article class="project-entry" id="proj-ggaiter">
+       <div class="project-entry-header" onclick="toggleProject('proj-ggaiter')">
+         <div class="peh-left">
+           <span class="proj-num">03</span>
+           <div class="peh-meta">
+             <span class="proj-domain-tag">Medical Robotics</span>
+             <h2 class="proj-title">G-Gaiter</h2>
+             <p class="proj-tagline">Robotic gait rehabilitation exoskeleton for individuals with paraplegic conditions and gait disabilities.</p>
+           </div>
+         </div>
+         <div class="peh-right">
+           <button class="expand-btn" aria-label="Toggle"><span class="expand-icon">+</span></button>
+         </div>
+       </div>
+       <div class="project-entry-body">
+         <div class="proj-section proj-section--name-ref">
+           <div class="proj-name-block">
+             <h3 class="proj-full-name">G-Gaiter — Robotic Gait Trainer</h3>
+             <p class="proj-one-liner">An advanced rehabilitation exoskeleton using pneumatic actuators to provide motorized walking support for patients with paraplegic conditions — designed for hospitals and PMR centres, classified as medical electrical equipment under IEC 60601.</p>
+           </div>
+-          <a href="https://medical.genrobotics.com/g-gaiter/" target="_blank" class="proj-ref-link">Project Reference ↗</a>
++          <a href="https://medical.genrobotics.com/g-gaiter/" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer" class="proj-ref-link">Project Reference ↗</a>
+         </div>
+         <div class="proj-body-grid">
+           <div class="proj-section">
+             <div class="proj-section-label"><span class="psec-dot"></span>Application Area</div>
+             <p class="proj-section-desc">Medical rehabilitation — assisting patients with paraplegic conditions or gait disabilities to regain walking ability through motorized exoskeletal support in hospital and PMR centre environments.</p>
+             <div class="app-tags"><span>Gait Rehabilitation</span><span>Medical Exoskeleton</span><span>Paraplegia</span><span>Hospitals &amp; PMR Centres</span><span>Medical Electrical Equipment</span></div>
+           </div>
+           <div class="proj-section">
+             <div class="proj-section-label"><span class="psec-dot"></span>Keywords</div>
+             <div class="keyword-cloud"><span>Pneumatic Actuators</span><span>Exoskeleton Design</span><span>Structural Analysis</span><span>FEA / ANSYS</span><span>IEC 60601</span><span>Medical Device Safety</span><span>Component Selection</span><span>Cross-discipline Collaboration</span><span>Compliance Documentation</span></div>
+           </div>
+           <div class="proj-section proj-section--full">
+             <div class="proj-section-label"><span class="psec-dot"></span>My Role &amp; Contribution</div>
+             <div class="role-grid">
+               <div class="role-phase">
+                 <div class="role-phase-title"><span class="phase-badge">Analysis &amp; Modelling</span></div>
+                 <ul class="contribution-list">
+                   <li>Conducted theoretical study of the exoskeleton system and its biomechanical operating conditions</li>
+                   <li>Performed structural analysis of components for safety verification and optimisation</li>
+                   <li>Carried out component selection based on load and performance requirements</li>
+                 </ul>
+               </div>
+               <div class="role-phase">
+                 <div class="role-phase-title"><span class="phase-badge phase-badge--b">Compliance &amp; Documentation</span></div>
+                 <ul class="contribution-list">
+@@ -396,51 +400,51 @@
+         </div>
+       </div>
+     </article>
+ 
+     <!-- PROJECT 04 · MOBILITY+ -->
+     <article class="project-entry" id="proj-mobilityplus">
+       <div class="project-entry-header" onclick="toggleProject('proj-mobilityplus')">
+         <div class="peh-left">
+           <span class="proj-num">04</span>
+           <div class="peh-meta">
+             <span class="proj-domain-tag">Urban Sanitation Robotics</span>
+             <h2 class="proj-title">Mobility+</h2>
+             <p class="proj-tagline">Vehicle-mounted robotic platform integrating the Bandicoot system for fully automated sewer manhole cleaning.</p>
+           </div>
+         </div>
+         <div class="peh-right">
+           <button class="expand-btn" aria-label="Toggle"><span class="expand-icon">+</span></button>
+         </div>
+       </div>
+       <div class="project-entry-body">
+         <div class="proj-section proj-section--name-ref">
+           <div class="proj-name-block">
+             <h3 class="proj-full-name">Mobility+ — Vehicle-Mounted Manhole Cleaning System</h3>
+             <p class="proj-one-liner">An advanced vehicle-mounted robotic system integrating the Bandicoot robot for end-to-end automated manhole cleaning — featuring automated positioning, hydraulic sludge suction, and a smart waste dumping tray, operating with its own independent power source.</p>
+           </div>
+-          <a href="https://sanitation.genrobotics.com/mobility+/" target="_blank" class="proj-ref-link">Project Reference ↗</a>
++          <a href="https://sanitation.genrobotics.com/mobility+/" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer" class="proj-ref-link">Project Reference ↗</a>
+         </div>
+         <div class="proj-body-grid">
+           <div class="proj-section">
+             <div class="proj-section-label"><span class="psec-dot"></span>Application Area</div>
+             <p class="proj-section-desc">Urban sanitation infrastructure — fully automated sewer manhole cleaning and waste management mounted on a dedicated vehicle, eliminating human entry and enabling efficient city-wide deployment.</p>
+             <div class="app-tags"><span>Vehicle-Mounted Robotics</span><span>Manhole Cleaning</span><span>Hydraulic Waste Suction</span><span>Urban Sanitation</span><span>Municipal Deployment</span></div>
+           </div>
+           <div class="proj-section">
+             <div class="proj-section-label"><span class="psec-dot"></span>Keywords</div>
+             <div class="keyword-cloud"><span>Hydraulic System</span><span>Vehicle Integration</span><span>Weldment Frame Design</span><span>Structural Optimisation</span><span>FEA / ANSYS Workbench</span><span>Feasibility Study</span><span>Component Selection</span><span>Prototype Testing</span><span>System Integration</span><span>Automated Positioning</span></div>
+           </div>
+           <div class="proj-section proj-section--full">
+             <div class="proj-section-label"><span class="psec-dot"></span>My Role &amp; Contribution</div>
+             <div class="role-grid">
+               <div class="role-phase">
+                 <div class="role-phase-title"><span class="phase-badge">Design &amp; Analysis</span></div>
+                 <ul class="contribution-list">
+                   <li>Involved from project inception as Mechanical Design Engineer</li>
+                   <li>Conducted feasibility studies and theoretical verifications for the vehicle-mounted system</li>
+                   <li>Performed structural strength analysis of design components</li>
+                   <li>Conducted weldment frame optimisation using ANSYS Workbench</li>
+                   <li>Carried out design optimisation based on analysis results and performance requirements</li>
+                   <li>Selected mechanical and hydraulic components based on system requirements</li>
+                 </ul>
+               </div>
+@@ -471,51 +475,51 @@
+         </div>
+       </div>
+     </article>
+ 
+     <!-- PROJECT 05 · GENBOT -->
+     <article class="project-entry" id="proj-genbot">
+       <div class="project-entry-header" onclick="toggleProject('proj-genbot')">
+         <div class="peh-left">
+           <span class="proj-num">05</span>
+           <div class="peh-meta">
+             <span class="proj-domain-tag">Defence &amp; Industrial Robotics</span>
+             <h2 class="proj-title">Genbot</h2>
+             <p class="proj-tagline">Semi-humanoid robotic platform for high-risk tasks in defence, construction, and industrial maintenance.</p>
+           </div>
+         </div>
+         <div class="peh-right">
+           <button class="expand-btn" aria-label="Toggle"><span class="expand-icon">+</span></button>
+         </div>
+       </div>
+       <div class="project-entry-body">
+         <div class="proj-section proj-section--name-ref">
+           <div class="proj-name-block">
+             <h3 class="proj-full-name">Genbot — Semi-Humanoid Robotic Platform</h3>
+             <p class="proj-one-liner">A hydraulically actuated semi-humanoid robot for extreme, dangerous, and high-risk tasks — including reconnaissance, bomb disposal, heavy equipment handling, and industrial maintenance. Currently under active R&amp;D.</p>
+           </div>
+-          <a href="https://research.genrobotics.com/genbot/" target="_blank" class="proj-ref-link">Project Reference ↗</a>
++          <a href="https://research.genrobotics.com/genbot/" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer" class="proj-ref-link">Project Reference ↗</a>
+         </div>
+         <div class="proj-body-grid">
+           <div class="proj-section">
+             <div class="proj-section-label"><span class="psec-dot"></span>Application Area</div>
+             <p class="proj-section-desc">Defence and industrial operations — handling extreme and high-risk tasks including reconnaissance, bomb disposal, heavy lifting, and maintenance in environments where human presence is unsafe.</p>
+             <div class="app-tags"><span>Defence Robotics</span><span>Bomb Disposal</span><span>Reconnaissance</span><span>Heavy Equipment Handling</span><span>Industrial Maintenance</span><span>Remote Operation</span></div>
+           </div>
+           <div class="proj-section">
+             <div class="proj-section-label"><span class="psec-dot"></span>Keywords</div>
+             <div class="keyword-cloud"><span>Hydraulic Actuators</span><span>Hydraulic Cylinders</span><span>Hydraulic Motors</span><span>Semi-Humanoid Robotics</span><span>Feasibility Study</span><span>Power Requirements</span><span>Component Selection</span><span>Vendor Coordination</span><span>Structural Review</span><span>Hydraulic Troubleshooting</span><span>Technical Advisory</span></div>
+           </div>
+           <div class="proj-section proj-section--full">
+             <div class="proj-section-label"><span class="psec-dot"></span>My Role &amp; Contribution</div>
+             <div class="role-grid">
+               <div class="role-phase">
+                 <div class="role-phase-title"><span class="phase-badge">Genbot v1.0 — Mechanical Design Engineer</span></div>
+                 <ul class="contribution-list">
+                   <li>Studied various robotic platforms in the market; conducted feasibility studies</li>
+                   <li>Provided design recommendations — theoretical calculations for component selection, dimensional requirements, and load conditions</li>
+                   <li>Calculated hydraulic power requirements and selected hydraulic cylinders and motors</li>
+                   <li>Communicated with vendors for procurement of actuators and mechanical components</li>
+                 </ul>
+               </div>
+               <div class="role-phase">
+                 <div class="role-phase-title"><span class="phase-badge phase-badge--b">Genbot v2.0 — Hydraulic &amp; Mechanical Systems Advisor</span></div>
+@@ -546,51 +550,51 @@
+         </div>
+       </div>
+     </article>
+ 
+     <!-- PROJECT 06 · WILBOAR -->
+     <article class="project-entry" id="proj-wilboar">
+       <div class="project-entry-header" onclick="toggleProject('proj-wilboar')">
+         <div class="peh-left">
+           <span class="proj-num">06</span>
+           <div class="peh-meta">
+             <span class="proj-domain-tag">Confined Space Robotics</span>
+             <h2 class="proj-title">Wilboar</h2>
+             <p class="proj-tagline">Hydraulic robotic rover for unmanned de-sludging and cleaning of confined spaces such as STP wells and stormwater drains.</p>
+           </div>
+         </div>
+         <div class="peh-right">
+           <button class="expand-btn" aria-label="Toggle"><span class="expand-icon">+</span></button>
+         </div>
+       </div>
+       <div class="project-entry-body">
+         <div class="proj-section proj-section--name-ref">
+           <div class="proj-name-block">
+             <h3 class="proj-full-name">Wilboar — Robotic Confined Space Cleaning Rover</h3>
+             <p class="proj-one-liner">A hydraulically powered tracked robotic rover with vacuum suction or onboard pump unit and a stirrer mixing unit — designed for unmanned removal of dry waste, solid waste, and sludge from STP wells, stormwater drains, and confined spaces.</p>
+           </div>
+-          <a href="https://sanitation.genrobotics.com/wilboar/" target="_blank" class="proj-ref-link">Project Reference ↗</a>
++          <a href="https://sanitation.genrobotics.com/wilboar/" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer" class="proj-ref-link">Project Reference ↗</a>
+         </div>
+         <div class="proj-body-grid">
+           <div class="proj-section">
+             <div class="proj-section-label"><span class="psec-dot"></span>Application Area</div>
+             <p class="proj-section-desc">Confined space maintenance — automated cleaning and de-sludging of sewage treatment plant wells, stormwater drains, and similar enclosed environments where human entry is hazardous or impractical.</p>
+             <div class="app-tags"><span>Sewage Treatment Plants</span><span>Stormwater Drains</span><span>Confined Space Cleaning</span><span>Sludge Removal</span><span>Municipal &amp; Industrial</span></div>
+           </div>
+           <div class="proj-section">
+             <div class="proj-section-label"><span class="psec-dot"></span>Keywords</div>
+             <div class="keyword-cloud"><span>Hydraulic Systems</span><span>Continuous Track</span><span>Vacuum Suction</span><span>Centrifugal Pumps</span><span>Submersible Pumps</span><span>Positive Displacement Pumps</span><span>Pump Selection</span><span>Suction Mouth Design</span><span>Structural Analysis</span><span>FEA</span><span>Prototype Testing</span><span>Design Iteration</span></div>
+           </div>
+           <div class="proj-section proj-section--full">
+             <div class="proj-section-label"><span class="psec-dot"></span>My Role &amp; Contribution</div>
+             <div class="role-grid">
+               <div class="role-phase">
+                 <div class="role-phase-title"><span class="phase-badge">Design &amp; Analysis</span></div>
+                 <ul class="contribution-list">
+                   <li>Conducted feasibility studies and studied vacuum system performance under different conditions — dry suction, wet suction, liquid suction</li>
+                   <li>Performed theoretical calculations and studied design aspects versus performance requirements</li>
+                   <li>Provided design recommendations — dimensional requirements and performance criteria</li>
+                   <li>Conducted structural analysis for strength and optimisation</li>
+                   <li>Selected mechanical components — hydraulic components, bearings, rubber elements</li>
+                   <li>Designed suction mouth end configurations</li>
+                 </ul>
+               </div>
+@@ -622,51 +626,51 @@
+         </div>
+       </div>
+     </article>
+ 
+     <!-- PROJECT 07 · G-MAMMOTH -->
+     <article class="project-entry" id="proj-gmammoth">
+       <div class="project-entry-header" onclick="toggleProject('proj-gmammoth')">
+         <div class="peh-left">
+           <span class="proj-num">07</span>
+           <div class="peh-meta">
+             <span class="proj-domain-tag">Urban Sanitation</span>
+             <h2 class="proj-title">G-Mammoth</h2>
+             <p class="proj-tagline">4-in-1 automated suction-jetting truck for modern urban sewer and manhole cleaning — no human entry required.</p>
+           </div>
+         </div>
+         <div class="peh-right">
+           <button class="expand-btn" aria-label="Toggle"><span class="expand-icon">+</span></button>
+         </div>
+       </div>
+       <div class="project-entry-body">
+         <div class="proj-section proj-section--name-ref">
+           <div class="proj-name-block">
+             <h3 class="proj-full-name">G-Mammoth — Automated Suction &amp; Jetting Truck</h3>
+             <p class="proj-one-liner">An advanced 4-in-1 vehicle combining high-pressure jetting, powerful suction, desilting, and inspection in a single automated platform — designed to eliminate manual scavenging and tackle hard sediment, fatbergs, and heavy sludge across urban, industrial, and municipal infrastructure.</p>
+           </div>
+-          <a href="https://sanitation.genrobotics.com/g-mammoth/" target="_blank" class="proj-ref-link">Project Reference ↗</a>
++          <a href="https://sanitation.genrobotics.com/g-mammoth/" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer" class="proj-ref-link">Project Reference ↗</a>
+         </div>
+         <div class="proj-body-grid">
+           <div class="proj-section">
+             <div class="proj-section-label"><span class="psec-dot"></span>Application Area</div>
+             <p class="proj-section-desc">Urban and municipal sanitation — automated sewer and manhole cleaning combining jetting, suction, desilting, and inspection, deployed across urban, industrial, and municipal environments.</p>
+             <div class="app-tags"><span>Sewer Cleaning</span><span>Manhole Maintenance</span><span>High-Pressure Jetting</span><span>Vacuum Suction</span><span>Municipal Infrastructure</span><span>Urban Sanitation</span></div>
+           </div>
+           <div class="proj-section">
+             <div class="proj-section-label"><span class="psec-dot"></span>Keywords</div>
+             <div class="keyword-cloud"><span>Vacuum Suction System</span><span>High-Pressure Jetting</span><span>Hydraulic Actuation</span><span>Power Take-Off (PTO)</span><span>Truck Integration</span><span>BOM Management</span><span>Outsourced Manufacturing</span><span>Testing Protocols</span><span>Quality Assurance</span><span>Stakeholder Management</span><span>Technical Leadership</span></div>
+           </div>
+           <div class="proj-section proj-section--full">
+             <div class="proj-section-label"><span class="psec-dot"></span>My Role &amp; Contribution</div>
+             <div class="role-grid">
+               <div class="role-phase">
+                 <div class="role-phase-title"><span class="phase-badge">Senior Mechanical Design Engineer</span></div>
+                 <ul class="contribution-list">
+                   <li>Studied and developed deep understanding of vacuum suction systems — components, manufacturing, materials, and operation</li>
+                   <li>Studied hydraulic system design, construction, operation, and maintenance for component actuation — valve operation, door opening, tank dumping</li>
+                   <li>Studied truck integration aspects including power take-off (PTO) methods and vehicle-mounted system requirements</li>
+                 </ul>
+               </div>
+               <div class="role-phase">
+                 <div class="role-phase-title"><span class="phase-badge phase-badge--b">Project Lead Engineer</span></div>
+                 <ul class="contribution-list">
+@@ -696,51 +700,51 @@
+         </div>
+       </div>
+     </article>
+ 
+     <!-- PROJECT 08 · GBOT -->
+     <article class="project-entry" id="proj-gbot">
+       <div class="project-entry-header" onclick="toggleProject('proj-gbot')">
+         <div class="peh-left">
+           <span class="proj-num">08</span>
+           <div class="peh-meta">
+             <span class="proj-domain-tag">Humanoid Robotics · R&amp;D</span>
+             <h2 class="proj-title">Gbot</h2>
+             <p class="proj-tagline">Fully humanoid robot research — joint design studies and rigid body dynamics simulation for a platform with linear actuators.</p>
+           </div>
+         </div>
+         <div class="peh-right">
+           <button class="expand-btn" aria-label="Toggle"><span class="expand-icon">+</span></button>
+         </div>
+       </div>
+       <div class="project-entry-body">
+         <div class="proj-section proj-section--name-ref">
+           <div class="proj-name-block">
+             <h3 class="proj-full-name">Gbot — Humanoid Robot Research</h3>
+             <p class="proj-one-liner">An early-stage R&amp;D initiative for a fully humanoid robotic platform. Focused on literature research, joint design studies, and rigid body dynamics simulation. No physical prototype developed — project currently on hold.</p>
+           </div>
+-          <a href="https://research.genrobotics.com/g-bot/" target="_blank" class="proj-ref-link">Project Reference ↗</a>
++          <a href="https://research.genrobotics.com/g-bot/" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer" class="proj-ref-link">Project Reference ↗</a>
+         </div>
+         <div class="proj-body-grid">
+           <div class="proj-section">
+             <div class="proj-section-label"><span class="psec-dot"></span>Application Area</div>
+             <p class="proj-section-desc">Humanoid robotics research — foundational design study for a fully humanoid robot platform with linear actuators, intended as a basis for future development in industrial and service robotics.</p>
+             <div class="app-tags"><span>Humanoid Robotics</span><span>R&amp;D / Feasibility</span><span>Linear Actuators</span><span>Joint Mechanism Design</span></div>
+           </div>
+           <div class="proj-section">
+             <div class="proj-section-label"><span class="psec-dot"></span>Keywords</div>
+             <div class="keyword-cloud"><span>Humanoid Robot</span><span>Joint Design</span><span>Linear Actuators</span><span>Rigid Body Dynamics</span><span>ANSYS Simulation</span><span>Literature Review</span><span>Feasibility Study</span><span>Dynamic Analysis</span><span>Mechanism Design</span></div>
+           </div>
+           <div class="proj-section proj-section--full">
+             <div class="proj-section-label"><span class="psec-dot"></span>My Role &amp; Contribution</div>
+             <div class="role-grid">
+               <div class="role-phase">
+                 <div class="role-phase-title"><span class="phase-badge">R&amp;D Feasibility Contribution</span></div>
+                 <ul class="contribution-list">
+                   <li>Conducted literature review on different joint types and design approaches for humanoid robotic platforms</li>
+                   <li>Studied various joint mechanism designs and their suitability for a fully humanoid configuration</li>
+                   <li>Performed rigid body dynamics analysis in ANSYS — full joint simulation of a humanoid robot with linear actuators</li>
+                 </ul>
+               </div>
+               <div class="role-phase">
+                 <div class="role-phase-title"><span class="phase-badge phase-badge--b">Project Status</span></div>
+                 <ul class="contribution-list">
+@@ -749,51 +753,51 @@
+                   <li>Foundational research and simulation work completed as basis for potential future development</li>
+                 </ul>
+               </div>
+             </div>
+           </div>
+           <div class="proj-section proj-section--full">
+             <div class="proj-section-label"><span class="psec-dot"></span>Key Skills Achieved</div>
+             <div class="skills-achieved-grid">
+               <div class="skill-achieved-item"><span class="sa-icon">🤖</span><div><strong>Humanoid Robot Mechanics</strong><p>Study of joint design types, mechanism configurations, and their structural and kinematic implications for fully humanoid platforms</p></div></div>
+               <div class="skill-achieved-item"><span class="sa-icon">⚡</span><div><strong>Rigid Body Dynamics Simulation</strong><p>ANSYS-based rigid body dynamics analysis of a full humanoid joint system with linear actuators — load, motion, and force behaviour</p></div></div>
+               <div class="skill-achieved-item"><span class="sa-icon">📚</span><div><strong>Engineering Literature Review</strong><p>Systematic literature research on robotic joint design, informing feasibility recommendations for a novel humanoid platform</p></div></div>
+             </div>
+           </div>
+         </div>
+       </div>
+     </article>
+ 
+ 
+   </div>
+ </section>
+ 
+ <footer class="footer">
+   <div class="footer-inner">
+     <span class="footer-brand">Jithin Machath</span>
+     <span class="footer-role">Mechanical Design Engineer</span>
+-    <a href="https://research.genrobotics.com/draco/" target="_blank" class="footer-link">Published Project Reference ↗</a>
++    <a href="https://research.genrobotics.com/draco/" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer" class="footer-link">Published Project Reference ↗</a>
+   </div>
+ </footer>
+ 
+ <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+   <button class="lightbox-close" onclick="event.stopPropagation(); closeLightbox()">✕</button>
+   <img class="lightbox-img" id="lightbox-img" src="" alt="">
+ </div>
+ 
+ <script src="main.js"></script>
+ <script>
+   document.querySelectorAll('.gallery-item img').forEach(img => {
+     img.addEventListener('click', e => {
+       e.stopPropagation();
+       document.getElementById('lightbox-img').src = img.src;
+       document.getElementById('lightbox').classList.add('active');
+     });
+   });
+   function closeLightbox() {
+     document.getElementById('lightbox').classList.remove('active');
+   }
+   document.addEventListener('keydown', e => {
+     if (e.key === 'Escape') closeLightbox();
+   });
+ </script>
+ </body>
+ 
+EOF
+)

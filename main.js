@@ -106,8 +106,25 @@ document.addEventListener('contextmenu', e => {
   if (e.target.tagName === 'IMG') e.preventDefault();
 });
 document.addEventListener('DOMContentLoaded', () => {
+  // External-link hardening
+  document.querySelectorAll('a[target="_blank"]').forEach(link => {
+    link.setAttribute('rel', 'noopener noreferrer');
+    link.setAttribute('referrerpolicy', 'no-referrer');
+  });
+
+  // Asset hardening hints for local downloadable documents
+  document.querySelectorAll('a[href$=".pdf"]').forEach(link => {
+    const href = link.getAttribute('href') || '';
+    if (!href.startsWith('http')) {
+      link.setAttribute('download', '');
+      link.setAttribute('type', 'application/pdf');
+    }
+  });
+
   document.querySelectorAll('img').forEach(img => {
     img.setAttribute('draggable', 'false');
+    img.setAttribute('loading', img.getAttribute('loading') || 'lazy');
+    img.setAttribute('decoding', 'async');
     img.addEventListener('dragstart', e => e.preventDefault());
   });
 });
