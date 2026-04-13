@@ -741,6 +741,9 @@ In-service sludge removal from crude oil storage tanks in hazardous environments
     <span class="footer-brand">Jithin Machath</span>
     <span class="footer-role">Mechanical Design Engineer</span>
 
+   <span class="footer-meta" id="last-updated"></span>
+
+
 <span class="footer-note">
   Selected professional work — detailed engineering contributions available above
 </span>
@@ -754,7 +757,9 @@ In-service sludge removal from crude oil storage tanks in hazardous environments
 </div>
 
 <script src="main.js"></script>
+
 <script>
+  // ===== LIGHTBOX FUNCTIONALITY =====
   document.querySelectorAll('.gallery-item img').forEach(img => {
     img.addEventListener('click', e => {
       e.stopPropagation();
@@ -762,12 +767,27 @@ In-service sludge removal from crude oil storage tanks in hazardous environments
       document.getElementById('lightbox').classList.add('active');
     });
   });
+
   function closeLightbox() {
     document.getElementById('lightbox').classList.remove('active');
   }
+
   document.addEventListener('keydown', e => {
     if (e.key === 'Escape') closeLightbox();
   });
+
+  // ===== AUTO LAST UPDATED =====
+  (function () {
+    const el = document.getElementById("last-updated");
+    if (!el) return;
+
+    const date = new Date(document.lastModified);
+    const options = { year: "numeric", month: "long" };
+
+ el.textContent =
+  "Updated " + date.toLocaleDateString("en-US", options);
+  })();
 </script>
+
 </body>
 </html>

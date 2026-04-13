@@ -437,8 +437,6 @@ This added a strong problem-solving and continuous improvement perspective to my
           </div>
           <svg class="contact-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 13L13 3M13 3H7M13 3v6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </a>
-
-        <a href="https://wa.me/918086587592" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer" class="contact-card">
           <div class="contact-card-icon">
             <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
               <path d="M11 2a9 9 0 0 1 7.36 14.18L20 20l-3.93-1.03A9 9 0 1 1 11 2z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
@@ -470,19 +468,42 @@ This added a strong problem-solving and continuous improvement perspective to my
   </div>
 </section>
 
+
+
+
 <!-- FOOTER -->
 <footer class="footer">
   <div class="footer-inner">
-    <span class="footer-brand">Jithin Machath</span>
-    <span class="footer-role">Mechanical Design Engineer</span>
-    <div class="footer-links">
-      <a href="/cdn-cgi/l/email-protection#1d777469757473707c7e757c69755d72686971727276337e7270" class="footer-link">Email</a>
-      <a href="https://www.linkedin.com/in/jithin-machath/" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer" class="footer-link">LinkedIn</a>
-      <a href="https://wa.me/918086587592" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer" class="footer-link">WhatsApp</a>
+
+    <div class="footer-left">
+      <span class="footer-brand">Jithin Machath</span>
+      <span class="footer-role">Mechanical Design Engineer</span>
+      <span class="footer-meta" id="last-updated"></span>
     </div>
+
+    <div class="footer-links">
+      <a href="mailto:jithinmachath@outlook.com" class="footer-link">Email</a>
+      <a href="https://www.linkedin.com/in/jithin-machath/" target="_blank" rel="noopener noreferrer" class="footer-link">LinkedIn</a>
+    </div>
+
   </div>
 </footer>
 
 <script src="main.js"></script>
+
+<!-- ✅ AUTO LAST UPDATED -->
+<script>
+  (function () {
+    const el = document.getElementById("last-updated");
+    if (!el) return;
+
+    const date = new Date(document.lastModified);
+    const options = { year: "numeric", month: "long" };
+
+el.textContent =
+  "Updated " + date.toLocaleDateString("en-US", options);
+  })();
+</script>
+
 </body>
 </html>
