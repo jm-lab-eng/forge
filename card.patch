@@ -1,4 +1,580 @@
-diff a/projects.html b/projects.html	(rejected hunks)
+ (cd "$(git rev-parse --show-toplevel)" && git apply --3way <<'EOF' 
+diff --git a/index.html b/index.html
+index 5b23e536e98dc4c5d2b835b933c09ef27561cd2b..c940e5a26ce6bb26450a249eefb8be1e81dc5c2d 100644
+--- a/index.html
++++ b/index.html
+@@ -1,30 +1,34 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
++<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https:; font-src 'self' https://fonts.gstatic.com data:; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'; upgrade-insecure-requests">
++<meta name="referrer" content="no-referrer">
++<meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=()">
++<meta http-equiv="X-Content-Type-Options" content="nosniff">
+ <title>Jithin Machath — Mechanical Design Engineer</title>
+ <link rel="stylesheet" href="style.css">
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+ <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+ <script>
+   (function(){
+     var t = localStorage.getItem('jm-theme');
+     if (t === 'dark') document.documentElement.setAttribute('data-theme','dark');
+   })();
+ </script>
+ </head>
+ <body>
+ 
+ <div class="cursor" id="cursor"></div>
+ <div class="cursor-follower" id="cursor-follower"></div>
+ 
+ <button id="theme-toggle" aria-label="Toggle theme"><span class="toggle-icon">◑</span></button>
+ 
+ <nav class="navbar" id="navbar">
+   <div class="nav-inner">
+     <a href="index.html" class="nav-brand"><span class="brand-jm">JM</span></a>
+     <ul class="nav-links" id="nav-links">
+       <li><a href="#about"        class="nav-link" onclick="closeMenu()">About</a></li>
+       <li><a href="#experience"   class="nav-link" onclick="closeMenu()">Experience</a></li>
+       <li><a href="#skills"       class="nav-link" onclick="closeMenu()">Skills</a></li>
+@@ -104,87 +108,87 @@
+         I primarily work with CAD tools such as SolidWorks and AutoCAD for 3D modelling and manufacturing drawings, and use ANSYS Workbench for structural analysis and validation. I also hold a Lean Six Sigma Black Belt, which I use for structured problem solving and continuous improvement.
+         </p>
+       </div>
+       <div class="about-cards">
+         <div class="about-card"><div class="about-card-icon">⚙</div><h4>System-Level Design</h4><p>Electro-mechanical integration, hydraulic systems, structural optimisation</p></div>
+         <div class="about-card"><div class="about-card-icon">🔬</div><h4>Analysis &amp; Validation</h4><p>FEA, DFMEA, engineering calculations, prototype testing</p></div>
+         <div class="about-card"><div class="about-card-icon">🏭</div><h4>Field Deployment</h4><p>Real-world validation in oil &amp; gas, sanitation, and hazardous environments</p></div>
+         <div class="about-card"><div class="about-card-icon">📋</div><h4>Project Leadership</h4><p>Leading cross-functional teams across design, fabrication, and testing</p></div>
+       </div>
+     </div>
+   </div>
+ </section>
+ 
+ <!-- EXPERIENCE -->
+ <section class="section section--alt" id="experience">
+   <div class="section-inner">
+     <div class="section-label"><span class="label-num">02</span><span>Experience</span></div>
+     <h2 class="section-title">Work History</h2>
+     <div class="timeline">
+ 
+       <!-- ROLE 3 -->
+       <div class="timeline-item">
+         <div class="timeline-meta"><span class="timeline-year">Apr 2025 – Oct 2025</span></div>
+         <div class="timeline-content">
+           <h3>Project Lead Engineer</h3>
+-          <p class="timeline-org"><a href="https://www.genrobotics.com/" target="_blank" class="org-link">Genrobotics</a> &nbsp;·&nbsp; Robotics &amp; Industrial Systems</p>
++          <p class="timeline-org"><a href="https://www.genrobotics.com/" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer" class="org-link">Genrobotics</a> &nbsp;·&nbsp; Robotics &amp; Industrial Systems</p>
+           <p>Led R&D delivery of DRACO (robotic tank cleaning system) and G-Mammoth (suction-cum-jetting system), owning system-level mechanical architecture across hydraulics, structures, and materials to improve reliability, durability, and lifecycle performance.</p>
+           <p>Coordinated cross-functional teams of 10–15 engineers across engineering, procurement, and manufacturing. Defined validation plans, test protocols, and acceptance criteria, including safety-critical evaluation and audit readiness.Drove design improvements through RCA, Lean, and value engineering — achieving zero major audit non-conformities and 96% on-time delivery.</p>
+           <div class="timeline-tags">
+             <span>Project Leadership</span>
+             <span>Cross-functional Teams</span>
+             <span>System Architecture</span>
+             <span>Validation &amp; QA</span>
+             <span>Lean / RCA</span>
+           </div>
+         </div>
+       </div>
+ 
+       <!-- ROLE 2 -->
+       <div class="timeline-item">
+         <div class="timeline-meta"><span class="timeline-year">Apr 2024 – Mar 2025</span></div>
+         <div class="timeline-content">
+           <h3>Senior Mechanical Design Engineer</h3>
+-          <p class="timeline-org"><a href="https://www.genrobotics.com/" target="_blank" class="org-link">Genrobotics</a> &nbsp;·&nbsp; Robotics &amp; Industrial Systems</p>
++          <p class="timeline-org"><a href="https://www.genrobotics.com/" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer" class="org-link">Genrobotics</a> &nbsp;·&nbsp; Robotics &amp; Industrial Systems</p>
+           <p>Led end-to-end mechanical design and prototyping of DRACO, improving sludge extraction and buoyancy performance by 30%. Designed and deployed test rigs, cutting validation cost by 20% and cycle time by 25%.</p>
+           <p>Conducted linear and non-linear FEA studies in ANSYS Workbench across systems such as Genbot, Wilboar, and G-Gaiter. Performed design calculations, tolerance analysis, and material selection. Resolved multiple design-to-production issues in coordination with manufacturing teams.</p>
+           <div class="timeline-tags">
+             <span>Mechanical Design</span>
+             <span>FEA / ANSYS</span>
+             <span>Prototyping</span>
+             <span>Test Rig Design</span>
+             <span>Tolerance Analysis</span>
+           </div>
+         </div>
+       </div>
+ 
+       <!-- ROLE 1 -->
+       <div class="timeline-item">
+         <div class="timeline-meta"><span class="timeline-year">Apr 2021 – Mar 2024</span></div>
+         <div class="timeline-content">
+           <h3>Mechanical Design Engineer</h3>
+-          <p class="timeline-org"><a href="https://www.genrobotics.com/" target="_blank" class="org-link">Genrobotics</a> &nbsp;·&nbsp; Robotics &amp; Industrial Systems</p>
++          <p class="timeline-org"><a href="https://www.genrobotics.com/" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer" class="org-link">Genrobotics</a> &nbsp;·&nbsp; Robotics &amp; Industrial Systems</p>
+           <p>Designed mechanical subsystems for Bandicoot, Wilboar, G-Gaiter, and Mobility+, including 3D modelling, assemblies, and manufacturing drawings using SolidWorks and AutoCAD. Prepared and managed BOMs for manufacturing, procurement, and quality.</p>
+           <p>Conducted feasibility studies and structural analysis to improve durability and reduce cost. Supported prototype builds and field trials, incorporating test feedback into iterative design improvements.</p>
+           <div class="timeline-tags">
+             <span>SolidWorks / AutoCAD</span>
+             <span>BOM Management</span>
+             <span>Structural Analysis</span>
+             <span>Prototype Development</span>
+             <span>Field Trials</span>
+           </div>
+         </div>
+       </div>
+ 
+     </div>
+ 
+     <!-- IMPACT STRIP -->
+     <div class="impact-strip">
+       <div class="impact-item">
+         <span class="impact-label">Efficiency Improvements</span>
+         <span class="impact-desc">System optimisation across robotic programs</span>
+       </div>
+       <div class="impact-item">
+         <span class="impact-label">Cost Reduction</span>
+         <span class="impact-desc">Through design optimisation and value engineering</span>
+       </div>
+       <div class="impact-item">
+@@ -277,106 +281,106 @@
+         <div class="tool-chip"><img src="images/icons/autocad.png"    alt="AutoCAD"><span>AutoCAD</span></div>
+         <div class="tool-chip"><img src="images/icons/ansys.png"      alt="ANSYS"><span>ANSYS</span></div>
+         <div class="tool-chip"><img src="images/icons/excel.png"      alt="Excel"><span>Excel</span></div>
+         <div class="tool-chip"><img src="images/icons/powerpoint.png" alt="PowerPoint"><span>PowerPoint</span></div>
+         <div class="tool-chip"><img src="images/icons/word.png"       alt="Word"><span>Word</span></div>
+       </div>
+     </div>
+   </div>
+ </section>
+ 
+ <!-- EDUCATION -->
+ <section class="section section--alt" id="education">
+   <div class="section-inner">
+     <div class="section-label"><span class="label-num">04</span><span>Education</span></div>
+     <h2 class="section-title">Academic Background</h2>
+ <p class="edu-summary">
+ My academic journey progressed from strong mechanical fundamentals to system-level design, and further into structured, data-driven problem solving and process improvement.
+ </p>
+     
+     <div class="edu-timeline">
+       <div class="edu-item">
+         <div class="edu-logo-wrap"><img src="images/iiitdm.png" alt="IIITDM" class="edu-logo"></div>
+         <div class="edu-body">
+           <div class="edu-year">2017 – 2019</div>
+           <h3>M.Des – Mechanical Systems</h3>
+-          <a href="https://www.iiitdm.ac.in/" target="_blank" class="edu-inst">IIITDM Kancheepuram</a>
++          <a href="https://www.iiitdm.ac.in/" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer" class="edu-inst">IIITDM Kancheepuram</a>
+           <p class="edu-focus"> System Design · Mechatronics · FEA · Product Development </p>
+           <p>
+ I completed my Master of Design (M.Des) in Mechanical Systems from IIITDM Kancheepuram, a programme focused on hands-on product engineering and system-level design.
+ </p>
+ 
+ <p>
+ The coursework combined mechanical design with mechatronics, advanced manufacturing, and simulation-driven engineering. I worked on product development, mechatronic systems, and FEA, with a strong emphasis on taking concepts from idea to working systems.
+ </p>
+ 
+ <p>
+ This phase helped me move from component-level thinking to system-level design, understanding how different elements integrate in real engineering applications.
+ </p>
+         </div>
+       </div>
+       <div class="edu-item">
+         <div class="edu-logo-wrap"><img src="images/gec.jpg" alt="GEC Thrissur" class="edu-logo"></div>
+         <div class="edu-body">
+           <div class="edu-year">2012 – 2016</div>
+           <h3>B.Tech – Mechanical Engineering</h3>
+-          <a href="https://gectcr.ac.in/" target="_blank" class="edu-inst">Government Engineering College, Thrissur</a>
++          <a href="https://gectcr.ac.in/" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer" class="edu-inst">Government Engineering College, Thrissur</a>
+           <p class="edu-focus"> Core Mechanics · Manufacturing · Fluid Systems · Engineering Fundamentals </p>
+           <p>
+ I completed my B.Tech in Mechanical Engineering from Government Engineering College, Thrissur, building a strong foundation in thermodynamics, mechanics, fluid systems, machine design, and manufacturing.
+ </p>
+ 
+ <p>
+ I was also exposed to operations, supply chain, and management basics, helping me understand how engineering decisions connect to production, cost, and real-world delivery.
+ </p>
+ 
+ <p>
+ Most of my learning came through labs, workshops, and projects, shaping a practical, hands-on approach to engineering.
+ </p>
+         </div>
+       </div>
+       <div class="edu-item edu-item--cert">
+         <div class="edu-logo-wrap"><img src="images/imc.png" alt="IMC" class="edu-logo"></div>
+         <div class="edu-body">
+           <div class="edu-year">2025</div>
+           <h3>Lean Six Sigma Black Belt</h3>
+-          <a href="https://imccertifications.com/" target="_blank" class="edu-inst">International Management Consultancy (IMC)</a>
++          <a href="https://imccertifications.com/" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer" class="edu-inst">International Management Consultancy (IMC)</a>
+           <p class="edu-focus"> DMAIC · Root Cause Analysis · Process Improvement · Data-Driven Decisions </p>
+           <p>
+ I completed Lean Six Sigma Black Belt certification, where I learned to approach engineering and process problems in a structured, data-driven way.
+ </p>
+ 
+ <p>
+ The focus was on identifying root causes, improving processes, and enhancing efficiency and quality using frameworks like DMAIC and basic statistical analysis.
+ </p>
+ 
+ <p>
+ This added a strong problem-solving and continuous improvement perspective to my engineering approach.
+ </p>
+           <div class="cert-links">
+-            <a href="https://imccertifications.com/certificates/C-2025-51795.pdf"     target="_blank">IMC Certificate ↗</a>
+-            <a href="https://imccertifications.com/certificates/CPD-C-2025-51795.pdf" target="_blank">CPD Certificate ↗</a>
++            <a href="https://imccertifications.com/certificates/C-2025-51795.pdf"     target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer">IMC Certificate ↗</a>
++            <a href="https://imccertifications.com/certificates/CPD-C-2025-51795.pdf" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer">CPD Certificate ↗</a>
+           </div>
+         </div>
+       </div>
+     </div>
+   </div>
+ </section>
+ 
+ <!-- CTA -->
+ <section class="section section--cta">
+   <div class="section-inner cta-inner">
+     <h2>Explore Engineering Projects</h2>
+     <p>Detailed case studies of real-world system development — from hydraulics to field deployment.</p>
+     <a href="projects.html" class="btn-primary btn-primary--large">View All Projects →</a>
+   </div>
+ </section>
+ 
+ <!-- CONTACT -->
+ <section class="section section--contact" id="contact">
+   <div class="section-inner">
+     <div class="contact-grid">
+ 
+       <!-- LEFT -->
+       <div class="contact-left">
+         <div class="section-label" style="margin-bottom:16px">
+           <span class="label-num">05</span>
+@@ -385,89 +389,90 @@ This added a strong problem-solving and continuous improvement perspective to my
+         <h2 class="section-title" style="margin-bottom:16px">Let's <em>connect</em></h2>
+         <p class="contact-desc">Open to new opportunities, collaborations, and conversations about engineering challenges. Feel free to reach out through any of the channels below.</p>
+         <div class="contact-availability">
+           <span class="avail-dot"></span>
+           <span>Available for new roles — Immediate</span>
+         </div>
+       </div>
+ 
+       <!-- RIGHT — CONTACT CARDS -->
+             <div class="contact-right">
+ <div class="contact-card email-card">
+   <div class="contact-card-body">
+     <span class="contact-card-label">Email</span>
+ 
+     <div class="contact-email-wrap">
+       <a href="mailto:jithinmachath@gmail.com" class="contact-card-value">
+         jithinmachath@outlook.com
+       </a>
+ 
+       <button class="copy-btn" id="copy-email" title="Copy email">
+         ⧉
+       </button>
+     </div>
+   </div>
+ </div>
+-        <a href="https://www.linkedin.com/in/jithin-machath/" target="_blank" class="contact-card">
++        <a href="https://www.linkedin.com/in/jithin-machath/" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer" class="contact-card">
+           <div class="contact-card-icon">
+             <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
+               <rect x="2" y="2" width="18" height="18" rx="3" stroke="currentColor" stroke-width="1.5"/>
+               <path d="M6 9v7M6 6v.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+               <path d="M10 16v-4c0-1.5 1-2 2-2s2 .5 2 2v4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+               <path d="M10 9v7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+             </svg>
+           </div>
+           <div class="contact-card-body">
+             <span class="contact-card-label">LinkedIn</span>
+             <span class="contact-card-value">jithin-machath</span>
+           </div>
+           <svg class="contact-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 13L13 3M13 3H7M13 3v6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+         </a>
+ 
+-        <a href="https://wa.me/918086587592" target="_blank" class="contact-card">
++        <a href="https://wa.me/918086587592" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer" class="contact-card">
+           <div class="contact-card-icon">
+             <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
+               <path d="M11 2a9 9 0 0 1 7.36 14.18L20 20l-3.93-1.03A9 9 0 1 1 11 2z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+               <path d="M8 10.5c.5 1 1.5 2 2.5 2.5l1-1c.8.3 1.7.5 2.5.5 0 1-1 2-2 2A8 8 0 0 1 6 8c0-1 1-2 2-2 0 .8.2 1.7.5 2.5l-1 1z" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"/>
+             </svg>
+           </div>
+           <div class="contact-card-body">
+             <span class="contact-card-label">WhatsApp</span>
+             <span class="contact-card-value">+91 80865 87592</span>
+           </div>
+           <svg class="contact-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 13L13 3M13 3H7M13 3v6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+         </a>
+ 
+         <a href="tel:+918086587592" class="contact-card">
+           <div class="contact-card-icon">
+             <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
+               <path d="M6.5 3h3l1.5 4-2 1.5c1 2 2.5 3.5 4.5 4.5L15 11l4 1.5v3C19 17 17 19 15 19 8.4 19 3 13.6 3 7c0-2 2-4 3.5-4z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+             </svg>
+           </div>
+           <div class="contact-card-body">
+             <span class="contact-card-label">Phone</span>
+             <span class="contact-card-value">+91 80865 87592</span>
+           </div>
+           <svg class="contact-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 13L13 3M13 3H7M13 3v6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+         </a>
+ 
+       </div>
+     </div>
+   </div>
+ </section>
+ 
+ <!-- FOOTER -->
+ <footer class="footer">
+   <div class="footer-inner">
+     <span class="footer-brand">Jithin Machath</span>
+     <span class="footer-role">Mechanical Design Engineer</span>
++    <span class="footer-updated" data-last-updated>Last updated: April 2026</span>
+     <div class="footer-links">
+       <a href="/cdn-cgi/l/email-protection#1d777469757473707c7e757c69755d72686971727276337e7270" class="footer-link">Email</a>
+-      <a href="https://www.linkedin.com/in/jithin-machath/" target="_blank" class="footer-link">LinkedIn</a>
+-      <a href="https://wa.me/918086587592" target="_blank" class="footer-link">WhatsApp</a>
++      <a href="https://www.linkedin.com/in/jithin-machath/" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer" class="footer-link">LinkedIn</a>
++      <a href="https://wa.me/918086587592" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer" class="footer-link">WhatsApp</a>
+     </div>
+   </div>
+ </footer>
+ 
+ <script src="main.js"></script>
+ </body>
+ </html>
+ 
+EOF
+)
+
+ (cd "$(git rev-parse --show-toplevel)" && git apply --3way <<'EOF' 
+diff --git a/main.js b/main.js
+index 23c776bea7ab8a7b2b69846346a60d439d93ea42..d9c12d490aa6f2dd5bbb360be67a2b9cbd3dcd8b 100644
+--- a/main.js
++++ b/main.js
+@@ -13,144 +13,199 @@ if (cursor && follower && window.matchMedia('(hover: hover)').matches) {
+     cursor.style.top  = my + 'px';
+   });
+ 
+   (function animFollower() {
+     fx += (mx - fx) * 0.14;
+     fy += (my - fy) * 0.14;
+     follower.style.left = fx + 'px';
+     follower.style.top  = fy + 'px';
+     requestAnimationFrame(animFollower);
+   })();
+ 
+   document.querySelectorAll('a, button, .project-entry-header, .gallery-item').forEach(el => {
+     el.addEventListener('mouseenter', () => {
+       cursor.style.transform = 'translate(-50%,-50%) scale(2)';
+       follower.style.opacity = '0.8';
+     });
+     el.addEventListener('mouseleave', () => {
+       cursor.style.transform = 'translate(-50%,-50%) scale(1)';
+       follower.style.opacity = '0.5';
+     });
+   });
+ }
+ 
+ // ── THEME ─────────────────────────────────────────────────
+ const toggle = document.getElementById('theme-toggle');
++const readTheme = () => {
++  try { return localStorage.getItem('jm-theme'); } catch (_) { return null; }
++};
++const writeTheme = (theme) => {
++  try { localStorage.setItem('jm-theme', theme); } catch (_) { /* no-op */ }
++};
+ 
+ function applyTheme(theme) {
+   document.documentElement.setAttribute('data-theme', theme);
+-  localStorage.setItem('jm-theme', theme);
++  writeTheme(theme);
+   if (toggle) {
+     toggle.querySelector('.toggle-icon').textContent = theme === 'dark' ? '○' : '◑';
+     toggle.setAttribute('aria-label', theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode');
+   }
+ }
+ 
+ // Apply saved theme (inline script in <head> handles first paint; this syncs the icon)
+-const saved = localStorage.getItem('jm-theme');
++const saved = readTheme();
+ applyTheme(saved === 'dark' ? 'dark' : 'light');
+ 
+ if (toggle) {
+   toggle.addEventListener('click', () => {
+     const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+     applyTheme(isDark ? 'light' : 'dark');
+   });
+ }
+ 
+ // ── NAVBAR SCROLL ─────────────────────────────────────────
+ const navbar = document.getElementById('navbar');
+ if (navbar) {
+   window.addEventListener('scroll', () => {
+     navbar.style.boxShadow = window.scrollY > 10
+       ? '0 2px 20px rgba(0,0,0,.08)'
+       : 'none';
+   }, { passive: true });
+ }
+ 
+ // ── SCROLL REVEAL ─────────────────────────────────────────
+ const revealEls = document.querySelectorAll(
+   '.about-card, .skill-block, .edu-item, .timeline-item, .impact-item, .tool-chip, .project-entry'
+ );
+ revealEls.forEach(el => el.classList.add('reveal'));
+ 
+-const revealObserver = new IntersectionObserver((entries) => {
+-  entries.forEach((entry, i) => {
+-    if (entry.isIntersecting) {
+-      setTimeout(() => entry.target.classList.add('visible'), i * 60);
+-      revealObserver.unobserve(entry.target);
+-    }
+-  });
+-}, { threshold: 0.1 });
++if ('IntersectionObserver' in window) {
++  const revealObserver = new IntersectionObserver((entries) => {
++    entries.forEach((entry, i) => {
++      if (entry.isIntersecting) {
++        setTimeout(() => entry.target.classList.add('visible'), i * 60);
++        revealObserver.unobserve(entry.target);
++      }
++    });
++  }, { threshold: 0.1 });
+ 
+-revealEls.forEach(el => revealObserver.observe(el));
++  revealEls.forEach(el => revealObserver.observe(el));
++} else {
++  revealEls.forEach(el => el.classList.add('visible'));
++}
+ 
+ // ── ACCORDION ─────────────────────────────────────────────
+ function toggleProject(id) {
+   const el = document.getElementById(id);
+   if (!el) return;
+   const wasOpen = el.classList.contains('is-open');
+ 
+   // Close all open entries
+   document.querySelectorAll('.project-entry.is-open').forEach(e => e.classList.remove('is-open'));
+ 
+   // If it wasn't open, open it and scroll to it
+   if (!wasOpen) {
+     el.classList.add('is-open');
+     setTimeout(() => {
+       el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+     }, 80);
+   }
+ }
+ 
+ // ── IMAGE PROTECTION ──────────────────────────────────────
+ document.addEventListener('contextmenu', e => {
+   if (e.target.tagName === 'IMG') e.preventDefault();
+ });
+ document.addEventListener('DOMContentLoaded', () => {
++  document.querySelectorAll('[data-last-updated]').forEach(el => {
++    const now = new Date();
++    const label = now.toLocaleString('en-US', { month: 'long', year: 'numeric' });
++    el.textContent = `Last updated: ${label}`;
++  });
++
++  // External-link hardening
++  document.querySelectorAll('a[target="_blank"]').forEach(link => {
++    link.setAttribute('rel', 'noopener noreferrer');
++    link.setAttribute('referrerpolicy', 'no-referrer');
++  });
++
++  // Asset hardening hints for local downloadable documents
++  document.querySelectorAll('a[href$=".pdf"]').forEach(link => {
++    const href = link.getAttribute('href') || '';
++    if (!href.startsWith('http')) {
++      link.setAttribute('download', '');
++      link.setAttribute('type', 'application/pdf');
++    }
++  });
++
+   document.querySelectorAll('img').forEach(img => {
+     img.setAttribute('draggable', 'false');
++    img.setAttribute('loading', img.getAttribute('loading') || 'lazy');
++    img.setAttribute('decoding', 'async');
+     img.addEventListener('dragstart', e => e.preventDefault());
+   });
+ });
+ 
+ // ── MOBILE MENU ───────────────────────────────────────────
+ function toggleMenu() {
+   const links = document.getElementById('nav-links');
+   const btn   = document.getElementById('hamburger');
+   if (!links || !btn) return;
+   const isOpen = links.classList.toggle('is-open');
+   btn.classList.toggle('is-open', isOpen);
+   btn.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
+ }
+ 
+ function closeMenu() {
+   const links = document.getElementById('nav-links');
+   const btn   = document.getElementById('hamburger');
+   if (!links || !btn) return;
+   links.classList.remove('is-open');
+   btn.classList.remove('is-open');
+   btn.setAttribute('aria-label', 'Open menu');
+ }
+ 
+ // Close menu when clicking outside
+ document.addEventListener('click', e => {
+   const navbar = document.getElementById('navbar');
+   if (navbar && !navbar.contains(e.target)) closeMenu();
+ });
+ 
+ 
+ // ── COPY EMAIL ─────────────────────────────────────────
+ const copyBtn = document.getElementById('copy-email');
+ 
+ if (copyBtn) {
+-copyBtn.addEventListener('click', () => {
+-  const email = "jithinmachath@outlook.com";
+-
+-  navigator.clipboard.writeText(email).then(() => {
+-    copyBtn.textContent = "✓";
+-
+-    setTimeout(() => {
+-      copyBtn.textContent = "⧉";
+-    }, 1200);
++  copyBtn.addEventListener('click', async () => {
++    const email = "jithinmachath@outlook.com";
++
++    const fallbackCopy = () => {
++      const ta = document.createElement('textarea');
++      ta.value = email;
++      ta.setAttribute('readonly', '');
++      ta.style.position = 'absolute';
++      ta.style.left = '-9999px';
++      document.body.appendChild(ta);
++      ta.select();
++      document.execCommand('copy');
++      document.body.removeChild(ta);
++    };
++
++    try {
++      if (navigator.clipboard && navigator.clipboard.writeText) {
++        await navigator.clipboard.writeText(email);
++      } else {
++        fallbackCopy();
++      }
++      copyBtn.textContent = "✓";
++      setTimeout(() => {
++        copyBtn.textContent = "⧉";
++      }, 1200);
++    } catch (_) {
++      fallbackCopy();
++      copyBtn.textContent = "✓";
++      setTimeout(() => {
++        copyBtn.textContent = "⧉";
++      }, 1200);
++    }
+   });
+-});
+ }
+ 
+EOF
+)
+
+ (cd "$(git rev-parse --show-toplevel)" && git apply --3way <<'EOF' 
+diff --git a/projects.html b/projects.html
+index 4f2d2ae2860c408232102e7e82d9c9b4a2446e2b..82cd16f12c990245d330f0aa28e327899c4067e1 100644
+--- a/projects.html
++++ b/projects.html
 @@ -1,30 +1,34 @@
  <!DOCTYPE html>
  <html lang="en">
@@ -665,3 +1241,139 @@ diff a/projects.html b/projects.html	(rejected hunks)
    });
  </script>
  </body>
+ 
+EOF
+)
+
+ (cd "$(git rev-parse --show-toplevel)" && git apply --3way <<'EOF' 
+diff --git a/style.css b/style.css
+index 8c8cb96716cf55a7b81df43a2dc02379a35f69a4..22d92a4324e28e26434327d770e31384de6efc54 100644
+--- a/style.css
++++ b/style.css
+@@ -474,67 +474,69 @@ h1,h2,h3,h4 { line-height: 1.2; }
+ .edu-item--cert .edu-focus {  color: var(--accent);   /* not accent-2 */}
+ .edu-focus { opacity: 0.85; }
+ .edu-body p { margin-bottom: 10px; line-height: 1.7; } .edu-body p:last-child { margin-bottom: 0; }
+ .edu-body h3 { margin-bottom: 6px; } .edu-inst { display: inline-block; margin-bottom: 10px; }
+ .edu-item--cert { border-left: 3px solid var(--accent); padding-left: 20px; }
+ .edu-item { align-items: flex-start; }
+ .edu-item:hover { transform: translateY(-2px); box-shadow: var(--shadow); transition: var(--transition); }
+ .edu-summary { font-size: 14px; color: var(--text-2); max-width: 680px; margin-bottom: 40px; line-height: 1.7; border-left: 3px solid var(--accent); padding-left: 16px; }
+ 
+ 
+ /* ── PAGE HEADER ─────────────────────────────────────────── */
+ .page-header { background: var(--bg-alt); border-bottom: 1px solid var(--border); padding: 80px 40px 60px; }
+ .page-header-inner { max-width: 1160px; margin: auto; }
+ .back-link {
+   display: inline-flex; align-items: center;
+   font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.06em;
+   color: var(--text-3); text-decoration: none; margin-bottom: 28px; transition: color var(--transition);
+ }
+ .back-link:hover { color: var(--accent); }
+ .page-title { font-family: var(--font-display); font-size: clamp(40px, 6vw, 70px); line-height: 1.05; margin-bottom: 16px; }
+ .page-title em { font-style: italic; color: var(--accent); }
+ .page-subtitle { font-size: 15px; color: var(--text-2); max-width: 540px; }
+ 
+ /* ── PROJECTS PAGE ───────────────────────────────────────── */
+ .projects-page { padding: 60px 40px 100px; }
+-.projects-page-inner { max-width: 1160px; margin: auto; }
++.projects-page-inner { width: 100%; max-width: none; margin: 0 auto; }
+ 
+ .global-disclaimer {
+   display: flex; gap: 12px; align-items: flex-start;
+   padding: 14px 18px;
+   background: var(--surface-2); border: 1px solid var(--border);
+   border-radius: var(--radius); margin-bottom: 40px; color: var(--text-3);
+ }
+ .global-disclaimer svg { flex-shrink: 0; margin-top: 1px; }
+ .global-disclaimer p { font-size: 12px; line-height: 1.5; }
+ 
+ /* PROJECT ENTRY CARD */
+ .project-entry {
+   background: var(--proj-color-bg, var(--surface));
+   border: 1.5px solid var(--proj-color, var(--border));
+   border-radius: var(--radius-lg);
+-  margin-bottom: 20px;
++  width: 100%;
++  max-width: none;
++  margin: 0 0 20px;
+   transition: border-color var(--transition), box-shadow var(--transition);
+ }
+ /* is-open styles now per-project — see PER-PROJECT ACCENT COLOURS */
+ 
+ .project-entry-header {
+   display: flex; justify-content: space-between; align-items: center;
+   padding: 30px 32px; cursor: pointer; user-select: none; gap: 24px;
+   position: relative; z-index: 1;
+ }
+ /* expand-btn hover now per-project */
+ 
+ .peh-left { display: flex; gap: 20px; align-items: flex-start; }
+ .proj-num {
+   font-family: var(--font-mono); font-size: 28px; font-weight: 700;
+   color: var(--border); flex-shrink: 0; line-height: 1; padding-top: 4px; transition: color var(--transition);
+ }
+ /* proj-num open colour now per-project */
+ 
+ .peh-meta { }
+ .proj-domain-tag {
+   font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;
+   color: var(--accent); margin-bottom: 6px; font-family: var(--font-mono); display: block;
+ }
+ .proj-title { font-family: var(--font-display); font-size: 26px; color: var(--text); margin-bottom: 6px; }
+ .proj-tagline { font-size: 13px; color: var(--text-2); max-width: 480px; line-height: 1.5; }
+@@ -738,50 +740,51 @@ h1,h2,h3,h4 { line-height: 1.2; }
+   right: calc(50% - 44vw);
+   font-family: var(--font-mono);
+   font-size: 11px;
+   font-weight: 700;
+   letter-spacing: 0.06em;
+   color: rgba(255,255,255,0.55);
+   text-shadow: 0 1px 4px rgba(0,0,0,0.7);
+   pointer-events: none;
+   user-select: none;
+   z-index: 9001;
+ }
+ .lightbox-close {
+   position: absolute; top: 24px; right: 28px;
+   background: none; border: 1.5px solid rgba(255,255,255,.3);
+   color: white; font-size: 16px;
+   width: 38px; height: 38px; border-radius: 50%;
+   cursor: pointer; display: flex; align-items: center; justify-content: center; transition: border-color .2s;
+ }
+ .lightbox-close:hover { border-color: white; }
+ 
+ /* ── FOOTER ──────────────────────────────────────────────── */
+ .footer { padding: 32px 40px; border-top: 1px solid var(--border); background: var(--bg-alt); }
+ .footer-inner { max-width: 1160px; margin: auto; display: flex; align-items: center; gap: 16px; flex-wrap: wrap; }
+ .footer-brand { font-family: var(--font-mono); font-size: 13px; font-weight: 700; }
+ .footer-role { font-size: 12px; color: var(--text-3); }
++.footer-updated { font-size: 12px; color: var(--text-3); font-family: var(--font-mono); }
+ .footer-link { margin-left: auto; font-size: 12px; color: var(--accent-2); text-decoration: none; font-family: var(--font-mono); transition: color var(--transition); }
+ .footer-link:hover { color: var(--accent); }
+ 
+ 
+ /* Comet border animation removed */
+ 
+ /* ── ANIMATION ───────────────────────────────────────────── */
+ @keyframes fadeUp {
+   from { opacity: 0; transform: translateY(20px); }
+   to   { opacity: 1; transform: translateY(0); }
+ }
+ .reveal { opacity: 0; transform: translateY(24px); transition: opacity .7s ease, transform .7s ease; }
+ .reveal.visible { opacity: 1; transform: none; }
+ 
+ /* ── RESPONSIVE ──────────────────────────────────────────── */
+ @media (max-width: 900px) {
+   .hero { flex-direction: column; padding: 60px 24px 40px; min-height: auto; }
+   .hero-side { width: 100%; flex-direction: row; flex-wrap: wrap; }
+   .hero-portrait { width: 160px; height: 200px; }
+   .hero-bg-grid { display: none; }
+   .hero-scroll-hint { display: none; }
+   .about-grid { grid-template-columns: 1fr; gap: 32px; }
+   .skills-grid { grid-template-columns: 1fr 1fr; }
+   .gallery-grid { grid-template-columns: 1fr 1fr; }
+   .timeline-item { grid-template-columns: 1fr; gap: 6px; }
+ 
+EOF
+)

@@ -237,7 +237,7 @@ diff a/index.html b/index.html	(rejected hunks)
        <div class="contact-left">
          <div class="section-label" style="margin-bottom:16px">
            <span class="label-num">05</span>
-@@ -385,89 +389,89 @@ This added a strong problem-solving and continuous improvement perspective to my
+@@ -385,89 +389,90 @@ This added a strong problem-solving and continuous improvement perspective to my
          <h2 class="section-title" style="margin-bottom:16px">Let's <em>connect</em></h2>
          <p class="contact-desc">Open to new opportunities, collaborations, and conversations about engineering challenges. Feel free to reach out through any of the channels below.</p>
          <div class="contact-availability">
@@ -318,6 +318,7 @@ diff a/index.html b/index.html	(rejected hunks)
    <div class="footer-inner">
      <span class="footer-brand">Jithin Machath</span>
      <span class="footer-role">Mechanical Design Engineer</span>
++    <span class="footer-updated" data-last-updated>Last updated: April 2026</span>
      <div class="footer-links">
        <a href="/cdn-cgi/l/email-protection#1d777469757473707c7e757c69755d72686971727276337e7270" class="footer-link">Email</a>
 -      <a href="https://www.linkedin.com/in/jithin-machath/" target="_blank" class="footer-link">LinkedIn</a>

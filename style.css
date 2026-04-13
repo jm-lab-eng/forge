@@ -765,6 +765,7 @@ h1,h2,h3,h4 { line-height: 1.2; }
 .footer-inner { max-width: 1160px; margin: auto; display: flex; align-items: center; gap: 16px; flex-wrap: wrap; }
 .footer-brand { font-family: var(--font-mono); font-size: 13px; font-weight: 700; }
 .footer-role { font-size: 12px; color: var(--text-3); }
+.footer-updated { font-size: 12px; color: var(--text-3); font-family: var(--font-mono); }
 .footer-link { margin-left: auto; font-size: 12px; color: var(--accent-2); text-decoration: none; font-family: var(--font-mono); transition: color var(--transition); }
 .footer-link:hover { color: var(--accent); }
 
@@ -1097,4 +1098,30 @@ h1,h2,h3,h4 { line-height: 1.2; }
 
 @media (max-width: 480px) {
   .contact-card { max-width: 100%; flex: 0 0 calc(50% - 6px); }
+}
+
+
+/* ===== FIX: PROJECT CARD WIDTH ALIGNMENT ===== */
+
+.project-entry {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto 32px auto;
+  box-sizing: border-box;
+}
+
+.project-entry-header,
+.project-entry-body {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.projects-page-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.project-entry-header {
+  box-sizing: border-box;
 }

@@ -1,6 +1,98 @@
 diff a/main.js b/main.js	(rejected hunks)
-@@ -84,52 +84,69 @@ const revealObserver = new IntersectionObserver((entries) => {
- revealEls.forEach(el => revealObserver.observe(el));
+@@ -13,144 +13,199 @@ if (cursor && follower && window.matchMedia('(hover: hover)').matches) {
+     cursor.style.top  = my + 'px';
+   });
+ 
+   (function animFollower() {
+     fx += (mx - fx) * 0.14;
+     fy += (my - fy) * 0.14;
+     follower.style.left = fx + 'px';
+     follower.style.top  = fy + 'px';
+     requestAnimationFrame(animFollower);
+   })();
+ 
+   document.querySelectorAll('a, button, .project-entry-header, .gallery-item').forEach(el => {
+     el.addEventListener('mouseenter', () => {
+       cursor.style.transform = 'translate(-50%,-50%) scale(2)';
+       follower.style.opacity = '0.8';
+     });
+     el.addEventListener('mouseleave', () => {
+       cursor.style.transform = 'translate(-50%,-50%) scale(1)';
+       follower.style.opacity = '0.5';
+     });
+   });
+ }
+ 
+ // ── THEME ─────────────────────────────────────────────────
+ const toggle = document.getElementById('theme-toggle');
++const readTheme = () => {
++  try { return localStorage.getItem('jm-theme'); } catch (_) { return null; }
++};
++const writeTheme = (theme) => {
++  try { localStorage.setItem('jm-theme', theme); } catch (_) { /* no-op */ }
++};
+ 
+ function applyTheme(theme) {
+   document.documentElement.setAttribute('data-theme', theme);
+-  localStorage.setItem('jm-theme', theme);
++  writeTheme(theme);
+   if (toggle) {
+     toggle.querySelector('.toggle-icon').textContent = theme === 'dark' ? '○' : '◑';
+     toggle.setAttribute('aria-label', theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode');
+   }
+ }
+ 
+ // Apply saved theme (inline script in <head> handles first paint; this syncs the icon)
+-const saved = localStorage.getItem('jm-theme');
++const saved = readTheme();
+ applyTheme(saved === 'dark' ? 'dark' : 'light');
+ 
+ if (toggle) {
+   toggle.addEventListener('click', () => {
+     const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+     applyTheme(isDark ? 'light' : 'dark');
+   });
+ }
+ 
+ // ── NAVBAR SCROLL ─────────────────────────────────────────
+ const navbar = document.getElementById('navbar');
+ if (navbar) {
+   window.addEventListener('scroll', () => {
+     navbar.style.boxShadow = window.scrollY > 10
+       ? '0 2px 20px rgba(0,0,0,.08)'
+       : 'none';
+   }, { passive: true });
+ }
+ 
+ // ── SCROLL REVEAL ─────────────────────────────────────────
+ const revealEls = document.querySelectorAll(
+   '.about-card, .skill-block, .edu-item, .timeline-item, .impact-item, .tool-chip, .project-entry'
+ );
+ revealEls.forEach(el => el.classList.add('reveal'));
+ 
+-const revealObserver = new IntersectionObserver((entries) => {
+-  entries.forEach((entry, i) => {
+-    if (entry.isIntersecting) {
+-      setTimeout(() => entry.target.classList.add('visible'), i * 60);
+-      revealObserver.unobserve(entry.target);
+-    }
+-  });
+-}, { threshold: 0.1 });
++if ('IntersectionObserver' in window) {
++  const revealObserver = new IntersectionObserver((entries) => {
++    entries.forEach((entry, i) => {
++      if (entry.isIntersecting) {
++        setTimeout(() => entry.target.classList.add('visible'), i * 60);
++        revealObserver.unobserve(entry.target);
++      }
++    });
++  }, { threshold: 0.1 });
+ 
+-revealEls.forEach(el => revealObserver.observe(el));
++  revealEls.forEach(el => revealObserver.observe(el));
++} else {
++  revealEls.forEach(el => el.classList.add('visible'));
++}
  
  // ── ACCORDION ─────────────────────────────────────────────
  function toggleProject(id) {
@@ -25,6 +117,12 @@ diff a/main.js b/main.js	(rejected hunks)
    if (e.target.tagName === 'IMG') e.preventDefault();
  });
  document.addEventListener('DOMContentLoaded', () => {
++  document.querySelectorAll('[data-last-updated]').forEach(el => {
++    const now = new Date();
++    const label = now.toLocaleString('en-US', { month: 'long', year: 'numeric' });
++    el.textContent = `Last updated: ${label}`;
++  });
++
 +  // External-link hardening
 +  document.querySelectorAll('a[target="_blank"]').forEach(link => {
 +    link.setAttribute('rel', 'noopener noreferrer');
@@ -69,3 +167,56 @@ diff a/main.js b/main.js	(rejected hunks)
  
  // Close menu when clicking outside
  document.addEventListener('click', e => {
+   const navbar = document.getElementById('navbar');
+   if (navbar && !navbar.contains(e.target)) closeMenu();
+ });
+ 
+ 
+ // ── COPY EMAIL ─────────────────────────────────────────
+ const copyBtn = document.getElementById('copy-email');
+ 
+ if (copyBtn) {
+-copyBtn.addEventListener('click', () => {
+-  const email = "jithinmachath@outlook.com";
+-
+-  navigator.clipboard.writeText(email).then(() => {
+-    copyBtn.textContent = "✓";
+-
+-    setTimeout(() => {
+-      copyBtn.textContent = "⧉";
+-    }, 1200);
++  copyBtn.addEventListener('click', async () => {
++    const email = "jithinmachath@outlook.com";
++
++    const fallbackCopy = () => {
++      const ta = document.createElement('textarea');
++      ta.value = email;
++      ta.setAttribute('readonly', '');
++      ta.style.position = 'absolute';
++      ta.style.left = '-9999px';
++      document.body.appendChild(ta);
++      ta.select();
++      document.execCommand('copy');
++      document.body.removeChild(ta);
++    };
++
++    try {
++      if (navigator.clipboard && navigator.clipboard.writeText) {
++        await navigator.clipboard.writeText(email);
++      } else {
++        fallbackCopy();
++      }
++      copyBtn.textContent = "✓";
++      setTimeout(() => {
++        copyBtn.textContent = "⧉";
++      }, 1200);
++    } catch (_) {
++      fallbackCopy();
++      copyBtn.textContent = "✓";
++      setTimeout(() => {
++        copyBtn.textContent = "⧉";
++      }, 1200);
++    }
+   });
+-});
+ }
