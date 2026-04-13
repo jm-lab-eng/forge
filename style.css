@@ -496,7 +496,7 @@ h1,h2,h3,h4 { line-height: 1.2; }
 
 /* ── PROJECTS PAGE ───────────────────────────────────────── */
 .projects-page { padding: 60px 40px 100px; }
-.projects-page-inner { max-width: 1160px; margin: auto; }
+.projects-page-inner { max-width: 1160px; margin: 0 auto;   width: 100%;}
 
 .global-disclaimer {
   display: flex; gap: 12px; align-items: flex-start;
@@ -514,6 +514,11 @@ h1,h2,h3,h4 { line-height: 1.2; }
   border-radius: var(--radius-lg);
   margin-bottom: 20px;
   transition: border-color var(--transition), box-shadow var(--transition);
+
+     /* ✅ FIX START */
+  width: 100%;
+  display: block;
+  /* ✅ FIX END */
 }
 /* is-open styles now per-project — see PER-PROJECT ACCENT COLOURS */
 
