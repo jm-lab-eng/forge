@@ -1,0 +1,71 @@
+diff a/main.js b/main.js	(rejected hunks)
+@@ -84,52 +84,69 @@ const revealObserver = new IntersectionObserver((entries) => {
+ revealEls.forEach(el => revealObserver.observe(el));
+ 
+ // ── ACCORDION ─────────────────────────────────────────────
+ function toggleProject(id) {
+   const el = document.getElementById(id);
+   if (!el) return;
+   const wasOpen = el.classList.contains('is-open');
+ 
+   // Close all open entries
+   document.querySelectorAll('.project-entry.is-open').forEach(e => e.classList.remove('is-open'));
+ 
+   // If it wasn't open, open it and scroll to it
+   if (!wasOpen) {
+     el.classList.add('is-open');
+     setTimeout(() => {
+       el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+     }, 80);
+   }
+ }
+ 
+ // ── IMAGE PROTECTION ──────────────────────────────────────
+ document.addEventListener('contextmenu', e => {
+   if (e.target.tagName === 'IMG') e.preventDefault();
+ });
+ document.addEventListener('DOMContentLoaded', () => {
++  // External-link hardening
++  document.querySelectorAll('a[target="_blank"]').forEach(link => {
++    link.setAttribute('rel', 'noopener noreferrer');
++    link.setAttribute('referrerpolicy', 'no-referrer');
++  });
++
++  // Asset hardening hints for local downloadable documents
++  document.querySelectorAll('a[href$=".pdf"]').forEach(link => {
++    const href = link.getAttribute('href') || '';
++    if (!href.startsWith('http')) {
++      link.setAttribute('download', '');
++      link.setAttribute('type', 'application/pdf');
++    }
++  });
++
+   document.querySelectorAll('img').forEach(img => {
+     img.setAttribute('draggable', 'false');
++    img.setAttribute('loading', img.getAttribute('loading') || 'lazy');
++    img.setAttribute('decoding', 'async');
+     img.addEventListener('dragstart', e => e.preventDefault());
+   });
+ });
+ 
+ // ── MOBILE MENU ───────────────────────────────────────────
+ function toggleMenu() {
+   const links = document.getElementById('nav-links');
+   const btn   = document.getElementById('hamburger');
+   if (!links || !btn) return;
+   const isOpen = links.classList.toggle('is-open');
+   btn.classList.toggle('is-open', isOpen);
+   btn.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
+ }
+ 
+ function closeMenu() {
+   const links = document.getElementById('nav-links');
+   const btn   = document.getElementById('hamburger');
+   if (!links || !btn) return;
+   links.classList.remove('is-open');
+   btn.classList.remove('is-open');
+   btn.setAttribute('aria-label', 'Open menu');
+ }
+ 
+ // Close menu when clicking outside
+ document.addEventListener('click', e => {

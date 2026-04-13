@@ -1,0 +1,333 @@
+diff a/index.html b/index.html	(rejected hunks)
+@@ -1,30 +1,34 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
++<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https:; font-src 'self' https://fonts.gstatic.com data:; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'; upgrade-insecure-requests">
++<meta name="referrer" content="no-referrer">
++<meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=()">
++<meta http-equiv="X-Content-Type-Options" content="nosniff">
+ <title>Jithin Machath — Mechanical Design Engineer</title>
+ <link rel="stylesheet" href="style.css">
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+ <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+ <script>
+   (function(){
+     var t = localStorage.getItem('jm-theme');
+     if (t === 'dark') document.documentElement.setAttribute('data-theme','dark');
+   })();
+ </script>
+ </head>
+ <body>
+ 
+ <div class="cursor" id="cursor"></div>
+ <div class="cursor-follower" id="cursor-follower"></div>
+ 
+ <button id="theme-toggle" aria-label="Toggle theme"><span class="toggle-icon">◑</span></button>
+ 
+ <nav class="navbar" id="navbar">
+   <div class="nav-inner">
+     <a href="index.html" class="nav-brand"><span class="brand-jm">JM</span></a>
+     <ul class="nav-links" id="nav-links">
+       <li><a href="#about"        class="nav-link" onclick="closeMenu()">About</a></li>
+       <li><a href="#experience"   class="nav-link" onclick="closeMenu()">Experience</a></li>
+       <li><a href="#skills"       class="nav-link" onclick="closeMenu()">Skills</a></li>
+@@ -104,87 +108,87 @@
+         I primarily work with CAD tools such as SolidWorks and AutoCAD for 3D modelling and manufacturing drawings, and use ANSYS Workbench for structural analysis and validation. I also hold a Lean Six Sigma Black Belt, which I use for structured problem solving and continuous improvement.
+         </p>
+       </div>
+       <div class="about-cards">
+         <div class="about-card"><div class="about-card-icon">⚙</div><h4>System-Level Design</h4><p>Electro-mechanical integration, hydraulic systems, structural optimisation</p></div>
+         <div class="about-card"><div class="about-card-icon">🔬</div><h4>Analysis &amp; Validation</h4><p>FEA, DFMEA, engineering calculations, prototype testing</p></div>
+         <div class="about-card"><div class="about-card-icon">🏭</div><h4>Field Deployment</h4><p>Real-world validation in oil &amp; gas, sanitation, and hazardous environments</p></div>
+         <div class="about-card"><div class="about-card-icon">📋</div><h4>Project Leadership</h4><p>Leading cross-functional teams across design, fabrication, and testing</p></div>
+       </div>
+     </div>
+   </div>
+ </section>
+ 
+ <!-- EXPERIENCE -->
+ <section class="section section--alt" id="experience">
+   <div class="section-inner">
+     <div class="section-label"><span class="label-num">02</span><span>Experience</span></div>
+     <h2 class="section-title">Work History</h2>
+     <div class="timeline">
+ 
+       <!-- ROLE 3 -->
+       <div class="timeline-item">
+         <div class="timeline-meta"><span class="timeline-year">Apr 2025 – Oct 2025</span></div>
+         <div class="timeline-content">
+           <h3>Project Lead Engineer</h3>
+-          <p class="timeline-org"><a href="https://www.genrobotics.com/" target="_blank" class="org-link">Genrobotics</a> &nbsp;·&nbsp; Robotics &amp; Industrial Systems</p>
++          <p class="timeline-org"><a href="https://www.genrobotics.com/" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer" class="org-link">Genrobotics</a> &nbsp;·&nbsp; Robotics &amp; Industrial Systems</p>
+           <p>Led R&D delivery of DRACO (robotic tank cleaning system) and G-Mammoth (suction-cum-jetting system), owning system-level mechanical architecture across hydraulics, structures, and materials to improve reliability, durability, and lifecycle performance.</p>
+           <p>Coordinated cross-functional teams of 10–15 engineers across engineering, procurement, and manufacturing. Defined validation plans, test protocols, and acceptance criteria, including safety-critical evaluation and audit readiness.Drove design improvements through RCA, Lean, and value engineering — achieving zero major audit non-conformities and 96% on-time delivery.</p>
+           <div class="timeline-tags">
+             <span>Project Leadership</span>
+             <span>Cross-functional Teams</span>
+             <span>System Architecture</span>
+             <span>Validation &amp; QA</span>
+             <span>Lean / RCA</span>
+           </div>
+         </div>
+       </div>
+ 
+       <!-- ROLE 2 -->
+       <div class="timeline-item">
+         <div class="timeline-meta"><span class="timeline-year">Apr 2024 – Mar 2025</span></div>
+         <div class="timeline-content">
+           <h3>Senior Mechanical Design Engineer</h3>
+-          <p class="timeline-org"><a href="https://www.genrobotics.com/" target="_blank" class="org-link">Genrobotics</a> &nbsp;·&nbsp; Robotics &amp; Industrial Systems</p>
++          <p class="timeline-org"><a href="https://www.genrobotics.com/" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer" class="org-link">Genrobotics</a> &nbsp;·&nbsp; Robotics &amp; Industrial Systems</p>
+           <p>Led end-to-end mechanical design and prototyping of DRACO, improving sludge extraction and buoyancy performance by 30%. Designed and deployed test rigs, cutting validation cost by 20% and cycle time by 25%.</p>
+           <p>Conducted linear and non-linear FEA studies in ANSYS Workbench across systems such as Genbot, Wilboar, and G-Gaiter. Performed design calculations, tolerance analysis, and material selection. Resolved multiple design-to-production issues in coordination with manufacturing teams.</p>
+           <div class="timeline-tags">
+             <span>Mechanical Design</span>
+             <span>FEA / ANSYS</span>
+             <span>Prototyping</span>
+             <span>Test Rig Design</span>
+             <span>Tolerance Analysis</span>
+           </div>
+         </div>
+       </div>
+ 
+       <!-- ROLE 1 -->
+       <div class="timeline-item">
+         <div class="timeline-meta"><span class="timeline-year">Apr 2021 – Mar 2024</span></div>
+         <div class="timeline-content">
+           <h3>Mechanical Design Engineer</h3>
+-          <p class="timeline-org"><a href="https://www.genrobotics.com/" target="_blank" class="org-link">Genrobotics</a> &nbsp;·&nbsp; Robotics &amp; Industrial Systems</p>
++          <p class="timeline-org"><a href="https://www.genrobotics.com/" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer" class="org-link">Genrobotics</a> &nbsp;·&nbsp; Robotics &amp; Industrial Systems</p>
+           <p>Designed mechanical subsystems for Bandicoot, Wilboar, G-Gaiter, and Mobility+, including 3D modelling, assemblies, and manufacturing drawings using SolidWorks and AutoCAD. Prepared and managed BOMs for manufacturing, procurement, and quality.</p>
+           <p>Conducted feasibility studies and structural analysis to improve durability and reduce cost. Supported prototype builds and field trials, incorporating test feedback into iterative design improvements.</p>
+           <div class="timeline-tags">
+             <span>SolidWorks / AutoCAD</span>
+             <span>BOM Management</span>
+             <span>Structural Analysis</span>
+             <span>Prototype Development</span>
+             <span>Field Trials</span>
+           </div>
+         </div>
+       </div>
+ 
+     </div>
+ 
+     <!-- IMPACT STRIP -->
+     <div class="impact-strip">
+       <div class="impact-item">
+         <span class="impact-label">Efficiency Improvements</span>
+         <span class="impact-desc">System optimisation across robotic programs</span>
+       </div>
+       <div class="impact-item">
+         <span class="impact-label">Cost Reduction</span>
+         <span class="impact-desc">Through design optimisation and value engineering</span>
+       </div>
+       <div class="impact-item">
+@@ -277,106 +281,106 @@
+         <div class="tool-chip"><img src="images/icons/autocad.png"    alt="AutoCAD"><span>AutoCAD</span></div>
+         <div class="tool-chip"><img src="images/icons/ansys.png"      alt="ANSYS"><span>ANSYS</span></div>
+         <div class="tool-chip"><img src="images/icons/excel.png"      alt="Excel"><span>Excel</span></div>
+         <div class="tool-chip"><img src="images/icons/powerpoint.png" alt="PowerPoint"><span>PowerPoint</span></div>
+         <div class="tool-chip"><img src="images/icons/word.png"       alt="Word"><span>Word</span></div>
+       </div>
+     </div>
+   </div>
+ </section>
+ 
+ <!-- EDUCATION -->
+ <section class="section section--alt" id="education">
+   <div class="section-inner">
+     <div class="section-label"><span class="label-num">04</span><span>Education</span></div>
+     <h2 class="section-title">Academic Background</h2>
+ <p class="edu-summary">
+ My academic journey progressed from strong mechanical fundamentals to system-level design, and further into structured, data-driven problem solving and process improvement.
+ </p>
+     
+     <div class="edu-timeline">
+       <div class="edu-item">
+         <div class="edu-logo-wrap"><img src="images/iiitdm.png" alt="IIITDM" class="edu-logo"></div>
+         <div class="edu-body">
+           <div class="edu-year">2017 – 2019</div>
+           <h3>M.Des – Mechanical Systems</h3>
+-          <a href="https://www.iiitdm.ac.in/" target="_blank" class="edu-inst">IIITDM Kancheepuram</a>
++          <a href="https://www.iiitdm.ac.in/" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer" class="edu-inst">IIITDM Kancheepuram</a>
+           <p class="edu-focus"> System Design · Mechatronics · FEA · Product Development </p>
+           <p>
+ I completed my Master of Design (M.Des) in Mechanical Systems from IIITDM Kancheepuram, a programme focused on hands-on product engineering and system-level design.
+ </p>
+ 
+ <p>
+ The coursework combined mechanical design with mechatronics, advanced manufacturing, and simulation-driven engineering. I worked on product development, mechatronic systems, and FEA, with a strong emphasis on taking concepts from idea to working systems.
+ </p>
+ 
+ <p>
+ This phase helped me move from component-level thinking to system-level design, understanding how different elements integrate in real engineering applications.
+ </p>
+         </div>
+       </div>
+       <div class="edu-item">
+         <div class="edu-logo-wrap"><img src="images/gec.jpg" alt="GEC Thrissur" class="edu-logo"></div>
+         <div class="edu-body">
+           <div class="edu-year">2012 – 2016</div>
+           <h3>B.Tech – Mechanical Engineering</h3>
+-          <a href="https://gectcr.ac.in/" target="_blank" class="edu-inst">Government Engineering College, Thrissur</a>
++          <a href="https://gectcr.ac.in/" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer" class="edu-inst">Government Engineering College, Thrissur</a>
+           <p class="edu-focus"> Core Mechanics · Manufacturing · Fluid Systems · Engineering Fundamentals </p>
+           <p>
+ I completed my B.Tech in Mechanical Engineering from Government Engineering College, Thrissur, building a strong foundation in thermodynamics, mechanics, fluid systems, machine design, and manufacturing.
+ </p>
+ 
+ <p>
+ I was also exposed to operations, supply chain, and management basics, helping me understand how engineering decisions connect to production, cost, and real-world delivery.
+ </p>
+ 
+ <p>
+ Most of my learning came through labs, workshops, and projects, shaping a practical, hands-on approach to engineering.
+ </p>
+         </div>
+       </div>
+       <div class="edu-item edu-item--cert">
+         <div class="edu-logo-wrap"><img src="images/imc.png" alt="IMC" class="edu-logo"></div>
+         <div class="edu-body">
+           <div class="edu-year">2025</div>
+           <h3>Lean Six Sigma Black Belt</h3>
+-          <a href="https://imccertifications.com/" target="_blank" class="edu-inst">International Management Consultancy (IMC)</a>
++          <a href="https://imccertifications.com/" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer" class="edu-inst">International Management Consultancy (IMC)</a>
+           <p class="edu-focus"> DMAIC · Root Cause Analysis · Process Improvement · Data-Driven Decisions </p>
+           <p>
+ I completed Lean Six Sigma Black Belt certification, where I learned to approach engineering and process problems in a structured, data-driven way.
+ </p>
+ 
+ <p>
+ The focus was on identifying root causes, improving processes, and enhancing efficiency and quality using frameworks like DMAIC and basic statistical analysis.
+ </p>
+ 
+ <p>
+ This added a strong problem-solving and continuous improvement perspective to my engineering approach.
+ </p>
+           <div class="cert-links">
+-            <a href="https://imccertifications.com/certificates/C-2025-51795.pdf"     target="_blank">IMC Certificate ↗</a>
+-            <a href="https://imccertifications.com/certificates/CPD-C-2025-51795.pdf" target="_blank">CPD Certificate ↗</a>
++            <a href="https://imccertifications.com/certificates/C-2025-51795.pdf"     target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer">IMC Certificate ↗</a>
++            <a href="https://imccertifications.com/certificates/CPD-C-2025-51795.pdf" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer">CPD Certificate ↗</a>
+           </div>
+         </div>
+       </div>
+     </div>
+   </div>
+ </section>
+ 
+ <!-- CTA -->
+ <section class="section section--cta">
+   <div class="section-inner cta-inner">
+     <h2>Explore Engineering Projects</h2>
+     <p>Detailed case studies of real-world system development — from hydraulics to field deployment.</p>
+     <a href="projects.html" class="btn-primary btn-primary--large">View All Projects →</a>
+   </div>
+ </section>
+ 
+ <!-- CONTACT -->
+ <section class="section section--contact" id="contact">
+   <div class="section-inner">
+     <div class="contact-grid">
+ 
+       <!-- LEFT -->
+       <div class="contact-left">
+         <div class="section-label" style="margin-bottom:16px">
+           <span class="label-num">05</span>
+@@ -385,89 +389,89 @@ This added a strong problem-solving and continuous improvement perspective to my
+         <h2 class="section-title" style="margin-bottom:16px">Let's <em>connect</em></h2>
+         <p class="contact-desc">Open to new opportunities, collaborations, and conversations about engineering challenges. Feel free to reach out through any of the channels below.</p>
+         <div class="contact-availability">
+           <span class="avail-dot"></span>
+           <span>Available for new roles — Immediate</span>
+         </div>
+       </div>
+ 
+       <!-- RIGHT — CONTACT CARDS -->
+             <div class="contact-right">
+ <div class="contact-card email-card">
+   <div class="contact-card-body">
+     <span class="contact-card-label">Email</span>
+ 
+     <div class="contact-email-wrap">
+       <a href="mailto:jithinmachath@gmail.com" class="contact-card-value">
+         jithinmachath@outlook.com
+       </a>
+ 
+       <button class="copy-btn" id="copy-email" title="Copy email">
+         ⧉
+       </button>
+     </div>
+   </div>
+ </div>
+-        <a href="https://www.linkedin.com/in/jithin-machath/" target="_blank" class="contact-card">
++        <a href="https://www.linkedin.com/in/jithin-machath/" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer" class="contact-card">
+           <div class="contact-card-icon">
+             <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
+               <rect x="2" y="2" width="18" height="18" rx="3" stroke="currentColor" stroke-width="1.5"/>
+               <path d="M6 9v7M6 6v.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+               <path d="M10 16v-4c0-1.5 1-2 2-2s2 .5 2 2v4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+               <path d="M10 9v7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+             </svg>
+           </div>
+           <div class="contact-card-body">
+             <span class="contact-card-label">LinkedIn</span>
+             <span class="contact-card-value">jithin-machath</span>
+           </div>
+           <svg class="contact-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 13L13 3M13 3H7M13 3v6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+         </a>
+ 
+-        <a href="https://wa.me/918086587592" target="_blank" class="contact-card">
++        <a href="https://wa.me/918086587592" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer" class="contact-card">
+           <div class="contact-card-icon">
+             <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
+               <path d="M11 2a9 9 0 0 1 7.36 14.18L20 20l-3.93-1.03A9 9 0 1 1 11 2z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+               <path d="M8 10.5c.5 1 1.5 2 2.5 2.5l1-1c.8.3 1.7.5 2.5.5 0 1-1 2-2 2A8 8 0 0 1 6 8c0-1 1-2 2-2 0 .8.2 1.7.5 2.5l-1 1z" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"/>
+             </svg>
+           </div>
+           <div class="contact-card-body">
+             <span class="contact-card-label">WhatsApp</span>
+             <span class="contact-card-value">+91 80865 87592</span>
+           </div>
+           <svg class="contact-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 13L13 3M13 3H7M13 3v6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+         </a>
+ 
+         <a href="tel:+918086587592" class="contact-card">
+           <div class="contact-card-icon">
+             <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
+               <path d="M6.5 3h3l1.5 4-2 1.5c1 2 2.5 3.5 4.5 4.5L15 11l4 1.5v3C19 17 17 19 15 19 8.4 19 3 13.6 3 7c0-2 2-4 3.5-4z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+             </svg>
+           </div>
+           <div class="contact-card-body">
+             <span class="contact-card-label">Phone</span>
+             <span class="contact-card-value">+91 80865 87592</span>
+           </div>
+           <svg class="contact-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 13L13 3M13 3H7M13 3v6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+         </a>
+ 
+       </div>
+     </div>
+   </div>
+ </section>
+ 
+ <!-- FOOTER -->
+ <footer class="footer">
+   <div class="footer-inner">
+     <span class="footer-brand">Jithin Machath</span>
+     <span class="footer-role">Mechanical Design Engineer</span>
+     <div class="footer-links">
+       <a href="/cdn-cgi/l/email-protection#1d777469757473707c7e757c69755d72686971727276337e7270" class="footer-link">Email</a>
+-      <a href="https://www.linkedin.com/in/jithin-machath/" target="_blank" class="footer-link">LinkedIn</a>
+-      <a href="https://wa.me/918086587592" target="_blank" class="footer-link">WhatsApp</a>
++      <a href="https://www.linkedin.com/in/jithin-machath/" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer" class="footer-link">LinkedIn</a>
++      <a href="https://wa.me/918086587592" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer" class="footer-link">WhatsApp</a>
+     </div>
+   </div>
+ </footer>
+ 
+ <script src="main.js"></script>
+ </body>
+ </html>

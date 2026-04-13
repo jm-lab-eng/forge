@@ -10,6 +10,14 @@ git status
 
 
 
+
+
+**Apply patch from codex**
+
+
+
+
+
 cd C:\\Users\\jithi\\OneDrive\\Desktop\\forge
 
 notepad codex.patch
@@ -52,13 +60,29 @@ git push origin main
 
 
 
+**download latest changes from GitHub to your local repo**
+
+
+
+cd C:\\Users\\jithi\\OneDrive\\Desktop\\forge
+
+git pull origin main
 
 
 
 
 
+**# make changes**
+
+git add .
+
+git commit -m "message"
 
 
 
+**# sync safely**
 
+git pull --rebase origin main
+
+git push origin main
 

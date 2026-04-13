@@ -107,10 +107,25 @@ document.addEventListener('contextmenu', e => {
 });
 document.addEventListener('DOMContentLoaded', () => {
   // External-link hardening
-  document.querySelectorAll('a[target="_blank"]').forEach(link => {
-    link.setAttribute('rel', 'noopener noreferrer');
-    link.setAttribute('referrerpolicy', 'no-referrer');
-  });
+document.querySelectorAll('a[target="_blank"]').forEach(link => {
+  link.setAttribute('rel', 'noopener noreferrer');
+  link.setAttribute('referrerpolicy', 'no-referrer');
+});
+
+// PDF handling
+document.querySelectorAll('a[href$=".pdf"]').forEach(link => {
+  const href = link.getAttribute('href') || '';
+  if (!href.startsWith('http')) {
+    link.setAttribute('download', '');
+    link.setAttribute('type', 'application/pdf');
+  }
+});
+
+// Image improvements
+document.querySelectorAll('img').forEach(img => {
+  img.setAttribute('loading', img.getAttribute('loading') || 'lazy');
+  img.setAttribute('decoding', 'async');
+});
 
   // Asset hardening hints for local downloadable documents
   document.querySelectorAll('a[href$=".pdf"]').forEach(link => {
