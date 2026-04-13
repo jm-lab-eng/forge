@@ -1,0 +1,142 @@
+ (cd "$(git rev-parse --show-toplevel)" && git apply --3way <<'EOF' 
+diff --git a/style.css b/style.css
+index 8c8cb96716cf55a7b81df43a2dc02379a35f69a4..43735a4e04cbc697b8c04e742c8b067f00020f2c 100644
+--- a/style.css
++++ b/style.css
+@@ -490,51 +490,53 @@ h1,h2,h3,h4 { line-height: 1.2; }
+   color: var(--text-3); text-decoration: none; margin-bottom: 28px; transition: color var(--transition);
+ }
+ .back-link:hover { color: var(--accent); }
+ .page-title { font-family: var(--font-display); font-size: clamp(40px, 6vw, 70px); line-height: 1.05; margin-bottom: 16px; }
+ .page-title em { font-style: italic; color: var(--accent); }
+ .page-subtitle { font-size: 15px; color: var(--text-2); max-width: 540px; }
+ 
+ /* ── PROJECTS PAGE ───────────────────────────────────────── */
+ .projects-page { padding: 60px 40px 100px; }
+ .projects-page-inner { max-width: 1160px; margin: auto; }
+ 
+ .global-disclaimer {
+   display: flex; gap: 12px; align-items: flex-start;
+   padding: 14px 18px;
+   background: var(--surface-2); border: 1px solid var(--border);
+   border-radius: var(--radius); margin-bottom: 40px; color: var(--text-3);
+ }
+ .global-disclaimer svg { flex-shrink: 0; margin-top: 1px; }
+ .global-disclaimer p { font-size: 12px; line-height: 1.5; }
+ 
+ /* PROJECT ENTRY CARD */
+ .project-entry {
+   background: var(--proj-color-bg, var(--surface));
+   border: 1.5px solid var(--proj-color, var(--border));
+   border-radius: var(--radius-lg);
+-  margin-bottom: 20px;
++  width: 100%;
++  max-width: 1160px;
++  margin: 0 auto 20px;
+   transition: border-color var(--transition), box-shadow var(--transition);
+ }
+ /* is-open styles now per-project — see PER-PROJECT ACCENT COLOURS */
+ 
+ .project-entry-header {
+   display: flex; justify-content: space-between; align-items: center;
+   padding: 30px 32px; cursor: pointer; user-select: none; gap: 24px;
+   position: relative; z-index: 1;
+ }
+ /* expand-btn hover now per-project */
+ 
+ .peh-left { display: flex; gap: 20px; align-items: flex-start; }
+ .proj-num {
+   font-family: var(--font-mono); font-size: 28px; font-weight: 700;
+   color: var(--border); flex-shrink: 0; line-height: 1; padding-top: 4px; transition: color var(--transition);
+ }
+ /* proj-num open colour now per-project */
+ 
+ .peh-meta { }
+ .proj-domain-tag {
+   font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;
+   color: var(--accent); margin-bottom: 6px; font-family: var(--font-mono); display: block;
+ }
+ .proj-title { font-family: var(--font-display); font-size: 26px; color: var(--text); margin-bottom: 6px; }
+ .proj-tagline { font-size: 13px; color: var(--text-2); max-width: 480px; line-height: 1.5; }
+ 
+EOF
+)
+
+ (cd "$(git rev-parse --show-toplevel)" && git apply --3way <<'EOF' 
+diff --git a/main.js b/main.js
+index 23c776bea7ab8a7b2b69846346a60d439d93ea42..e8987c4b3a11dec15633e3790418e3a7ebfed21d 100644
+--- a/main.js
++++ b/main.js
+@@ -84,52 +84,69 @@ const revealObserver = new IntersectionObserver((entries) => {
+ revealEls.forEach(el => revealObserver.observe(el));
+ 
+ // ── ACCORDION ─────────────────────────────────────────────
+ function toggleProject(id) {
+   const el = document.getElementById(id);
+   if (!el) return;
+   const wasOpen = el.classList.contains('is-open');
+ 
+   // Close all open entries
+   document.querySelectorAll('.project-entry.is-open').forEach(e => e.classList.remove('is-open'));
+ 
+   // If it wasn't open, open it and scroll to it
+   if (!wasOpen) {
+     el.classList.add('is-open');
+     setTimeout(() => {
+       el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+     }, 80);
+   }
+ }
+ 
+ // ── IMAGE PROTECTION ──────────────────────────────────────
+ document.addEventListener('contextmenu', e => {
+   if (e.target.tagName === 'IMG') e.preventDefault();
+ });
+ document.addEventListener('DOMContentLoaded', () => {
++  // External-link hardening
++  document.querySelectorAll('a[target="_blank"]').forEach(link => {
++    link.setAttribute('rel', 'noopener noreferrer');
++    link.setAttribute('referrerpolicy', 'no-referrer');
++  });
++
++  // Asset hardening hints for local downloadable documents
++  document.querySelectorAll('a[href$=".pdf"]').forEach(link => {
++    const href = link.getAttribute('href') || '';
++    if (!href.startsWith('http')) {
++      link.setAttribute('download', '');
++      link.setAttribute('type', 'application/pdf');
++    }
++  });
++
+   document.querySelectorAll('img').forEach(img => {
+     img.setAttribute('draggable', 'false');
++    img.setAttribute('loading', img.getAttribute('loading') || 'lazy');
++    img.setAttribute('decoding', 'async');
+     img.addEventListener('dragstart', e => e.preventDefault());
+   });
+ });
+ 
+ // ── MOBILE MENU ───────────────────────────────────────────
+ function toggleMenu() {
+   const links = document.getElementById('nav-links');
+   const btn   = document.getElementById('hamburger');
+   if (!links || !btn) return;
+   const isOpen = links.classList.toggle('is-open');
+   btn.classList.toggle('is-open', isOpen);
+   btn.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
+ }
+ 
+ function closeMenu() {
+   const links = document.getElementById('nav-links');
+   const btn   = document.getElementById('hamburger');
+   if (!links || !btn) return;
+   links.classList.remove('is-open');
+   btn.classList.remove('is-open');
+   btn.setAttribute('aria-label', 'Open menu');
+ }
+ 
+ // Close menu when clicking outside
+ document.addEventListener('click', e => {
+ 
+EOF
+)
