@@ -1,4 +1,4 @@
-cd C:\\Users\\jithi\\OneDrive\\Desktop
+cd C:\\Users\\jithi\\OneDrive\\Documents\\Career\\Jithin\\GitHub
 
 git clone https://github.com/jm-lab-eng/forge
 
@@ -18,7 +18,7 @@ git status
 
 
 
-cd C:\\Users\\jithi\\OneDrive\\Desktop\\forge
+cd C:\\Users\\jithi\\OneDrive\\Documents\\Career\\Jithin\\GitHub\\forge
 
 notepad codex.patch
 
@@ -36,7 +36,7 @@ git status
 
 
 
-cd C:\\Users\\jithi\\OneDrive\\Desktop\\forge
+cd C:\\Users\\jithi\\OneDrive\\Documents\\Career\\Jithin\\GitHub\\forge
 
 git status
 
@@ -47,6 +47,8 @@ pwd
 **Push to GitHub**
 
 
+
+cd C:\\Users\\jithi\\OneDrive\\Documents\\Career\\Jithin\\GitHub\\forge
 
 git status
 
@@ -64,7 +66,7 @@ git push origin main
 
 
 
-cd C:\\Users\\jithi\\OneDrive\\Desktop\\forge
+cd C:\\Users\\jithi\\OneDrive\\Documents\\Career\\Jithin\\GitHub\\forge
 
 git pull origin main
 
@@ -84,5 +86,5 @@ git commit -m "message"
 
 git pull --rebase origin main
 
-git push origin main	
+git push origin main
 
