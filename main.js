@@ -186,3 +186,37 @@ copyBtn.addEventListener('click', () => {
   });
 });
 }
+
+
+// ── GALLERY LIGHTBOX ─────────────────────────
+
+const lightbox = document.getElementById('lightbox');
+const lightboxImg = lightbox?.querySelector('img');
+const lightboxCaption = lightbox?.querySelector('.lightbox-caption');
+
+document.querySelectorAll('.gallery-item').forEach(item => {
+  item.addEventListener('click', () => {
+    const img = item.querySelector('img');
+    const caption = item.querySelector('figcaption')?.innerText || '';
+
+    if (!img) return;
+
+    lightboxImg.src = img.src;
+    lightboxCaption.textContent = caption;
+    lightbox.classList.add('active');
+  });
+});
+
+// Close on click anywhere
+if (lightbox) {
+  lightbox.addEventListener('click', () => {
+    lightbox.classList.remove('active');
+  });
+}
+
+// Close with ESC
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') {
+    lightbox?.classList.remove('active');
+  }
+});

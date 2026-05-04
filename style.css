@@ -696,6 +696,57 @@ h1,h2,h3,h4 { line-height: 1.2; }
 .gallery-item img { width: 100%; height: 100%; object-fit: cover; cursor: zoom-in; transition: transform var(--transition); }
 .gallery-item:hover img { transform: scale(1.04); }
 
+
+/* ===== PROJECT GALLERY UPGRADE (CAPTION SUPPORT) ===== */
+
+.project-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 18px;
+  margin-top: 16px;
+}
+
+/* Override existing gallery-item slightly */
+.project-gallery .gallery-item {
+  display: flex;
+  flex-direction: column;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  transition: var(--transition);
+  cursor: pointer;
+}
+
+.project-gallery .gallery-item:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-md);
+}
+
+/* Image */
+.project-gallery .gallery-item img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+/* Caption (NEW) */
+.project-gallery .gallery-item figcaption {
+  padding: 12px 14px;
+  font-size: 12.5px;
+  color: var(--text-2);
+  line-height: 1.5;
+  background: var(--surface);
+}
+
+.project-gallery .gallery-item strong {
+  display: block;
+  font-size: 13px;
+  color: var(--text);
+  margin-bottom: 4px;
+}
+
+
 /* Watermark overlay */
 .gallery-item::after {
   content: '© Jithin Machath';
