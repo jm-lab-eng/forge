@@ -1208,11 +1208,15 @@ h1,h2,h3,h4 { line-height: 1.2; }
 
 .project-gallery .gallery-item img {
   width: 100%;
-  aspect-ratio: 16 / 9;
-  height: auto;
-  object-fit: cover;
+  height: 220px;
+
+  object-fit: contain;
+  object-position: center;
+
   display: block;
+  background: var(--surface-2);
 }
+
 
 .project-gallery {
   align-items: start;
