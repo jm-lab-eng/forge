@@ -1,38 +1,5 @@
 /* main.js — Jithin Machath Portfolio */
 
-// ── CURSOR ────────────────────────────────────────────────
-const cursor = document.getElementById('cursor');
-const follower = document.getElementById('cursor-follower');
-
-if (cursor && follower && window.matchMedia('(hover: hover)').matches) {
-  let mx = 0, my = 0, fx = 0, fy = 0;
-
-  document.addEventListener('mousemove', e => {
-    mx = e.clientX; my = e.clientY;
-    cursor.style.left = mx + 'px';
-    cursor.style.top  = my + 'px';
-  });
-
-  (function animFollower() {
-    fx += (mx - fx) * 0.14;
-    fy += (my - fy) * 0.14;
-    follower.style.left = fx + 'px';
-    follower.style.top  = fy + 'px';
-    requestAnimationFrame(animFollower);
-  })();
-
-  document.querySelectorAll('a, button, .project-entry-header, .gallery-item').forEach(el => {
-    el.addEventListener('mouseenter', () => {
-      cursor.style.transform = 'translate(-50%,-50%) scale(2)';
-      follower.style.opacity = '0.8';
-    });
-    el.addEventListener('mouseleave', () => {
-      cursor.style.transform = 'translate(-50%,-50%) scale(1)';
-      follower.style.opacity = '0.5';
-    });
-  });
-}
-
 // ── THEME ─────────────────────────────────────────────────
 const toggle = document.getElementById('theme-toggle');
 
@@ -189,34 +156,24 @@ copyBtn.addEventListener('click', () => {
 
 
 // ── GALLERY LIGHTBOX ─────────────────────────
-
 const lightbox = document.getElementById('lightbox');
-const lightboxImg = lightbox?.querySelector('img');
-const lightboxCaption = lightbox?.querySelector('.lightbox-caption');
-
-document.querySelectorAll('.gallery-item').forEach(item => {
-  item.addEventListener('click', () => {
-    const img = item.querySelector('img');
-    const caption = item.querySelector('figcaption')?.innerText || '';
-
-    if (!img) return;
-
-    lightboxImg.src = img.src;
-    lightboxCaption.textContent = caption;
-    lightbox.classList.add('active');
-  });
-});
-
-// Close on click anywhere
 if (lightbox) {
-  lightbox.addEventListener('click', () => {
-    lightbox.classList.remove('active');
-  });
-}
+  const lightboxImg = lightbox.querySelector('img');
+  const lightboxCaption = lightbox.querySelector('.lightbox-caption');
+  const closeLightbox = () => lightbox.classList.remove('active');
 
-// Close with ESC
-document.addEventListener('keydown', (e) => {
-  if (e.key === 'Escape') {
-    lightbox?.classList.remove('active');
-  }
-});
+  document.querySelectorAll('.gallery-item').forEach(item => {
+    item.addEventListener('click', e => {
+      e.stopPropagation();
+      const img = item.querySelector('img');
+      if (!img) return;
+      lightboxImg.src = img.currentSrc || img.src;
+      lightboxImg.alt = img.alt;
+      if (lightboxCaption) lightboxCaption.textContent = item.querySelector('figcaption')?.textContent || '';
+      lightbox.classList.add('active');
+    });
+  });
+
+  lightbox.addEventListener('click', closeLightbox);
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
+}

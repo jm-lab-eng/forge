@@ -3,16 +3,21 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https:; font-src 'self' https://fonts.gstatic.com data:; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'; upgrade-insecure-requests">
-<meta name="referrer" content="no-referrer">
-<meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=()">
-<meta http-equiv="X-Content-Type-Options" content="nosniff">
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https:; font-src 'self' https://fonts.gstatic.com data:; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'; upgrade-insecure-requests">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https:; font-src 'self' https://fonts.gstatic.com data:; object-src 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests">
 <meta name="referrer" content="no-referrer">
 <meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=()">
 <meta http-equiv="X-Content-Type-Options" content="nosniff">
 
-<title>Jithin Machath — Mechanical Design Engineer</title>
+<title>Jithin Machath — Mechanical Design Engineer, UAE</title>
+<meta name="description" content="Mechanical Design Engineer in the UAE: product development, hydraulic and electro-mechanical systems, structural analysis and FEA, GD&amp;T and DFM/DFA, from concept to field deployment.">
+<link rel="canonical" href="https://jm-lab-eng.github.io/forge/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Jithin Machath — Mechanical Design Engineer, UAE">
+<meta property="og:description" content="Mechanical Design Engineer in the UAE: product development, hydraulic and electro-mechanical systems, structural analysis and FEA, GD&amp;T and DFM/DFA, from concept to field deployment.">
+<meta property="og:url" content="https://jm-lab-eng.github.io/forge/">
+<meta name="twitter:card" content="summary">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect width=%2732%27 height=%2732%27 rx=%276%27 fill=%27%230E7C7B%27/%3E%3Ctext x=%2716%27 y=%2722%27 font-size=%2716%27 font-family=%27Georgia,serif%27 text-anchor=%27middle%27 fill=%27white%27%3EJM%3C/text%3E%3C/svg%3E">
+
 <link rel="stylesheet" href="style.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
@@ -25,14 +30,11 @@
 </head>
 <body>
 
-<div class="cursor" id="cursor"></div>
-<div class="cursor-follower" id="cursor-follower"></div>
-
-<button id="theme-toggle" aria-label="Toggle theme"><span class="toggle-icon">◑</span></button>
+<button id="theme-toggle" type="button" aria-label="Toggle theme"><span class="toggle-icon">◑</span></button>
 
 <nav class="navbar" id="navbar">
   <div class="nav-inner">
-    <a href="index.html" class="nav-brand"><span class="brand-jm">JM</span></a>
+    <a href="index.html" class="nav-brand" aria-label="Jithin Machath — home"><span class="brand-jm">JM</span></a>
     <ul class="nav-links" id="nav-links">
       <li><a href="#about"        class="nav-link" onclick="closeMenu()">About</a></li>
       <li><a href="#experience"   class="nav-link" onclick="closeMenu()">Experience</a></li>
@@ -52,33 +54,29 @@
 <section class="hero" id="hero">
   <div class="hero-bg-grid"></div>
   <div class="hero-content">
-    <div class="hero-eyebrow"><span class="eyebrow-dot"></span><span>Mechanical Design Engineer — Industrial Systems, Product Development & R&D</span></div>
+    <div class="hero-eyebrow"><span class="eyebrow-dot"></span><span>Based in the UAE &nbsp;·&nbsp; Available to Join Immediately</span></div>
     <h1 class="hero-name">
       <span class="name-line">Jithin</span>
       <span class="name-line name-line--italic">Machath</span>
     </h1>
-    <p class="hero-descriptor">Industrial Systems &nbsp;·&nbsp; Product Development &nbsp;·&nbsp; R&amp;D</p>
-	<!-- ✅ ADD THIS EXACTLY HERE -->
-	<p class="hero-subnote"> Visual Engineering Portfolio — Professional Work & System Development</p>
-    <div class="hero-quote-block">
-      <span class="quote-mark">"</span>
-      <blockquote>Great engineering is proven in the field,<br>where it matters most.</blockquote>
-    </div>
+    <p class="hero-role">Mechanical Design Engineer</p>
+    <p class="hero-descriptor">Product Development &nbsp;·&nbsp; Industrial &amp; Electro-Mechanical Systems</p>
+    <p class="hero-summary">Hydraulic and structural design, FEA and prototype-to-field engineering. Four-plus years taking robotic and industrial equipment from concept through qualification to field deployment.</p>
     <div class="hero-actions">
       <a href="projects.html" class="btn-primary">View Projects</a>
-      <a href="#about" class="btn-ghost">About Me ↓</a>
+      <a href="#contact" class="btn-ghost">Get in Touch ↓</a>
     </div>
   </div>
   <div class="hero-side">
     <div class="hero-stats">
       <div class="stat-item"><span class="stat-num">4+</span><span class="stat-label">Years Experience</span></div>
       <div class="stat-divider"></div>
-      <div class="stat-item"><span class="stat-num">R&amp;D</span><span class="stat-label">Oil &amp; Gas Robotics</span></div>
+      <div class="stat-item"><span class="stat-num">M.Des</span><span class="stat-label">Mechanical Systems</span></div>
       <div class="stat-divider"></div>
-      <div class="stat-item"><span class="stat-num">⬡</span><span class="stat-label">Field Deployed</span></div>
+      <div class="stat-item"><span class="stat-num">UAE</span><span class="stat-label">Available Now</span></div>
     </div>
     <div class="hero-img-wrap">
-      <img src="images/profile.png" alt="Jithin Machath" class="hero-portrait">
+      <img src="images/profile.png" alt="Portrait of Jithin Machath" class="hero-portrait">
       <div class="portrait-ring"></div>
     </div>
   </div>
@@ -92,35 +90,24 @@
     <div class="about-grid">
       <div class="about-text">
         <h2 class="section-title">Engineering systems that perform <em>in the field</em></h2>
-  <p>
-    This portfolio is a visual representation of my professional engineering experience. It presents the projects I have worked on during my role in industry, structured to provide a clearer understanding of the systems, design decisions, and engineering work involved beyond what can be conveyed in a traditional resume.
-  </p>
-
         <p>
-        I am a Mechanical Design Engineer with 4+ years of experience working on design, analysis, and system development across robotics, industrial systems, and safety-critical applications in oil &amp; gas, sanitation, defence, and medical sectors.
+          I am a Mechanical Design Engineer with four-plus years at Genrobotics, designing hydraulic and electro-mechanical equipment for oil &amp; gas, sanitation and medical applications, from concept and detailed design through prototyping, qualification and field deployment.
         </p>
-        
         <p>
-        My work covers the full product development cycle — from feasibility and concept development to detailed CAD design, engineering analysis, prototyping, testing, and field validation. I have been involved in system-level engineering, including hydraulic systems, structural optimisation, and electro-mechanical integration for real-world conditions.
+          My work centres on mechanical and structural design, hydraulic system engineering and FEA in ANSYS, with SolidWorks and AutoCAD for 3D models and manufacturing drawings. I apply GD&amp;T, tolerance analysis and DFM/DFA, and I work directly with fabrication teams and external suppliers to resolve build and manufacturability issues.
         </p>
-        
         <p>
-        I enjoy building systems that actually work in the field. My experience includes hydraulic system design, component selection, and working in hazardous environments with considerations like ignition risk and ATEX/IECEx alignment.
+          On DRACO, a robotic tank-cleaning system for hazardous areas, I was the project owner for mechanical engineering. That covered the hydraulic circuit, structural design and analysis, resolving structural deflection and joint movement, component selection, design review and technical guidance to the engineering team. I also supported the PESO approval documentation.
         </p>
-        
         <p>
-        I have worked with cross-functional teams across design, fabrication, testing, and manufacturing, contributing to projects from early R&amp;D stages through to deployment, with a focus on reliability, safety, and practical performance.
-        </p>
-        
-        <p>
-        I primarily work with CAD tools such as SolidWorks and AutoCAD for 3D modelling and manufacturing drawings, and use ANSYS Workbench for structural analysis and validation. I also hold a Lean Six Sigma Black Belt, which I use for structured problem solving and continuous improvement.
+          I hold a Lean Six Sigma Black Belt, which I use for structured root-cause analysis. I am based in the UAE, available to join immediately, and open to roles across the country, including Abu Dhabi and Dubai.
         </p>
       </div>
       <div class="about-cards">
-        <div class="about-card"><div class="about-card-icon">⚙</div><h4>System-Level Design</h4><p>Electro-mechanical integration, hydraulic systems, structural optimisation</p></div>
-        <div class="about-card"><div class="about-card-icon">🔬</div><h4>Analysis &amp; Validation</h4><p>FEA, DFMEA, engineering calculations, prototype testing</p></div>
-        <div class="about-card"><div class="about-card-icon">🏭</div><h4>Field Deployment</h4><p>Real-world validation in oil &amp; gas, sanitation, and hazardous environments</p></div>
-        <div class="about-card"><div class="about-card-icon">📋</div><h4>Project Leadership</h4><p>Leading cross-functional teams across design, fabrication, and testing</p></div>
+        <div class="about-card"><h4>System-Level Design</h4><p>Electro-mechanical integration, hydraulic systems, structural optimisation</p></div>
+        <div class="about-card"><h4>Analysis &amp; Validation</h4><p>FEA, DFMEA, engineering calculations, prototype testing</p></div>
+        <div class="about-card"><h4>Field Deployment</h4><p>Real-world validation in oil &amp; gas and sanitation environments</p></div>
+        <div class="about-card"><h4>Technical Ownership</h4><p>Project owner on DRACO; design review and technical guidance to the engineering team</p></div>
       </div>
     </div>
   </div>
@@ -139,8 +126,8 @@
         <div class="timeline-content">
           <h3>Project Lead Engineer</h3>
           <p class="timeline-org"><a href="https://www.genrobotics.com/" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer" class="org-link">Genrobotics</a> &nbsp;·&nbsp; Robotics &amp; Industrial Systems</p>
-          <p>Led R&D delivery of DRACO (robotic tank cleaning system) and G-Mammoth (suction-cum-jetting system), owning system-level mechanical architecture across hydraulics, structures, and materials to improve reliability, durability, and lifecycle performance.</p>
-          <p>Coordinated cross-functional engineering, procurement, and manufacturing teams. Defined validation plans, test protocols, and acceptance criteria, including safety-critical evaluation and audit readiness. Drove design improvements through RCA, Lean, and value engineering — improving operational efficiency by up to 35% and reducing manual labour dependency by 40%.</p>
+          <p>Project owner for DRACO (robotic tank cleaning system) and R&D lead on G-Mammoth (suction-cum-jetting system), owning system-level mechanical architecture across hydraulics, structures, and materials.</p>
+          <p>Coordinated engineering, procurement, and manufacturing teams. Defined validation plans, test protocols, and acceptance criteria, and supported PESO approval documentation for DRACO as a hazardous-area product. DRACO outcomes: operational efficiency improved by up to 35% and manual-labour dependency reduced by 40%.</p>
           <div class="timeline-tags">
             <span>Project Leadership</span>
             <span>Cross-functional Teams</span>
@@ -158,7 +145,7 @@
           <h3>Senior Mechanical Design Engineer</h3>
           <p class="timeline-org"><a href="https://www.genrobotics.com/" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer" class="org-link">Genrobotics</a> &nbsp;·&nbsp; Robotics &amp; Industrial Systems</p>
           <p>Led end-to-end mechanical design and prototyping of DRACO, improving sludge extraction and buoyancy performance by 30% through iterative design optimisation and test rig-based validation.</p>
-          <p>Conducted linear and non-linear FEA studies in ANSYS Workbench across systems such as Genbot, Wilboar, and G-Gaiter. Performed design calculations, tolerance analysis, and material selection. Resolved multiple design-to-production issues in coordination with manufacturing teams.</p>
+          <p>Conducted linear and non-linear FEA studies in ANSYS Workbench and reviewed structural analysis across systems including Genbot and Wilboar. Performed design calculations, tolerance analysis, and material selection. Resolved multiple design-to-production issues in coordination with manufacturing teams.</p>
           <div class="timeline-tags">
             <span>Mechanical Design</span>
             <span>FEA / ANSYS</span>
@@ -189,26 +176,6 @@
 
     </div>
 
-    <!-- IMPACT STRIP -->
-    <div class="impact-strip">
-      <div class="impact-item">
-        <span class="impact-label">Efficiency Improvements</span>
-        <span class="impact-desc">System optimisation across robotic programs</span>
-      </div>
-      <div class="impact-item">
-        <span class="impact-label">Cost Reduction</span>
-        <span class="impact-desc">Through design optimisation and value engineering</span>
-      </div>
-      <div class="impact-item">
-        <span class="impact-label">Extensive BOM Management</span>
-        <span class="impact-desc">Across multiple robotic development programs</span>
-      </div>
-      <div class="impact-item">
-        <span class="impact-label">Zero Audit NCs</span>
-        <span class="impact-desc">Structured validation &amp; documentation</span>
-      </div>
-    </div>
-
   </div>
 </section>
 
@@ -237,7 +204,7 @@
       <li>Hydraulic Systems — Circuit Design, Component Selection, Actuation</li>
       <li>Component Selection &amp; System Matching</li>
       <li>Cross-functional Design Collaboration</li>
-      <li>Engineering for Hazardous Environments (Ignition Risk, ATEX/IECEx Considerations)</li>
+      <li>Hazardous-Area Equipment Engineering (Ignition-Risk Assessment, Non-Electrical Equipment Requirements)</li>
     </ul>
   </div>
 
@@ -284,14 +251,11 @@
 
 </div>
     <div class="tools-row">
-      <h4 class="tools-heading">Tools &amp; Software</h4>
+      <h4 class="tools-heading">Engineering Tools</h4>
       <div class="tools-chips">
         <div class="tool-chip"><img src="images/icons/solidworks.png" alt="SolidWorks"><span>SolidWorks</span></div>
         <div class="tool-chip"><img src="images/icons/autocad.png"    alt="AutoCAD"><span>AutoCAD</span></div>
         <div class="tool-chip"><img src="images/icons/ansys.png"      alt="ANSYS"><span>ANSYS</span></div>
-        <div class="tool-chip"><img src="images/icons/excel.png"      alt="Excel"><span>Excel</span></div>
-        <div class="tool-chip"><img src="images/icons/powerpoint.png" alt="PowerPoint"><span>PowerPoint</span></div>
-        <div class="tool-chip"><img src="images/icons/word.png"       alt="Word"><span>Word</span></div>
       </div>
     </div>
   </div>
@@ -308,14 +272,14 @@ My academic journey progressed from strong mechanical fundamentals to system-lev
     
     <div class="edu-timeline">
       <div class="edu-item">
-        <div class="edu-logo-wrap"><img src="images/iiitdm.png" alt="IIITDM" class="edu-logo"></div>
+        <div class="edu-logo-wrap"><img src="images/iiitdm.png" alt="IIITDM Kancheepuram logo" class="edu-logo"></div>
         <div class="edu-body">
           <div class="edu-year">2017 – 2019</div>
-          <h3>M.Des – Mechanical Systems</h3>
+          <h3>Master of Design (M.Des.) in Mechanical Systems</h3>
           <a href="https://www.iiitdm.ac.in/" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer" class="edu-inst">IIITDM Kancheepuram</a>
           <p class="edu-focus"> System Design · Mechatronics · FEA · Product Development </p>
           <p>
-I completed my Master of Design (M.Des) in Mechanical Systems from IIITDM Kancheepuram, a programme focused on hands-on product engineering and system-level design.
+I completed my Master of Design (M.Des.) in Mechanical Systems at IIITDM Kancheepuram, a programme focused on hands-on product engineering and system-level design.
 </p>
 
 <p>
@@ -330,7 +294,7 @@ This phase helped me move from component-level thinking to system-level design, 
 
 
       <div class="edu-item">
-        <div class="edu-logo-wrap"><img src="images/gec.jpg" alt="GEC Thrissur" class="edu-logo"></div>
+        <div class="edu-logo-wrap"><img src="images/gec.jpg" alt="Government Engineering College, Thrissur logo" class="edu-logo"></div>
         <div class="edu-body">
           <div class="edu-year">2012 – 2016</div>
           <h3>B.Tech – Mechanical Engineering</h3>
@@ -353,7 +317,7 @@ Most of my learning came through labs, workshops, and projects, shaping a practi
 
 
 <div class="edu-item edu-item--cert">
-        <div class="edu-logo-wrap"><img src="images/smri.jpg" alt="SMRI" class="edu-logo"></div>
+        <div class="edu-logo-wrap"><img src="images/smri.jpg" alt="SMRI logo" class="edu-logo"></div>
         <div class="edu-body">
           <div class="edu-year">2020 – 2021</div>
           <h3>Advanced Diploma in Sports Engineering (ADSE)</h3>
@@ -369,7 +333,7 @@ I completed Advanced Diploma in Sports Engineering, an engineering programme foc
 
 
       <div class="edu-item edu-item--cert">
-        <div class="edu-logo-wrap"><img src="images/imc.png" alt="IMC" class="edu-logo"></div>
+        <div class="edu-logo-wrap"><img src="images/imc.png" alt="IMC Certifications logo" class="edu-logo"></div>
         <div class="edu-body">
           <div class="edu-year">2025</div>
           <h3>Lean Six Sigma Black Belt</h3>
@@ -386,10 +350,6 @@ The focus was on identifying root causes, improving processes, and enhancing eff
 <p>
 This added a strong problem-solving and continuous improvement perspective to my engineering approach.
 </p>
-          <div class="cert-links">
-            <a href="https://imccertifications.com/certificates/C-2025-51795.pdf"     target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer">IMC Certificate ↗</a>
-            <a href="https://imccertifications.com/certificates/CPD-C-2025-51795.pdf" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer">CPD Certificate ↗</a>
-          </div>
         </div>
       </div>
     </div>
@@ -417,10 +377,10 @@ This added a strong problem-solving and continuous improvement perspective to my
           <span>Contact</span>
         </div>
         <h2 class="section-title" style="margin-bottom:16px">Let's <em>connect</em></h2>
-        <p class="contact-desc">Open to new opportunities, collaborations, and conversations about engineering challenges. Feel free to reach out through any of the channels below.</p>
+        <p class="contact-desc">Open to Mechanical Design, Product Development and related engineering roles across the UAE, including Abu Dhabi and Dubai.</p>
         <div class="contact-availability">
           <span class="avail-dot"></span>
-          <span>Available for new roles — Immediate</span>
+          <span>Based in the UAE &nbsp;·&nbsp; Available to join immediately</span>
         </div>
       </div>
 
@@ -457,6 +417,7 @@ This added a strong problem-solving and continuous improvement perspective to my
           <svg class="contact-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 13L13 3M13 3H7M13 3v6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </a>
 
+        <!-- UAE phone: add a card here once the number is issued (format +971 XX XXX XXXX). Do not publish a placeholder. -->
         <a href="tel:+918086587592" class="contact-card">
           <div class="contact-card-icon">
             <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
@@ -464,7 +425,7 @@ This added a strong problem-solving and continuous improvement perspective to my
             </svg>
           </div>
           <div class="contact-card-body">
-            <span class="contact-card-label">Phone</span>
+            <span class="contact-card-label">Phone (India)</span>
             <span class="contact-card-value">+91 80865 87592</span>
           </div>
           <svg class="contact-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 13L13 3M13 3H7M13 3v6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
@@ -484,7 +445,7 @@ This added a strong problem-solving and continuous improvement perspective to my
 
     <div class="footer-left">
       <span class="footer-brand">Jithin Machath</span>
-      <span class="footer-role">Mechanical Design Engineer</span>
+      <span class="footer-role">Mechanical Design Engineer · Based in the UAE</span>
       <span class="footer-meta" id="last-updated"></span>
     </div>
 
