@@ -58,15 +58,32 @@ function toggleProject(id) {
 
   // Close all open entries
   document.querySelectorAll('.project-entry.is-open').forEach(e => e.classList.remove('is-open'));
+  syncAria();
 
   // If it wasn't open, open it and scroll to it
   if (!wasOpen) {
     el.classList.add('is-open');
+    syncAria();
     setTimeout(() => {
       el.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }, 80);
   }
 }
+
+function syncAria() {
+  document.querySelectorAll('.project-entry-header').forEach(hd => {
+    const art = hd.closest('.project-entry');
+    hd.setAttribute('aria-expanded', art && art.classList.contains('is-open') ? 'true' : 'false');
+  });
+}
+document.addEventListener('DOMContentLoaded', () => {
+  syncAria();
+  document.querySelectorAll('.project-entry-header[role="button"]').forEach(hd => {
+    hd.addEventListener('keydown', e => {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); hd.click(); }
+    });
+  });
+});
 
 // ── IMAGE PROTECTION ──────────────────────────────────────
 document.addEventListener('contextmenu', e => {
@@ -160,9 +177,15 @@ const lightbox = document.getElementById('lightbox');
 if (lightbox) {
   const lightboxImg = lightbox.querySelector('img');
   const lightboxCaption = lightbox.querySelector('.lightbox-caption');
-  const closeLightbox = () => lightbox.classList.remove('active');
+  const closeLightbox = () => { lightbox.classList.remove('active'); if (lastFocus) lastFocus.focus(); };
 
+  let lastFocus = null;
+  const closeBtn = lightbox.querySelector('.lightbox-close');
   document.querySelectorAll('.gallery-item').forEach(item => {
+    item.setAttribute('tabindex', '0');
+    item.setAttribute('role', 'button');
+    item.setAttribute('aria-label', 'Enlarge image: ' + (item.querySelector('figcaption')?.textContent || ''));
+    item.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); item.click(); } });
     item.addEventListener('click', e => {
       e.stopPropagation();
       const img = item.querySelector('img');
@@ -170,7 +193,9 @@ if (lightbox) {
       lightboxImg.src = img.currentSrc || img.src;
       lightboxImg.alt = img.alt;
       if (lightboxCaption) lightboxCaption.textContent = item.querySelector('figcaption')?.textContent || '';
+      lastFocus = item;
       lightbox.classList.add('active');
+      if (closeBtn) closeBtn.focus();
     });
   });
 

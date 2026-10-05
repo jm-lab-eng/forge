@@ -47,7 +47,7 @@
       <li><a href="index.html#contact"    class="nav-link" onclick="closeMenu()">Contact</a></li>
       <li><a href="projects.html"         class="nav-link nav-link--active">Projects</a></li>
     </ul>
-    <button class="hamburger" id="hamburger" aria-label="Open menu" onclick="toggleMenu()">
+    <button type="button" class="hamburger" id="hamburger" aria-label="Open menu" onclick="toggleMenu()">
       <span></span><span></span><span></span>
     </button>
   </div>
@@ -90,7 +90,7 @@
 
     <article class="project-entry project-entry--primary is-open" id="proj-draco">
 
-      <div class="project-entry-header" onclick="toggleProject('proj-draco')">
+      <div class="project-entry-header" role="button" tabindex="0" aria-expanded="false" aria-controls="proj-draco" onclick="toggleProject('proj-draco')">
         <div class="peh-left">
           <span class="proj-num">01</span>
           <div class="peh-meta">
@@ -228,7 +228,7 @@
     <div class="proj-tier"><h2>Major supporting projects</h2><p>Product development and manufacturing coordination (G-Mammoth) and confined-space robotic mechanisms (Bandicoot).</p></div>
 
     <article class="project-entry" id="proj-gmammoth">
-      <div class="project-entry-header" onclick="toggleProject('proj-gmammoth')">
+      <div class="project-entry-header" role="button" tabindex="0" aria-expanded="false" aria-controls="proj-gmammoth" onclick="toggleProject('proj-gmammoth')">
         <div class="peh-left">
           <span class="proj-num">02</span>
           <div class="peh-meta">
@@ -239,7 +239,7 @@
           </div>
         </div>
         <div class="peh-right">
-          <button class="expand-btn" aria-label="Toggle"><span class="expand-icon">+</span></button>
+          <button type="button" class="expand-btn" aria-label="Toggle"><span class="expand-icon">+</span></button>
         </div>
       </div>
       <div class="project-entry-body">
@@ -298,7 +298,7 @@
     </article>
 
     <article class="project-entry" id="proj-bandicoot">
-      <div class="project-entry-header" onclick="toggleProject('proj-bandicoot')">
+      <div class="project-entry-header" role="button" tabindex="0" aria-expanded="false" aria-controls="proj-bandicoot" onclick="toggleProject('proj-bandicoot')">
         <div class="peh-left">
           <span class="proj-num">03</span>
           <div class="peh-meta">
@@ -309,7 +309,7 @@
           </div>
         </div>
         <div class="peh-right">
-          <button class="expand-btn" aria-label="Toggle"><span class="expand-icon">+</span></button>
+          <button type="button" class="expand-btn" aria-label="Toggle"><span class="expand-icon">+</span></button>
         </div>
       </div>
       <div class="project-entry-body">
@@ -370,7 +370,7 @@
     <div class="proj-tier"><h2>Supporting work</h2><p>Design and engineering contributions to other Genrobotics platforms.</p></div>
 
     <article class="project-entry" id="proj-genbot">
-      <div class="project-entry-header" onclick="toggleProject('proj-genbot')">
+      <div class="project-entry-header" role="button" tabindex="0" aria-expanded="false" aria-controls="proj-genbot" onclick="toggleProject('proj-genbot')">
         <div class="peh-left">
           <span class="proj-num">04</span>
           <div class="peh-meta">
@@ -381,7 +381,7 @@
           </div>
         </div>
         <div class="peh-right">
-          <button class="expand-btn" aria-label="Toggle"><span class="expand-icon">+</span></button>
+          <button type="button" class="expand-btn" aria-label="Toggle"><span class="expand-icon">+</span></button>
         </div>
       </div>
       <div class="project-entry-body">
@@ -441,7 +441,7 @@
     </article>
 
     <article class="project-entry" id="proj-wilboar">
-      <div class="project-entry-header" onclick="toggleProject('proj-wilboar')">
+      <div class="project-entry-header" role="button" tabindex="0" aria-expanded="false" aria-controls="proj-wilboar" onclick="toggleProject('proj-wilboar')">
         <div class="peh-left">
           <span class="proj-num">05</span>
           <div class="peh-meta">
@@ -452,7 +452,7 @@
           </div>
         </div>
         <div class="peh-right">
-          <button class="expand-btn" aria-label="Toggle"><span class="expand-icon">+</span></button>
+          <button type="button" class="expand-btn" aria-label="Toggle"><span class="expand-icon">+</span></button>
         </div>
       </div>
       <div class="project-entry-body">
@@ -513,7 +513,7 @@
     </article>
 
     <article class="project-entry" id="proj-mobilityplus">
-      <div class="project-entry-header" onclick="toggleProject('proj-mobilityplus')">
+      <div class="project-entry-header" role="button" tabindex="0" aria-expanded="false" aria-controls="proj-mobilityplus" onclick="toggleProject('proj-mobilityplus')">
         <div class="peh-left">
           <span class="proj-num">06</span>
           <div class="peh-meta">
@@ -524,7 +524,7 @@
           </div>
         </div>
         <div class="peh-right">
-          <button class="expand-btn" aria-label="Toggle"><span class="expand-icon">+</span></button>
+          <button type="button" class="expand-btn" aria-label="Toggle"><span class="expand-icon">+</span></button>
         </div>
       </div>
       <div class="project-entry-body">
@@ -584,7 +584,7 @@
     </article>
 
     <article class="project-entry" id="proj-ggaiter">
-      <div class="project-entry-header" onclick="toggleProject('proj-ggaiter')">
+      <div class="project-entry-header" role="button" tabindex="0" aria-expanded="false" aria-controls="proj-ggaiter" onclick="toggleProject('proj-ggaiter')">
         <div class="peh-left">
           <span class="proj-num">07</span>
           <div class="peh-meta">
@@ -595,7 +595,7 @@
           </div>
         </div>
         <div class="peh-right">
-          <button class="expand-btn" aria-label="Toggle"><span class="expand-icon">+</span></button>
+          <button type="button" class="expand-btn" aria-label="Toggle"><span class="expand-icon">+</span></button>
         </div>
       </div>
       <div class="project-entry-body">
@@ -670,7 +670,7 @@
 
 <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer">
   <button class="lightbox-close" type="button" aria-label="Close image">✕</button>
-  <img class="lightbox-img" id="lightbox-img" src="" alt="">
+  <img class="lightbox-img" id="lightbox-img" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="">
   <div class="lightbox-caption"></div>
 </div>
 
